@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: install.script.php 4562 2012-10-26 19:53:26Z btowles $
+ * @version   $Id: install.script.php 15086 2013-10-31 16:59:30Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -230,39 +230,46 @@ if (!class_exists('PlgSystemGantryFrameWorkinstallerInstallerScript')) {
 	}
 
 	if (!class_exists('RokInstallerJAdministratorWrapper')) {
-		/**
-		 *
-		 */
-		class RokInstallerJAdministratorWrapper extends JAdministrator
-		{
-			/**
-			 * @var JAdministrator
-			 */
-			protected $app;
-
-			/**
-			 * @param JAdministrator $app
-			 */
-			public function __construct(JAdministrator $app)
+		$jversion = new JVersion();
+		if ($jversion->isCompatible('3.2')) {
+			class RokInstallerJAdministratorWrapper extends JApplicationCms
 			{
-				$this->app =& $app;
+				protected $app;
+
+				public function __construct(JApplicationCms $app)
+				{
+					$this->app =& $app;
+				}
+
+				public function getMessageQueue()
+				{
+					return $this->app->getMessageQueue();
+				}
+
+				public function setMessageQueue($messages)
+				{
+					$this->app->_messageQueue = $messages;
+				}
 			}
-
-			/**
-			 * @return array
-			 */
-			public function getMessageQueue()
+		} else {
+			class RokInstallerJAdministratorWrapper extends JAdministrator
 			{
-				return $this->app->getMessageQueue();
-			}
+				protected $app;
 
+				public function __construct(JAdministrator $app)
+				{
+					$this->app =& $app;
+				}
 
-			/**
-			 * @param $messages
-			 */
-			public function setMessageQueue($messages)
-			{
-				$this->app->_messageQueue = $messages;
+				public function getMessageQueue()
+				{
+					return $this->app->getMessageQueue();
+				}
+
+				public function setMessageQueue($messages)
+				{
+					$this->app->_messageQueue = $messages;
+				}
 			}
 		}
 	}

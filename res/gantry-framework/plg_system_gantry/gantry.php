@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        4.1.17 September 10, 2013
+ * @version        4.1.18 November 6, 2013
  * @author         RocketTheme http://www.rockettheme.com
  * @copyright      Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license        http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -28,7 +28,6 @@ class plgSystemGantry extends JPlugin
 		'data-toggle="pill"',
 		'data-dismiss="alert"'
 	);
-
 	/**
 	 * @var array
 	 */
@@ -57,11 +56,10 @@ class plgSystemGantry extends JPlugin
 		)
 	);
 
-
 	public function __construct(&$subject, $config = array())
 	{
 		parent::__construct($subject, $config);
-		$app = JFactory::getApplication();
+		$app  = JFactory::getApplication();
 		$lang = JFactory::getLanguage();
 		$lang->load('plg_system_gantry', JPATH_ADMINISTRATOR);
 		JLog::addLogger(array('text_file' => 'gantry.php'), $this->params->get('debugloglevel', 63), array('gantry'));
@@ -79,6 +77,7 @@ class plgSystemGantry extends JPlugin
 				JLog::add(sprintf('Setting override path to %s', GANTRY_OVERRIDES_PATH), JLog::DEBUG, 'rokoverrides');
 			}
 			require_once dirname(__FILE__) . '/functions.php';
+
 		}
 	}
 
@@ -139,6 +138,61 @@ class plgSystemGantry extends JPlugin
 	}
 
 	/* temporary solution to add Google Prettify stuff */
+
+	/**
+	 * @param $key
+	 * @param $value
+	 */
+	private function setRequestOption($key, $value)
+	{
+		if (class_exists('JRequest')) {
+			JRequest::set(array($key => $value), 'GET');
+			JRequest::set(array($key => $value), 'POST');
+		}
+	}
+
+	/**
+	 * Check if template is based on gantry
+	 *
+	 * @param string $id
+	 *
+	 * @return boolean
+	 */
+	private function isGantryTemplate($id)
+	{
+		// Get a row instance.
+		$table = $this->getTable();
+
+		// Attempt to load the row.
+		$return = $table->load($id);
+
+		// Check for a table object error.
+		if ($return === false && $table->getError()) {
+			$this->setError($table->getError());
+			return false;
+
+		}
+		$template = $table->template;
+
+		return file_exists(JPATH_SITE . '/' . 'templates' . '/' . $template . '/' . 'lib' . '/' . 'gantry' . '/' . 'gantry.php');
+
+	}
+
+	/**
+	 * Returns a reference to the a Table object, always creating it.
+	 *
+	 * @param    type      The table type to instantiate
+	 * @param    string    A prefix for the table class name. Optional.
+	 * @param    array     Configuration array for model. Optional.
+	 *
+	 * @return    JTable    A database object
+	 */
+	public function getTable($type = 'Style', $prefix = 'TemplatesTable', $config = array())
+	{
+		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_templates/tables');
+		return JTable::getInstance($type, $prefix, $config);
+	}
+
 	/**
 	 * @param     $context
 	 * @param     $article
@@ -171,7 +225,20 @@ class plgSystemGantry extends JPlugin
 	 */
 	public function onBeforeCompileHead()
 	{
-
+		$doc = JFactory::getDocument();
+		$app = JFactory::getApplication();
+		if (!$app->isAdmin()) {
+			$template_info = $app->getTemplate(true);
+			// If its a gantry template dont load up
+			if ($this->isGantryTemplate($template_info->id) && isset($doc->_styleSheets[JURI::root(true) . '/templates/' . $app->getTemplate() . '/css-compiled/bootstrap.css'])) {
+				unset($doc->_styleSheets[JUri::base(true) . '/media/jui/css/bootstrap.css']);
+				unset($doc->_styleSheets[JUri::base(true) . '/media/jui/css/bootstrap.min.css']);
+				unset($doc->_styleSheets[JUri::base(true) . '/media/jui/css/bootstrap-responsive.css']);
+				unset($doc->_styleSheets[JUri::base(true) . '/media/jui/css/bootstrap-responsive.min.css']);
+				unset($doc->_styleSheets[JUri::base(true) . '/media/jui/css/bootstrap-extended.css']);
+				unset($doc->_styleSheets[JUri::base(true) . '/media/jui/css/bootstrap-rtl.css']);
+			}
+		}
 	}
 
 	/**
@@ -242,99 +309,18 @@ class plgSystemGantry extends JPlugin
 	}
 
 	/**
-	 *
+	 * @return array
 	 */
-	public function onAfterDispatch()
+	private function getMasters()
 	{
-		$app = JFactory::getApplication();
-
-		if ($app->isAdmin()) return;
-
-		$document = JFactory::getDocument();
-		$doctype  = $document->getType();
-		$messages = JFactory::getSession()->get('application.queue');
-
-		if ($doctype == 'html') {
-			$buffer      = "";
-			$tmp_buffers = $document->getBuffer();
-			if (is_array($tmp_buffers)) {
-				foreach ($document->getBuffer() as $key => $value) {
-					$buffer .= $document->getBuffer($key);
-				}
-			}
-
-			if (empty($buffer) && !count($messages)) return;
-
-			// wether to load bootstrap jui or not
-			if (($this->_contains($buffer, $this->bootstrapTriggers) || count($messages)) && version_compare(JVERSION, '3.0.0') >= 0) {
-				JHtml::_('bootstrap.framework');
+		$templates = $this->getTemplates();
+		$masters   = array();
+		foreach ($templates as $template) {
+			if ($template->params->get('master') == 'true') {
+				$masters[] = $template->id;
 			}
 		}
-
-	}
-
-	/**
-	 *
-	 */
-	public function onSearch()
-	{
-
-	}
-
-
-
-	/**
-	 * @param $key
-	 * @param $value
-	 */
-	private function setRequestOption($key, $value)
-	{
-		if (class_exists('JRequest')){
-			JRequest::set(array($key => $value), 'GET');
-			JRequest::set(array($key => $value), 'POST');
-		}
-	}
-
-	/**
-	 * Check if template is based on gantry
-	 *
-	 * @param string $id
-	 *
-	 * @return boolean
-	 */
-	private function isGantryTemplate($id)
-	{
-		// Get a row instance.
-		$table = $this->getTable();
-
-		// Attempt to load the row.
-		$return = $table->load($id);
-
-		// Check for a table object error.
-		if ($return === false && $table->getError()) {
-			$this->setError($table->getError());
-			return false;
-
-		}
-		$template = $table->template;
-
-		return file_exists(JPATH_SITE . '/' . 'templates' . '/' . $template . '/' . 'lib' . '/' . 'gantry' . '/' . 'gantry.php');
-
-	}
-
-	/**
-	 * Returns a reference to the a Table object, always creating it.
-	 *
-	 * @param    type      The table type to instantiate
-	 * @param    string    A prefix for the table class name. Optional.
-	 * @param    array     Configuration array for model. Optional.
-	 *
-	 * @return    JTable    A database object
-	 */
-	public function getTable($type = 'Style', $prefix = 'TemplatesTable', $config = array())
-	{
-		JTable::addIncludePath(JPATH_ADMINISTRATOR . '/components/com_templates/tables');
-		return JTable::getInstance($type, $prefix, $config);
+		return $masters;
 	}
 
 	/**
@@ -378,21 +364,6 @@ class plgSystemGantry extends JPlugin
 	/**
 	 * @return array
 	 */
-	private function getMasters()
-	{
-		$templates = $this->getTemplates();
-		$masters   = array();
-		foreach ($templates as $template) {
-			if ($template->params->get('master') == 'true') {
-				$masters[] = $template->id;
-			}
-		}
-		return $masters;
-	}
-
-	/**
-	 * @return array
-	 */
 	private function getGantryTemplates()
 	{
 		$templates = $this->getTemplates();
@@ -407,6 +378,38 @@ class plgSystemGantry extends JPlugin
 	}
 
 	/**
+	 *
+	 */
+	public function onAfterDispatch()
+	{
+		$app = JFactory::getApplication();
+
+		if ($app->isAdmin()) return;
+
+		$document = JFactory::getDocument();
+		$doctype  = $document->getType();
+		$messages = JFactory::getSession()->get('application.queue');
+
+		if ($doctype == 'html') {
+			$buffer      = "";
+			$tmp_buffers = $document->getBuffer();
+			if (is_array($tmp_buffers)) {
+				foreach ($document->getBuffer() as $key => $value) {
+					$buffer .= $document->getBuffer($key);
+				}
+			}
+
+			if (empty($buffer) && !count($messages)) return;
+
+			// wether to load bootstrap jui or not
+			if (($this->_contains($buffer, $this->bootstrapTriggers) || count($messages)) && version_compare(JVERSION, '3.0.0') >= 0) {
+				JHtml::_('bootstrap.framework');
+			}
+		}
+
+	}
+
+	/**
 	 * @param       $string
 	 * @param array $search
 	 * @param bool  $caseInsensitive
@@ -417,6 +420,14 @@ class plgSystemGantry extends JPlugin
 	{
 		$exp = '/' . implode('|', array_map('preg_quote', $search)) . ($caseInsensitive ? '/i' : '/');
 		return preg_match($exp, $string) ? true : false;
+	}
+
+	/**
+	 *
+	 */
+	public function onSearch()
+	{
+
 	}
 
 }

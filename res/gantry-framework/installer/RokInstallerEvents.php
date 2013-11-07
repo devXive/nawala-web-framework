@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   4.1.17 September 10, 2013
+ * @version   2.0.5-SNAPSHOT October 31, 2013
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -77,11 +77,12 @@ class RokInstallerEvents extends JPlugin
 	{
 		ob_start();
 		?>
-    <li class="rokinstall-failure"><span class="rokinstall-row"><span
-            class="rokinstall-icon"><span></span></span><?php echo $package['name'];?> installation failed</span>
-            <span class="rokinstall-errormsg">
-                <?php echo $msg; ?>
-            </span>
+    <li class="rokinstall-failure">
+		<span class="rokinstall-icon"><span></span></span>
+        <span class="rokinstall-row"><?php echo $package['name'];?> installation failed</span>
+        <span class="rokinstall-errormsg">
+            <?php echo $msg; ?>
+        </span>
     </li>
 	<?php
 		$out = ob_get_clean();
@@ -97,9 +98,9 @@ class RokInstallerEvents extends JPlugin
 	{
 		ob_start();
 		?>
-    <li class="rokinstall-success"><span class="rokinstall-row"><span
-            class="rokinstall-icon"><span></span></span><?php echo $package['name'];?>
-        installation was successful</span></li>
+    <li class="rokinstall-success">
+    	<span class="rokinstall-icon"><span></span></span>
+        <span class="rokinstall-row"><?php echo $package['name'];?> installation was successful</span></li>
 	<?php
 		$out = ob_get_clean();
 		return $out;
@@ -114,8 +115,9 @@ class RokInstallerEvents extends JPlugin
 	{
 		ob_start();
 		?>
-    <li class="rokinstall-update"><span class="rokinstall-row"><span
-            class="rokinstall-icon"><span></span></span><?php echo $package['name'];?> update was successful</span>
+    <li class="rokinstall-update">
+    	<span class="rokinstall-icon"><span></span></span>
+    	<span class="rokinstall-row"><?php echo $package['name'];?> update was successful</span>
     </li>
 	<?php
 		$out = ob_get_clean();
@@ -141,9 +143,11 @@ class RokInstallerEvents extends JPlugin
 	{
 		$buffer = '';
 		$buffer .= self::loadCss();
-		$buffer .= '<div id="rokinstall-logo"><ul id="rokinstall-status">';
+		$buffer .= '<div id="rokinstall"><ul id="rokinstall-status">';
 		$buffer .= implode('', self::$messages);
-		$buffer .= '</ul></div>';
+		$buffer .= '</ul>';
+		$buffer .= '<i class="rokinstall-logo"></i>';
+		$buffer .= '</div>';
 		return $buffer;
 	}
 
