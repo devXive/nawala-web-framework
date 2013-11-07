@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="system" method="upgrade">
+    <name>Installer</name>
+	<author>RocketTheme, LLC</author>
+	<creationDate>September 10, 2013</creationDate>
+	<copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
+	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+	<authorEmail>support@rockettheme.com</authorEmail>
+	<authorUrl>http://www.rockettheme.com</authorUrl>
+	<version>4.1.17</version>
+	<description>Gantry Framework for Joomla! v4.1.17</description>
+
+    <scriptfile>install.script.php</scriptfile>
+    <files>
+        <filename plugin="GantryFrameWorkinstaller">installer.php</filename>
+    </files>
+    <cogs>
+        <cog type="library" enabled="true" protected="false">
+            lib_gantry
+            <name>Gantry Library</name>
+            <description>The Gantry Framework Shared Library for Joomla!</description>
+        </cog>
+        <cog type="component" client="site" access="0" enabled="true" protected="false" remove_admin_menu="true">
+            com_gantry
+            <name>Gantry Component</name>
+            <description>The Gantry Administrative Component for Joomla!</description>
+        </cog>
+        <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
+            plg_system_gantry
+            <name>Gantry System Plugin</name>
+            <description>The Gantry System Plugin for Joomla!</description>
+        </cog>
+    </cogs>
+</extension>
