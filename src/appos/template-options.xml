@@ -118,7 +118,7 @@
         <fields name="copyright" type="chain" label="COPYRIGHT" description="COPYRIGHT_DESC">
             <field name="enabled" type="toggle" default="0" label="SHOW" />
             <field name="position" type="position" default="copyright-a" label="POSITION" />
-            <field name="text" type="text" default="Designed by RocketTheme" label="TEXT" class="text-long" />
+            <field name="text" type="text" default="Designed by devXive" label="TEXT" class="text-long" />
         </fields>
 
         <fields name="totop" type="chain" label="TOTOP" description="TOTOP_DESC">
