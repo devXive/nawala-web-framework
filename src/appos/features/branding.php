@@ -19,7 +19,7 @@ class GantryFeatureBranding extends GantryFeature {
 	    ob_start();
 	    ?>
 	    <div class="rt-block">
-			<a href="http://www.gantry-framework.org/" title="Gantry Framework" class="powered-by"></a>
+			<a href="http://devxive.com/" title="devXive - research and development" class="powered-by" target="_blank"></a>
 		</div>
 		<?php
 	    return ob_get_clean();

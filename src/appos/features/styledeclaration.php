@@ -42,6 +42,7 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 
 	$gantry->addInlineStyle($css);
 	if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('mediaqueries.less');
+	if ($gantry->get('layout-mode')=="fluid") $gantry->addLess('fluid.less');
 	if ($gantry->get('layout-mode')=="960fixed") $gantry->addLess('960fixed.less');
 	if ($gantry->get('layout-mode')=="1200fixed") $gantry->addLess('1200fixed.less');
 	}

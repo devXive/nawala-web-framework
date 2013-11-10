@@ -8,25 +8,44 @@
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
 
-// Check to ensure this file is included in Nawala!RDK environment
-defined('_NRDKRA') or die;
+// Restrict access
+defined('_JEXEC') or die;
+
+// Define Nawala Rapid Development Kit Restricted Access (NRDKRA) as entrypoint and further check to ensure this file is included in Nawala!RDK environment
+define('_NRDKRA', 1);
 
 if (!defined('NAWALA_VERSION')) {
 	/**
 	 * @name NAWALA_VERSION
 	 */
-	$nversion = (string) JFactory::getXML(JPATH_ROOT . '/administrator/manifests/libraries/nawala.xml')->version;
+	$manifest = JFactory::getXML(JPATH_ROOT . '/administrator/manifests/libraries/lib_nawala.xml');
+	$nversion = (string) $manifest->version;
 	define('NAWALA_VERSION', $nversion);
 
 	if (!defined('DS')) {
 		define('DS', DIRECTORY_SEPARATOR);
 	}
 
+	define('NAWALA_LIBRARY', JPATH_LIBRARIES . '/nawala');
+
 	// Register the library.
-	JLoader::registerPrefix('MFW', JPATH_LIBRARIES . '/mootombo');
+//	JLoader::registerPrefix('Nawala', JPATH_LIBRARIES . '/nawala');
+	JLoader::registerPrefix('N', JPATH_LIBRARIES . '/nawala');
+
+
+	// Init the factory if necessary.
+	if (!class_exists('NFactory'))
+	{
+		require_once(NAWALA_LIBRARY . '/factory.php');
+	}
 
 	// Load gantry class
-	require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
+	$gantry_lib_path = JPATH_SITE . '/libraries/gantry/gantry.php';
+	if (!file_exists($gantry_lib_path)) {
+	    echo JText::_('GANTRY_BOOTSTRAP_CANT_FIND_LIBRARY');
+	    die;
+	}
+	include($gantry_lib_path);
 
 	/**
 	 * Adds a script file to the document with platform based checks

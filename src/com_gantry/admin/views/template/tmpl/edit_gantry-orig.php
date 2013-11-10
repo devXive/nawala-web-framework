@@ -144,28 +144,23 @@ function get_version_update_info(){
 	$buffer = '';
 	gantry_import('core.gantryupdates');
 	$gantry_updates = GantryUpdates::getInstance();
-	$currentVersion = $gantry_updates->getCurrentVersion();
+	$currentVersion =  $gantry_updates->getCurrentVersion();
 	$latest_version = $gantry_updates->getLatestVersion();
 
-	// Nawala!RDK Version
-	$nawala_updates = NCoreUpdates::getInstance();
-	$nawalaCurrent = $nawala_updates->getCurrentVersion();
-	$nawalaLatest = $nawala_updates->getLatestVersion();
-
-	if (version_compare($nawalaLatest,$nawalaCurrent,'>')){
+	if (version_compare($latest_version,$currentVersion,'>')){
 		$klass="update";
-		$upd = JText::sprintf('COM_GANTRY_NAWALA_VERSION_UPDATE_OUTOFDATE',$nawalaLatest,'index.php?option=com_installer&view=update');
+		$upd = JText::sprintf('COM_GANTRY_VERSION_UPDATE_OUTOFDATE',$latest_version,'index.php?option=com_installer&view=update');
 	} else {
 		$klass = "noupdate";
 		jimport('joomla.utilities.date');
-		$nextupdate = new JDate($nawala_updates->getLastUpdated()+(24*60*60));
+		$nextupdate = new JDate($gantry_updates->getLastUpdated()+(24*60*60));
 
-		$upd = JText::sprintf('COM_GANTRY_NAWALA_VERSION_UPDATE_CURRENT');
+		$upd = JText::sprintf('COM_GANTRY_VERSION_UPDATE_CURRENT');
 	}
 
 	$buffer .= "
 	<div class='gantry-field updater-field ".$klass."'  id='updater'>
-		<div id='updater-bar' class='h2bar'>Nawala!RDK <span>v".$nawalaCurrent."</span></div>
+		<div id='updater-bar' class='h2bar'>Gantry <span>v".$currentVersion."</span></div>
 		<div id='updater-desc'>".$upd."</div>
 	</div>";
 
