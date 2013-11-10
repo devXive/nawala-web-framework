@@ -17,7 +17,7 @@ defined('_NRDKRA') or die;
  * @package  Framework
  * @since    1.0
  */
-abstract class NFWFactory
+class NFactory
 {
 //	include( JPATH_SITE . '/libraries/gantry/gantry.php' );
 
