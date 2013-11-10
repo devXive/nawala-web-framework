@@ -1,32 +1,49 @@
-<extension version="1.6" type="plugin" group="system" method="upgrade">
+<extension version="3.1" type="plugin" group="system" method="upgrade">
     <name>Installer</name>
-	<author>RocketTheme, LLC</author>
-	<creationDate>November 6, 2013</creationDate>
-	<copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
+	<author>devXive</author>
+	<creationDate>2013-11-01</creationDate>
+	<copyright>(C) 1997 - 2013 devXive - research and development. All rights reserved.</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-	<authorEmail>support@rockettheme.com</authorEmail>
-	<authorUrl>http://www.rockettheme.com</authorUrl>
-	<version>4.1.18</version>
-	<description>Gantry Template Bundle Package v.4.1.18</description>
+	<authorEmail>support@devxive.com</authorEmail>
+	<authorUrl>http://devxive.com</authorUrl>
+	<version>1.1.0</version>
+	<description>Nawala Rapid Development Kit v.1.1.0</description>
     <scriptfile>install.script.php</scriptfile>
     <files>
-        <filename plugin="gantry_installer">installer.php</filename>
+        <filename plugin="nawala_installer">installer.php</filename>
     </files>
     <cogs>
         <cog type="library" enabled="true" protected="false">
+            lib_nawala
+            <name>Nawala Library</name>
+            <description>The Nawala Framework Shared Library</description>
+        </cog>
+        <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
+            plg_system_nawala
+            <name>Nawala System Plugin</name>
+            <description>The Nawala System Plugin</description>
+        </cog>
+        <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
+            appos
+            <name>AppOS Template</name>
+            <description>Application optimized template</description>
+            <style name="AppOS - Default" default="false" master="true" paramsfile="template-options.xml"/>
+        </cog>
+
+        <cog type="library" enabled="true" protected="false">
             lib_gantry
             <name>Gantry Library</name>
-            <description>The Gantry Framework Shared Library for Joomla!</description>
+            <description>The Gantry Framework Shared Library</description>
         </cog>
         <cog type="component" client="site" access="0" enabled="true" protected="false" remove_admin_menu="true">
             com_gantry
             <name>Gantry Component</name>
-            <description>The Gantry Administrative Component for Joomla 1.6</description>
+            <description>The Gantry Administrative Component</description>
         </cog>
         <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">
             plg_system_gantry
             <name>Gantry System Plugin</name>
-            <description>The Gantry System Plugin for Joomla 1.6</description>
+            <description>The Gantry System Plugin</description>
         </cog>
         <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
             gantry
@@ -42,7 +59,7 @@
         <cog type="module" client="site" access="1" enabled="true" protected="false">
             mod_roknavmenu
             <name>RokNavMenu Module</name>
-            <description>RocketTheme RokNavMenu Module for Joomla 1.6</description>
+            <description>RocketTheme RokNavMenu Module</description>
         </cog>
     </cogs>
 </extension>

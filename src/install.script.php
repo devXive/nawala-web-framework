@@ -1,16 +1,18 @@
 <?php
 /**
- * @version   $Id: install.script.php 15086 2013-10-31 16:59:30Z btowles $
- * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Installer
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
-if (!class_exists('PlgSystemgantry_installerInstallerScript')) {
+if (!class_exists('PlgSystemnawala_installerInstallerScript')) {
 
 	/**
 	 *
 	 */
-	class PlgSystemgantry_installerInstallerScript
+	class PlgSystemnawala_installerInstallerScript
 	{
 		/**
 		 * @var array

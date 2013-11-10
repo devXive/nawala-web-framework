@@ -1,13 +1,10 @@
 <?php
 /**
- * @package   gantry
- * @subpackage core
- * @version   4.1.18 November 6, 2013
- * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Installer
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
 die();
