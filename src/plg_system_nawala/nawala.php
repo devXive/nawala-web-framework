@@ -25,9 +25,15 @@ class plgSystemNawala extends JPlugin
 	public function __construct(&$subject, $config = array())
 	{
 		parent::__construct($subject, $config);
+
+		if (!defined('_NRDKRA')) {
+			require_once(JPATH_LIBRARIES . '/nawala/nawala.php');
+		}
+
 		$app  = JFactory::getApplication();
 		$lang = JFactory::getLanguage();
 		$lang->load('plg_system_nawala', JPATH_ADMINISTRATOR);
+
 		JLog::addLogger(array('text_file' => 'nawala.php'), $this->params->get('debugloglevel', 63), array('nawala'));
 	}
 
