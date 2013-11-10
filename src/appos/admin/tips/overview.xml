@@ -3,14 +3,39 @@
 
 	<tip label="Getting More Help">
 		<![CDATA[
-		Each tab contains a summary and also a "tip-box" that displays relevant information as you mouse-over the elements in the template parameters.  If you would like to find out more about these settings and the Gantry Framework in general please checkout these links:
-		<ul>
-		<li><a href="http://www.gantry-framework.org">Gantry Framework Homepage</a></li>
-		<li><a href="http://www.gantry-framework.org/documentation">Gantry Framework Documentation &amp; Screencasts</a></li>
-		<li><a href="https://groups.google.com/forum/#!forum/gantry-framework-for-joomla-users">Gantry Framework for Joomla Users Mailing list</a></li>
-		<li><a href="https://groups.google.com/forum/#!forum/gantry-framework-developers">Gantry Framework Developers Mailing list</a></li>
+			Each tab contains a summary and also a "tip-box" that displays relevant information as you mouse-over the elements in the template parameters.
+			If you would like to find out more about these settings and the Nawala!RDK in general please checkout these links:
+			<ul>
+				<li><a href="http://devxive.com">devXive Homepage</a></li>
+				<li><a href="http://devxive.com/documentation/nawala">Nawala!RDK - Documentation &amp; Screencasts</a></li>
+				<li><a href="http://devxive.com/forum/nawala">Nawala!RDK - Forum</a></li>
+				<li><a href="https://github.com/devxive/nawala-rdk">Nawala!RDK - Codebase on GitHub</a></li>
+			</ul>
+		]]>
+	</tip>
 
-		</ul>
+	<tip label="Getting More Help">
+		<![CDATA[
+			To learn more about the AppOS - Theme, please visit one of the following sites:
+			<ul>
+				<li><a href="http://devxive.com">devXive Homepage</a></li>
+				<li><a href="http://devxive.com/documentation/nawala">Nawala!RDK - Documentation &amp; Screencasts</a></li>
+				<li><a href="http://devxive.com/forum/nawala">Nawala!RDK - Forum</a></li>
+				<li><a href="https://github.com/devxive/nawala-rdk">Nawala!RDK - Codebase on GitHub</a></li>
+			</ul>
+		]]>
+	</tip>
+
+	<tip label="Credits and special thanks">
+		<![CDATA[
+			Nawala!RDK would not exist without the great work of the following projects and the people behind:
+			<ul>
+				<li><a href="http://jquery.com">jQuery</a> - the Javascript Framework</li>
+				<li><a href="http://getbootstrap.com">Bootstrap</a> - the responsive CSS Framework</li>
+				<li><a href="http://gantry-framework.org">Gantry Framework</a> - and the awesome guys behind from <a href="http://www.rockettheme.com">RocketTheme</a></li>
+				<li>...and all those that we might forget*</li>
+			</ul>
+			<small>*Sorry for that, please drop us a note and we'll add you to the list</small>
 		]]>
 	</tip>
 
