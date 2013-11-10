@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<extension group="system" method="upgrade" type="plugin" version="1.6">
+    <name>System - Nawala</name>
+    <author>devXive</author>
+    <creationDate>2013-11-01</creationDate>
+    <copyright>(C) 1997 - 2013 devXive - research and development. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@devxive.com</authorEmail>
+    <authorUrl>http://www.devxive.com</authorUrl>
+    <version>1.1.0</version>
+    <description>Nawala System Plugin for MOOTOMBO and Joomla</description>
+    <files>
+        <filename plugin="nawala">nawala.php</filename>
+
+        <folder>fields</folder>
+        <folder>language</folder>
+        <folder>overrides</folder>
+        <filename>index.html</filename>
+        <filename>functions.php</filename>
+        <filename>checksums</filename>
+    </files>
+
+    <config>
+        <fields name="params">
+            <fieldset addfieldpath="/plugins/system/nawala/fields" label="PLG_SYSTEM_NAWALA_FIELD_LABEL_DEBUG" name="debug">
+                <field description="PLG_SYSTEM_NAWALA_DEBUG_LOG_LOCATION_DESC" label="PLG_SYSTEM_NAWALA_DEBUG_LOG_LOCATION_LABEL" logfile="nawala.php" name="debugloglocation" type="debuglink"/>
+
+                <field default="63" description="PLG_SYSTEM_NAWALA_DEBUG_LOG_LEVEL_DESC" label="PLG_SYSTEM_NAWALA_DEBUG_LOG_LEVEL_LABEL" name="debugloglevel" type="list">
+                    <option value="15">PLG_SYSTEM_NAWALA_DEBUG_LOG_LEVEL_DISABLED</option>
+                    <option value="15">PLG_SYSTEM_NAWALA_DEBUG_LOG_LEVEL_ERRORS_ONLY</option>
+                    <option value="63">PLG_SYSTEM_NAWALA_DEBUG_LOG_LEVEL_NORMAL</option>
+                    <option value="30719">PLG_SYSTEM_NAWALA_DEBUG_LOG_LEVEL_DEBUG</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
