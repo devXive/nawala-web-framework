@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension method="upgrade" type="library" version="3.1">
+    <name>Nawala</name>
+    <libraryname>nawala</libraryname>
+    <creationDate>2013-11-01</creationDate>
+    <author>devXive</author>
+    <authorEmail>support@devxive.com</authorEmail>
+    <authorUrl>http://www.devxive.com</authorUrl>
+    <copyright>(C) 1997 - 2013 devXive - research and development. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <version>1.0.0</version>
+    <description>The Nawala Library for MOOTOMBO and Joomla</description>
+
+    <files folder=".">
+        <filename>CHANGELOG.php</filename>
+        <filename>checksums</filename>
+        <filename>CREDITS.php</filename>
+        <filename>factory.php</filename>
+        <filename>index.html</filename>
+        <filename>nawala.config.php</filename>
+        <filename>nawala.php</filename>
+    </files>
+
+    <!-- Update Specification -->
+	<updateservers>
+		<server name="devXive Update Server" priority="1" type="extension">http://updates.devxive.com/frameworks/nawala.xml</server>
+	</updateservers>
+</extension>

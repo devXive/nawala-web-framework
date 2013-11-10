@@ -1,0 +1,58 @@
+<?php
+/**
+ * CREDITS
+ *
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Nawala - Library
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
+ */
+
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die;
+?>
+
+-------------------- Nawala Credits ---------------------
+
+Code contributers:
+------------------
+Lahmizzar Muinela
+
+
+Nawala includes or is derivative of works distributed under the licenses listed below.
+---------------------------------------------------------------------------------------------
+
+Gantry Framework
+--------------------
+Author:       RocketTheme
+Copyright:    Copyright (C) 2007 - 2013 RocketTheme, LLC
+License:      Licensed under GNU/GPLv2 only
+Url:          http://www.gnu.org/licenses/gpl-2.0.html
+
+GantryURL Base
+--------------------
+Author:       Alexander Podgorny
+License:      No License or Copyright Provided
+
+FamFamFam Silk Icons
+--------------------
+Author:       Mark James
+Copyright:    Copyright (C) Mark James
+License:      Creative Commons Attribution 2.5 License.	
+Url:          http://www.famfamfam.com/lab/icons/silk/
+
+Flatfile DB
+--------------------
+Author:       Leaf Corcoran
+Copyright:    Copyright (c) 2005 Luke Plant <L.Plant.98@cantab.net>
+License:      http://www.opensource.org/licenses/mit-license.php
+Url:          http://lukeplant.me.uk/resources/flatfile/
+
+Less CSS Compiler
+-------------------
+Author:       Luke Plant
+Copyright:    Copyright 2012, Leaf Corcoran <leafot@gmail.com>
+License:      Licensed under MIT or GPLv3, see LICENSE
+Url:          http://leafo.net/lessphp
