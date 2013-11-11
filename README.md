@@ -1,4 +1,4 @@
-# [Nawala!RDK]
+# Nawala!RDK
 
 Rapid Development Kit to increase app development
 
