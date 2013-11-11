@@ -1124,6 +1124,7 @@ class Gantry
 				$less->setImportDir($less_search_paths);
 			}
 			$less->addImportDir($this->gantryPath . '/assets');
+//			$less->addImportDir($this->gantryPath . '/assets3');
 
 			if (!empty($options)) {
 				$less->setVariables($options);
