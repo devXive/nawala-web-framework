@@ -13,6 +13,7 @@
 	<files folder=".">
         <folder>admin</folder>
         <folder>assets</folder>
+        <folder>assets3</folder>
         <folder>images</folder>
         <folder>classes</folder>
         <folder>core</folder>
