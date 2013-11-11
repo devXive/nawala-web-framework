@@ -45,4 +45,4 @@ if (!defined('NRDKPATH_LIBRARIES'))
 }
 
 // Import the entrypoint
-require_once NRDKPATH_LIBRARIES . '/lib_nawala/factory.php';
+// require_once NRDKPATH_LIBRARIES . '/lib_nawala/nawala.php';
