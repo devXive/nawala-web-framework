@@ -1,4 +1,4 @@
-[Nawala!RDK](http://devxive.com) [![Build Status](https://secure.travis-ci.org/devxive/nawala-rdk.png?branch=master)](https://travis-ci.org/devxive/nawala-rdk)
+[Nawala!RDK](http://devxive.com) [![Build Status](https://secure.travis-ci.org/devXive/nawala-rdk.png?branch=master)](https://travis-ci.org/devXive/nawala-rdk)
 ====
 
 ### What is the Nawala!RDK ?
