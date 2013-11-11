@@ -16,7 +16,6 @@
         <folder>language</folder>
         <folder>overrides</folder>
         <filename>index.html</filename>
-        <filename>functions.php</filename>
         <filename>checksums</filename>
     </files>
 
