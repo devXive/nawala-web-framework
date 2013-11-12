@@ -146,7 +146,7 @@ class RokInstallerEvents extends JPlugin
 		$buffer .= '<div id="xinstall"><ul id="xinstall-status">';
 		$buffer .= implode('', self::$messages);
 		$buffer .= '</ul>';
-		$buffer .= '<i class="xinstall-logo"></i>';
+		$buffer .= '<a href="http://devxive.com" target="_blank" alt="powered by devXive" title="powered by devXive"><i class="xinstall-logo"></i></a>';
 		$buffer .= '</div>';
 		return $buffer;
 	}
