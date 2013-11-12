@@ -77,10 +77,10 @@ class RokInstallerEvents extends JPlugin
 	{
 		ob_start();
 		?>
-    <li class="rokinstall-failure">
-		<span class="rokinstall-icon"><span></span></span>
-        <span class="rokinstall-row"><?php echo $package['name'];?> installation failed</span>
-        <span class="rokinstall-errormsg">
+    <li class="xinstall-failure">
+		<span class="xinstall-icon"><span></span></span>
+        <span class="xinstall-row"><?php echo $package['name'];?> installation failed</span>
+        <span class="xinstall-errormsg">
             <?php echo $msg; ?>
         </span>
     </li>
@@ -98,9 +98,9 @@ class RokInstallerEvents extends JPlugin
 	{
 		ob_start();
 		?>
-    <li class="rokinstall-success">
-    	<span class="rokinstall-icon"><span></span></span>
-        <span class="rokinstall-row"><?php echo $package['name'];?> installation was successful</span></li>
+    <li class="xinstall-success">
+    	<span class="xinstall-icon"><span></span></span>
+        <span class="xinstall-row"><?php echo $package['name'];?> installation was successful</span></li>
 	<?php
 		$out = ob_get_clean();
 		return $out;
@@ -115,9 +115,9 @@ class RokInstallerEvents extends JPlugin
 	{
 		ob_start();
 		?>
-    <li class="rokinstall-update">
-    	<span class="rokinstall-icon"><span></span></span>
-    	<span class="rokinstall-row"><?php echo $package['name'];?> update was successful</span>
+    <li class="xinstall-update">
+    	<span class="xinstall-icon"><span></span></span>
+    	<span class="xinstall-row"><?php echo $package['name'];?> update was successful</span>
     </li>
 	<?php
 		$out = ob_get_clean();
@@ -143,10 +143,10 @@ class RokInstallerEvents extends JPlugin
 	{
 		$buffer = '';
 		$buffer .= self::loadCss();
-		$buffer .= '<div id="rokinstall"><ul id="rokinstall-status">';
+		$buffer .= '<div id="xinstall"><ul id="xinstall-status">';
 		$buffer .= implode('', self::$messages);
 		$buffer .= '</ul>';
-		$buffer .= '<i class="rokinstall-logo"></i>';
+		$buffer .= '<i class="xinstall-logo"></i>';
 		$buffer .= '</div>';
 		return $buffer;
 	}
