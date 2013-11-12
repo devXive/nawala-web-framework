@@ -12,6 +12,7 @@
     <description>The Nawala Library for MOOTOMBO and Joomla</description>
 
     <files folder=".">
+        <folder>assets</folder>
         <folder>core</folder>
         <filename>CHANGELOG.php</filename>
         <filename>checksums</filename>
