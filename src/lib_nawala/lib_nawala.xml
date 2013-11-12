@@ -13,7 +13,9 @@
 
     <files folder=".">
         <folder>assets</folder>
+        <folder>compiler</folder>
         <folder>core</folder>
+        <folder>object</folder>
         <filename>CHANGELOG.php</filename>
         <filename>checksums</filename>
         <filename>CREDITS.php</filename>
