@@ -15,23 +15,22 @@ defined('_JEXEC') or die;
 define('_NRDKRA', 1);
 
 if (!defined('NAWALA_VERSION')) {
+	// Register the library.
+	JLoader::registerPrefix('N', JPATH_LIBRARIES . '/nawala');
+
 	/**
 	 * @name NAWALA_VERSION
 	 */
-	$manifest = JFactory::getXML(JPATH_ROOT . '/administrator/manifests/libraries/lib_nawala.xml');
-	$nversion = (string) $manifest->version;
-	define('NAWALA_VERSION', $nversion);
+	$nawala_updates = NCoreUpdates::getInstance();
+	$nawalaCurrent = $nawala_updates->getCurrentVersion();
+
+	define('NAWALA_VERSION', $nawalaCurrent);
 
 	if (!defined('DS')) {
 		define('DS', DIRECTORY_SEPARATOR);
 	}
 
 	define( 'NAWALA_LIBRARY', JPATH_LIBRARIES . '/nawala' );
-
-	// Register the library.
-//	JLoader::registerPrefix('Nawala', JPATH_LIBRARIES . '/nawala');
-	JLoader::registerPrefix('N', JPATH_LIBRARIES . '/nawala');
-
 
 	// Init the factory if necessary.
 	if (!class_exists('NFactory'))
