@@ -8,10 +8,11 @@
     <authorUrl>http://www.devxive.com</authorUrl>
     <copyright>(C) 1997 - 2013 devXive - research and development. All rights reserved.</copyright>
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <description>The Nawala Library for MOOTOMBO and Joomla</description>
 
     <files folder=".">
+        <folder>core</folder>
         <filename>CHANGELOG.php</filename>
         <filename>checksums</filename>
         <filename>CREDITS.php</filename>
