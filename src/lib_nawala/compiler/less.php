@@ -10,161 +10,154 @@
  */
 defined('_NRDKRA') or die();
 
+// Require Lessc
+require "lessc.inc.php";
 
 /**
  *
  */
-class NCompilerLess
+class NCompilerLess extends lessc
 {
+	/**
+	 * Template name of the active template
+	 * @var
+	 */
+	protected static $template;
+
+	/**
+	 * Template path of the active template
+	 * @var
+	 */
+	protected static $templatePath;
+
 	/**
 	 * @var
 	 */
-	protected static $instance;
+	protected static $urlPath;
 
 	/**
-	 * @static
-	 * @return NawalaUpdates
+	 * @var
 	 */
-	public static function &getInstance()
-	{
-		if (self::$instance == null) {
-			self::$instance = new NCompilerLess();
-		}
-		return self::$instance;
-	}
+	protected static $pathArray;
 
 	/**
-	 * @var null
+	 * Array of compiled files to load in header
+	 * @var
 	 */
-	private $extensionInfo = null;
+	protected static $fileArray;
 
-	/**
-	 * @var null
-	 */
-	private $updateInfo = null;
 
 	/**
 	 *
 	 */
 	public function __construct()
 	{
-		// Require Lessc
-		require "lessc.inc.php";
+		$this->template = JFactory::getDocument()->template;
+		$this->templatePath = NAWALA_BASEPATH_FILESYSTEM . '/templates/' . $this->template;
+		$this->urlPath = NAWALA_BASEPATH_URL;
 
-		$this->populateExtensionInfo();
+		$this->pathArray = array(
+			'templates/' . $this->template . '/less',
+			'libraries/nawala/assets/less'
+		);
 	}
 
-	/**
-	 * @return string
-	 */
-	public function getCurrentVersion()
-	{
-		if ($this->extensionInfo && array_key_exists('version', $this->extensionInfo->manifest_cache)) {
-			return $this->extensionInfo->manifest_cache['version'];
-		} else {
-			//TODO: move to translation
-			return 'unknown';
-		}
-	}
 
 	/**
-	 * @return string
-	 */
-	public function getLatestVersion()
-	{
-		$this->populateUpdateInfo();
-		if ($this->updateInfo) {
-			return $this->updateInfo->version;
-		} else {
-			return $this->getCurrentVersion();
-		}
-	}
-
-	/**
-	 * @return int|bool
-	 */
-	public function getLastUpdated()
-	{
-		$this->populateUpdateInfo();
-		if ($this->extensionInfo && array_key_exists('last_update', $this->extensionInfo->custom_data)) {
-			return $this->extensionInfo->custom_data['last_update'];
-		} else {
-			return 0;
-		}
-	}
-
-	/**
-	 * @return void
-	 */
-	protected function populateExtensionInfo()
-	{
-		$table = JTable::getInstance('extension');
-		$id    = $table->find(array('type' => 'library', 'element' => 'lib_nawala'));
-		if (empty($id)) {
-			return;
-		}
-		$table->load($id);
-
-		// convert manifest_cache to array
-		$registry = new JRegistry();
-		$registry->loadString($table->manifest_cache);
-		$table->manifest_cache = $registry->toArray();
-
-		// convert custom_data to array
-		$registry = new JRegistry();
-		$registry->loadString($table->custom_data);
-		$table->custom_data = $registry->toArray();
-
-		$this->extensionInfo = $table;
-	}
-
-	/**
+	 * Compile Less Style and add to Header
 	 *
+	 * @param     string    $styleDeclaration    Adding custom styles to less compiler. Eg: '.block { padding: 3 + 4px }'
+	 *
+	 * @return    void
 	 */
-	protected function populateUpdateInfo()
+	public function addLessStyle( $styleDeclaration )
 	{
-		if (empty($this->updateInfo)) {
-			$table    = JTable::getInstance('update');
-			$updateid = @$table->find(array('extension_id' => $this->extensionInfo->extension_id));
-			if (empty($updateid)) {
-				return;
+		$doc = JFactory::getDocument();
+
+		$style = parent::compile( $styleDeclaration );
+
+		$doc->addStyleDeclaration( $style );
+	}
+
+
+	/**
+	 * Compile Less File and add to Header
+	 *
+	 * @param     string    $file        Filename of the file to compile. Looks first in templates less folder, then in nawala library assets/less folder
+	 * @param     string    $compiled    Filename of the compiled file in templates css-compiled folder
+	 * @param     string    $priority    Priority of the file. Should determine on which position file will be rendered/loaded
+	 * @param     string    $check       Determine wether or not if the method shuld check if there already exist a compiled file or not. If the compiled file is older than it original or the file does not exist it will create a new one.
+	 *
+	 * @return    void
+	 */
+	public function addLess( $file, $compiled = false, $priority = 0, $check = true )
+	{
+		$doc = JFactory::getDocument();
+
+		// Find the file in the appropriate pathArray
+		if ( !$fileIn = JPath::find($this->pathArray, $file) ) {
+			return false;
+		}
+
+		// Check for existing index.html file in templates css-compiled folder. If not exist, create the file, folder will be created automatically
+		$indexFile = $this->templatePath . '/css-compiled/index.html';
+		if ( !JFile::exists($indexFile) ) {
+			$buffer = '<!DOCTYPE html><title></title>';
+			JFile::write($indexFile, $buffer);
+		}
+
+		if ( !$compiled ) {
+			$compiled = str_replace('.less', '.css', $file);
+		}
+
+		$fileOut = $this->templatePath . '/css-compiled/' . $compiled;
+
+		if ( $check ) {
+			$style = parent::checkedCompile( $fileIn, $fileOut );
+		} else {
+			$style = parent::compileFile( $fileIn, $fileOut );
+		}
+
+		$fileUrl = $this->urlPath . '/templates/' . $this->template . '/css-compiled/' . $compiled;
+		$doc->addStylesheet( $fileUrl );
+	}
+
+
+	/**
+	 * Method to add include paths where the compiler should look in to find the appropriate file
+	 *
+	 * @return mixed
+	 */
+	public function addPath( $addPath )
+	{
+		$newPaths = array();
+
+		// Get existing paths
+		if ( isset($this->pathArray) ) {
+			foreach ( $this->pathArray as $key => $val ) {
+				array_push($newPaths, NAWALA_BASEPATH_FILESYSTEM . '/' . $val);
 			}
-			$table->load($updateid);
-			$this->updateInfo = $table;
 		}
 
+		// Check and get new path/s
+		if ( is_array($addPath) ) {
+			foreach ( $addPath as $paths ) {
+				array_push($newPaths, NAWALA_BASEPATH_FILESYSTEM . '/' . $paths);
+			}
+		} else {
+			array_push($newPaths, NAWALA_BASEPATH_FILESYSTEM . '/' . $addPath);
+		}
+
+		return self::$pathArray = array_unique($newPaths);
 	}
 
+
 	/**
-	 * @param  $last_checked
+	 * Render Method (Used as last instance) after that function is called, no other less file will be imported
 	 *
-	 * @return void
+	 * @return mixed
 	 */
-	public function setLastChecked($last_checked)
+	public function renderLess( $file )
 	{
-		if (!empty($this->extensionInfo)) {
-			$this->extensionInfo->custom_data['last_update'] = $last_checked;
-
-			$registry = new JRegistry();
-			$registry->loadArray($this->extensionInfo->custom_data);
-			$this->extensionInfo->custom_data = $registry->toString();
-
-			$registry = new JRegistry();
-			$registry->loadArray($this->extensionInfo->manifest_cache);
-			$this->extensionInfo->manifest_cache = $registry->toString();
-
-			$this->extensionInfo->store();
-			$this->populateExtensionInfo();
-		}
 	}
-
-	/**
-	 * @return int
-	 */
-	public function getNawalaExtensionId()
-	{
-		return $this->extensionInfo->extension_id;
-	}
-
-
 }
