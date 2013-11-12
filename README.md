@@ -3,9 +3,14 @@
 
 ### What is the Nawala!RDK ?
 
-The `Nawala!RDK` is a Rapid Development Kit to increase app development and contains various PHP, Javascript and CSS libraries for writing web applications. It is free and open source software, distributed under the GNU General Public License version 2 or later and the MIT License.
+The `Nawala!RDK` (Rapid Development Kit) is a sophisticated set of powerful frameworks and applications with the sole intention
+of being the best platform to build solid web apps with. Nawala takes all the lessons learned during the development of many
+XiveApp's and XiveTheme's and distills that knowledge into a single super-flexible environment that is easy to configure, simple
+to extend, and powerful enough to handle anything we want to throw at it.
 
-It comprises code originally developed for the Joomla~~ and MOOTOMBO!WebOS~~, an enhanced Platform which combines a classic Content Management System (CMS)~~ and future promised Web Application Platform (WAP). For more information about the MOOTOMBO!WebOS visit [http://mootombo.com/about](http://mootombo.com/about).~~
+It is free and open source software, dual licensed under the GNU General Public License version 2 and the MIT License.
+
+It comprises code originally developed for Joomla~~ and MOOTOMBO!WebOS, an enhanced Platform which combines a classic Content Management System (CMS) and future promised Web Application Platform (WAP)~~. For more information about the MOOTOMBO!WebOS visit [http://mootombo.com/about](http://mootombo.com/about).~~
 
 For news and information about developing with devXive, please visit [http://devxive.com](http://devxive.com).
 
