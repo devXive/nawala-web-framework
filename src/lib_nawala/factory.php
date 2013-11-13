@@ -46,13 +46,6 @@ class NFactory
 			'template', array(
 				'name' => JFactory::getApplication()->getTemplate(),
 				'version' => '1.0.0',
-				'stylePaths' => array(
-					'templates/' . NCore::get('template')->name . '/less',
-					'templates/' . NCore::get('template')->name . '/css',
-					'templates/' . NCore::get('template')->name . '/css-compiled',
-					'libraries/nawala/assets/less',
-					'libraries/nawala/assets/css'
-				),
 				'css' => array(),
 				'js' => array()
 			)
@@ -62,8 +55,6 @@ class NFactory
 		$session->set('nawala', $sessionHelper);
 	}
 
-
-//	include( JPATH_SITE . '/libraries/gantry/gantry.php' );
 
 	/**
 	 * Adds a script file to the document with platform based checks
@@ -142,68 +133,5 @@ class NFactory
 	{
 		$document = JFactory::getDocument();
 		$document->addStyleDeclaration($css);
-	}
-
-
-	/**
-	 * Method to add a style file the Nawala Template Header
-	 *
-	 * @return void
-	 */
-	public function addStyle($file, $priority = '0') {
-		// Get the session object
-		$nawala = JFactory::getSession()->get('nawala');
-
-		$cssArray = array();
-
-		if ( isset($nawala->template['css'][$priority]) ) {
-			$cssArray = $nawala->template['css'][$priority];
-			array_push($cssArray, $file);
-		} else {
-			array_push($cssArray, $file);
-		}
-
-		array_unique( $cssArray );
-
-		$nawala->template['css'][$priority] = $cssArray;
-
-		array_unique( $nawala->template['css'] );
-		asort( $nawala->template['css'] );
-
-		return;
-	}
-
-
-	/**
-	 * Method to get the Nawala Template Header
-	 *
-	 * @return html
-	 */
-	public function getTemplateOptions( $inBuild = true ) {
-		$doc = JFactory::getDocument();
-
-		$templateoptions = new NObject;
-		$html = '';
-
-		// Get the stylesheet files
-		$cssArray = NCore::get('template')->css;
-
-		foreach ( $cssArray as $array ) {
-			foreach ( $array as $file ) {
-				if ( $inBuild ) {
-					$doc->addStyleSheet($file);
-				} else {
-					$html .= '<link rel="stylesheet" href="' . $file . '" type="text/css">' . "\n";
-				}
-			}
-		}
-
-		if ( $inBuild ) {
-			$templateoptions->displayHead = null;
-		} else {
-			$templateoptions->displayHead = $html;
-		}
-
-		return $templateoptions;
 	}
 }
