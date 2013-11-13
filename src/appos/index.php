@@ -11,6 +11,9 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted index access' );
 
+//Load and initialize nawala less compiler
+$less = new NCompilerLess();
+
 // load and inititialize gantry class
 require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
 $gantry->init();
@@ -196,3 +199,20 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 <?php
 $gantry->finalize();
 ?>
+
+
+
+
+<?
+
+
+
+$test = $less->addLess('font-awesome.less', 'fa2.css');
+
+echo '<pre>';
+print_r( $test );
+echo '</pre>';
+?>
+
+<h1><i class="fa fa-user"></i> Username</h1>
+
