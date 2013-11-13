@@ -52,7 +52,7 @@ class NCompilerLess extends lessc
 	 */
 	public function __construct()
 	{
-		$this->template = JFactory::getDocument()->template;
+		$this->template = NCore::get('template')->name;
 		$this->templatePath = NAWALA_BASEPATH_FILESYSTEM . '/templates/' . $this->template;
 		$this->urlPath = NAWALA_BASEPATH_URL;
 
@@ -90,7 +90,7 @@ class NCompilerLess extends lessc
 	 *
 	 * @return    void
 	 */
-	public function addLess( $file, $compiled = false, $priority = 0, $check = true )
+	public function addLess( $file, $compiled = false, $priority = 0, $lessVariables = false, $check = true )
 	{
 		$doc = JFactory::getDocument();
 
@@ -112,6 +112,10 @@ class NCompilerLess extends lessc
 
 		$fileOut = $this->templatePath . '/css-compiled/' . $compiled;
 
+		if ( $lessVariables ) {
+			parent::setVariables($lessVariables);
+		}
+
 		if ( $check ) {
 			$style = parent::checkedCompile( $fileIn, $fileOut );
 		} else {
@@ -119,7 +123,9 @@ class NCompilerLess extends lessc
 		}
 
 		$fileUrl = $this->urlPath . '/templates/' . $this->template . '/css-compiled/' . $compiled;
-		$doc->addStylesheet( $fileUrl );
+
+		// Add the style
+		NFactory::addStyle( $fileUrl, $priority );
 	}
 
 
