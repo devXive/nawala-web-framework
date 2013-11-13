@@ -36,17 +36,10 @@ if (!defined('NAWALA_VERSION')) {
 	define( 'NAWALA_BASEPATH_FULLURL', JURI::root(false) );
 	define( 'NAWALA_BASEPATH_FILESYSTEM', JPATH_ROOT );
 
-	// Init the factory if necessary.
+	// Load and init the factory if necessary.
 	if (!class_exists('NFactory'))
 	{
 		require_once( NAWALA_LIBRARY . '/factory.php' );
+		NFactory::init();
 	}
-
-	// Get and set the initial session object
-	$session = JFactory::getSession();
-	$sessionHelper = new NObject;
-	$sessionHelper->set('library', array('name' => 'nawala', 'version' => NAWALA_VERSION));
-
-	// Set the initial session object
-	$session->set('nawala', $sessionHelper);
 }
