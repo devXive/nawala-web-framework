@@ -169,6 +169,12 @@ class NGantryHelper
 		$lessc->setImportDir( $this->pathArray );
 
 		if ( !empty($lessVariables) ) {
+			// get an md5 sum of any passed in options
+			$tmp_options = $lessVariables;
+			array_walk($tmp_options, create_function('&$v,$k', '$v = " * @".$k." = " .$v;'));
+			$options_string = implode($tmp_options, "\n");
+			$options_md5    = md5($options_string . (string)$this->lessCompression);
+
 			$lessc->setVariables($lessVariables);
 		}
 
