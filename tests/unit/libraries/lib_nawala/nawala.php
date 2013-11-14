@@ -26,10 +26,9 @@ if ( !file_exists($indexFile) ) {
 
 		$fileOut = NRDKPATH_LIBRARIES . '/css-compiled/' . $fileNameOut;
 
-		$lessc->checkedCompile( $fileIn, $fileOut );
 //		$lessc->compileFile( $fileIn, $fileOut );
 
-		$fileUrl = $this->urlPath . '/templates/' . $this->template . '/css-compiled/' . $compiled;
+		return $lessc->checkedCompile( $fileIn, $fileOut );
 	}
 
 $lessVariables = array();
