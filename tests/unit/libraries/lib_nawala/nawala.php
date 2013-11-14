@@ -12,7 +12,7 @@ if ( !file_exists($indexFile) ) {
 	file_put_contents($indexFile, $buffer);
 }
 
-	function compile( $fileIn, $fileNameOut = 'compile' . '-' . time() . '.css', $lessVariables = false )
+	function compile( $fileIn, $fileNameOut = 'compiles.css', $lessVariables = false )
 	{
 		// Require Lessc
 		require_once(NRDKPATH_LIBRARIES . '/compiler/lessc.inc.php');
