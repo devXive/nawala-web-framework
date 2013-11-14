@@ -50,5 +50,4 @@ $deb = compile( $fileIn, $fileNameOut, $lessVariables );
 
 
 $debFile = NRDKPATH_LIBRARIES . '/deb.c';
-	file_put_contents($debFile, $deb);
-}
+file_put_contents($debFile, $deb);
