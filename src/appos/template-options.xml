@@ -123,9 +123,9 @@
 			<field name="text" type="text" default="Back to Top" label="TEXT" class="text-long" />
 		</fields>
 
-		<field name="iconfont" type="selectbox" default="fa" label="ICON_FONT" isbodyclass="true" description="ICON_FONT_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
-			<option value="fa">Font Awesome 4.0.3</option>
-			<option value="icomoon">Icomoon</option>
+		<field name="iconfont" type="selectbox" default="font-awesome" label="ICON_FONT" isbodyclass="true" description="ICON_FONT_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true">
+			<option value="font-awesome">Font Awesome 4.0.3</option>
+			<option value="icomoon">Icomoon (deprecated)</option>
 		</field>
 
 		<fields name="systemmessages" type="chain" label="SYSMESSAGE" description="SYSMESSAGE_DESC">
@@ -303,8 +303,8 @@
 
 	<fieldset name="advanced" label="ADVANCED">
 		<field name="layout-mode" type="selectbox" default="responsive" label="LAYOUT_MODE" description="LAYOUT_MODE_DESC" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" isbodyclass="true">
-			<option value="fluid">FLUID</option>
-			<option value="responsive">RESPONSIVE</option>
+			<option value="100responsive">100RESPONSIVE</option>
+			<option value="1200responsive">1200RESPONSIVE</option>
 			<option value="1200fixed">1200FIXED</option>
 			<option value="960fixed">960FIXED</option>
 		</field>
