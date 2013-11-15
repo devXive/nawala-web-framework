@@ -12,9 +12,9 @@
     <field name="master" type="hidden" value="false" default="true"/>
     <field name="current_id" type="hidden" value="false" default="true"/>
     <field name="gantry" type="gantry" value="" panel_position="hiddens"/>
-    <field name="template_full_name" type="hidden" default="Gantry"/>
+    <field name="template_full_name" type="hidden" default="AppTheme"/>
     <field name="grid_system" type="hidden" default="12"/>
-    <field name="template_prefix" type="hidden" default="gantry-"/>
+    <field name="template_prefix" type="hidden" default="apptheme-"/>
     <field name="cookie_time" type="hidden" default="31536000"/>
 
     <field name="override_set" type="hidden" default="2.5"/>
@@ -27,7 +27,7 @@
             <field name="enabled" type="toggle" default="1" label="SHOW" />
             <field name="position" type="position" translation="false" default="header-a" label="POSITION" />
             <field name="type" type="selectbox" selector="true" default="gantry" label="TYPE" isbodyclass="true" setbyurl="true" setinsession="true" setbysession="true" setincookie="true" setbycookie="true"/>
-            <fields type="set" name="gantry" label="Gantry Template">
+            <fields type="set" name="gantry" label="AppTheme Template">
             </fields>
             <fields type="set" name="custom" label="CUSTOM">
                 <field name="image" type="imagepicker" default="" label="LOGO_PICKER" description="LOGO_PICKER_DESC" setinsession="true" setbysession="true" setincookie="true" setbycookie="true" />
