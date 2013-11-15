@@ -51,11 +51,13 @@ class GantrySplitmenuLayout extends AbstractRokMenuLayout
             }
 			self::$jsLoaded = true;
 		}
-        $gantry->addLess('menu.less', 'menu.css', 1, array('headerstyle'=>$gantry->get('headerstyle','dark'), 'menuHoverColor'=>$gantry->get('linkcolor')));
+		$nawala->importLess( 'menu', 'menu.css', 1, array('headerstyle'=>$gantry->get('headerstyle','dark'), 'menuHoverColor'=>$gantry->get('linkcolor')) );
+//		$gantry->addLess('menu.less', 'menu.css', 1, array('headerstyle'=>$gantry->get('headerstyle','dark'), 'menuHoverColor'=>$gantry->get('linkcolor')));
 
         // no media queries for IE8 so we compile and load the hovers
         if ($gantry->browser->name == 'ie' && $gantry->browser->shortver < 9){
-            $gantry->addLess('menu-hovers.less', 'menu-hovers.css', 1, array('headerstyle'=>$gantry->get('headerstyle','dark'), 'menuHoverColor'=>$gantry->get('linkcolor')));
+		$nawala->importLess( 'menu-hovers', 'menu-hovers.css', 1, array('headerstyle'=>$gantry->get('headerstyle','dark'), 'menuHoverColor'=>$gantry->get('linkcolor')) );
+//            $gantry->addLess('menu-hovers.less', 'menu-hovers.css', 1, array('headerstyle'=>$gantry->get('headerstyle','dark'), 'menuHoverColor'=>$gantry->get('linkcolor')));
         }
     }
 

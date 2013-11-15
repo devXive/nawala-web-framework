@@ -1,0 +1,145 @@
+/**
+* @version   $Id$
+* @author    RocketTheme http://www.rockettheme.com
+* @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
+* @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
+*/
+
+
+// Bootstrap Variables
+@import "../bootstrap/variables.less";
+
+@grid-large: 100px;
+@grid-desktop: 80px;
+@grid-tablet: 64px;
+
+// Adopted from Bootstrap Mixins
+// Basic looping in LESS
+.make-rt-grid(@index, @factor) when (@index > 0) {
+	.calc-rt-grid(@index, @factor) {
+		.rt-grid-@{index} {
+			width: (@index * @factor);
+		}
+	}
+	.calc-rt-grid(@index, @factor) {
+		.rt-push-@{index} {
+			left: (@index * @factor);
+		}
+	}
+	.calc-rt-grid(@index, @factor) {
+		.rt-pull-@{index} {
+			right: (@index * @factor * -1);
+		}
+	}
+	.calc-rt-grid(@index, @factor) {
+		.rt-prefix-@{index} {
+			padding-left: (@index * @factor);
+		}
+	}
+	.calc-rt-grid(@index, @factor); // kickstart it
+
+	// next iteration
+//	@newIndex: (@index - 1);
+//	.make-rt-grid(@newIndex, @factor);
+}
+
+.mediaquery-small(@mediaquery-width) {
+	body {-webkit-tap-highlight-color: transparent;}
+
+	.rt-container {
+		width: @mediaquery-width;
+	}
+
+	.rt-container [class*="rt-grid"] {
+		display: block;
+		float: none;
+		position: relative;
+		width: 100%;
+	}
+	.rt-container [class*="rt-push"], [class*="rt-pull"] {
+		left: auto;
+	}
+	.rt-container [class*="rt-prefix"] {
+		padding-left: 0;
+	}
+}
+
+
+
+/* Body Layout */
+body {
+	min-width: 100px !important;
+
+	[class*="rt-grid"] {
+		display: inline;
+		float: left;
+		position: relative;
+		margin: 0;
+	}
+}
+
+
+/* Container Layout */
+.rt-container {
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+/* Grid Layout */
+.make-rt-grid(1, @grid-large);
+.make-rt-grid(2, @grid-large);
+.make-rt-grid(3, @grid-large);
+.make-rt-grid(4, @grid-large);
+.make-rt-grid(5, @grid-large);
+.make-rt-grid(6, @grid-large);
+.make-rt-grid(7, @grid-large);
+.make-rt-grid(8, @grid-large);
+.make-rt-grid(9, @grid-large);
+.make-rt-grid(10, @grid-large);
+.make-rt-grid(11, @grid-large);
+.make-rt-grid(12, @grid-large);
+
+/* Media Queries */
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+	.rt-container {width: 960px;}
+
+	.make-rt-grid(1, @grid-desktop);
+	.make-rt-grid(2, @grid-desktop);
+	.make-rt-grid(3, @grid-desktop);
+	.make-rt-grid(4, @grid-desktop);
+	.make-rt-grid(5, @grid-desktop);
+	.make-rt-grid(6, @grid-desktop);
+	.make-rt-grid(7, @grid-desktop);
+	.make-rt-grid(8, @grid-desktop);
+	.make-rt-grid(9, @grid-desktop);
+	.make-rt-grid(10, @grid-desktop);
+	.make-rt-grid(11, @grid-desktop);
+	.make-rt-grid(12, @grid-desktop);
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	.rt-container {width: 768px;}
+
+	.make-rt-grid(1, @grid-tablet);
+	.make-rt-grid(2, @grid-tablet);
+	.make-rt-grid(3, @grid-tablet);
+	.make-rt-grid(4, @grid-tablet);
+	.make-rt-grid(5, @grid-tablet);
+	.make-rt-grid(6, @grid-tablet);
+	.make-rt-grid(7, @grid-tablet);
+	.make-rt-grid(8, @grid-tablet);
+	.make-rt-grid(9, @grid-tablet);
+	.make-rt-grid(10, @grid-tablet);
+	.make-rt-grid(11, @grid-tablet);
+	.make-rt-grid(12, @grid-tablet);
+}
+
+@media only screen and (min-width: 481px) and (max-width: 767px) {
+	.mediaquery-small(480px);
+}
+
+@media only screen and (max-width: 480px) {
+	.mediaquery-small(95%);
+}

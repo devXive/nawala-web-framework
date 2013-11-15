@@ -27,24 +27,32 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 		global $gantry;
 		$browser = $gantry->browser;
 
-        // Colors
-	$lessVariables = array(
-		'linkcolor'     => $gantry->get('linkcolor',     '#2698de'),
-		'headerstyle'     => $gantry->get('headerstyle',     'dark')
-	);
+		//Load and initialize the GantryHelper class
+		$nawala = new NGantryHelper();
 
-	$gantry->addLess('global.less', 'master.css', 8, $lessVariables);
+		// Colors
+		$lessVariables = array(
+			'linkcolor'     => $gantry->get('linkcolor',     '#2698de'),
+			'headerstyle'     => $gantry->get('headerstyle',     'dark')
+		);
 
-        // Logo
-	$css = $this->buildLogo();
+		$gantry->addLess('global.less', 'master.css', 8, $lessVariables);
 
-	$this->_disableRokBoxForiPhone();
+		// Logo
+		$css = $this->buildLogo();
 
-	$gantry->addInlineStyle($css);
-	if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('mediaqueries.less');
-	if ($gantry->get('layout-mode')=="fluid") $gantry->addLess('fluid.less');
-	if ($gantry->get('layout-mode')=="960fixed") $gantry->addLess('960fixed.less');
-	if ($gantry->get('layout-mode')=="1200fixed") $gantry->addLess('1200fixed.less');
+		$this->_disableRokBoxForiPhone();
+
+		$gantry->addInlineStyle($css);
+//		if ($gantry->get('layout-mode')=="fluid") $nawala->addStyle('nawala-fluid.less', false);
+//		if ($gantry->get('layout-mode')=="fluid") $less->addLess('nawala-fluid.less', 'fluid.css');
+//		if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('mediaqueries.less');
+//		if ($gantry->get('layout-mode')=="960fixed") $gantry->addLess('960fixed.less');
+//		if ($gantry->get('layout-mode')=="1200fixed") $gantry->addLess('1200fixed.less');
+
+		// IconFont
+		if ($gantry->get('iconfont')=="fa") $nawala->importLess( array('font-awesome.less'), false, 10, false, true, false );
+
 	}
 
 	function buildLogo(){

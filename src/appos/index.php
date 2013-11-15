@@ -11,12 +11,12 @@
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted index access' );
 
-//Load and initialize nawala less compiler
-$less = new NCompilerLess();
-
 // load and inititialize gantry class
 require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
 $gantry->init();
+
+//Load and initialize the GantryHelper class
+$nawala = new NGantryHelper();
 
 // get the current preset
 $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
@@ -32,16 +32,16 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 	<?php else : ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php endif; ?>
-    <?php
-        $gantry->displayHead();
+	<?php
+		$gantry->displayHead();
 
-		$gantry->addStyle('grid-responsive.css', 5);
-		$gantry->addLess('bootstrap.less', 'bootstrap.css', 6);
+//		$gantry->addStyle('grid-responsive.css', 5);
+		$nawala->addStyle('bootstrap.css', false, 6);
 
-        if ($gantry->browser->name == 'ie'){
-        	if ($gantry->browser->shortversion == 9){
-        		$gantry->addInlineScript("if (typeof RokMediaQueries !== 'undefined') window.addEvent('domready', function(){ RokMediaQueries._fireEvent(RokMediaQueries.getQuery()); });");
-        	}
+		if ($gantry->browser->name == 'ie'){
+			if ($gantry->browser->shortversion == 9){
+				$gantry->addInlineScript("if (typeof RokMediaQueries !== 'undefined') window.addEvent('domready', function(){ RokMediaQueries._fireEvent(RokMediaQueries.getQuery()); });");
+			}
 			if ($gantry->browser->shortversion == 8){
 				$gantry->addScript('html5shim.js');
 			}
@@ -50,8 +50,7 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 		if ($gantry->get('loadtransition')) {
 		$gantry->addScript('load-transition.js');
 		$hidden = ' class="rt-hidden"';}
-
-    ?>
+	?>
 </head>
 <body <?php echo $gantry->displayBodyTag(); ?>>
     <?php /** Begin Top Surround **/ if ($gantry->countModules('top') or $gantry->countModules('header')) : ?>
@@ -200,18 +199,18 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 $gantry->finalize();
 ?>
 
-
-
-
 <?
 
+$session = JFactory::getSession()->get('nawala');
+
+$test = $session;
 
 
-$test = $less->addLess('font-awesome.less', 'fa2.css');
 
 echo '<pre>';
 print_r( $test );
 echo '</pre>';
+
 ?>
 
 <h1><i class="fa fa-user"></i> Username</h1>
