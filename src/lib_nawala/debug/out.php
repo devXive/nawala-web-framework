@@ -34,13 +34,15 @@ class NDebugOut
 	/**
 	 * Code Section
 	 */
-	public function setCodeBox( $data )
+	public function setCodeBox( $data, $desc = 'code' )
 	{
+		$desc = ucfirst( $desc );
+
 		echo '<style>.nw-test-container {display: table; margin: 0 50px; min-height: 1px;} rt-container .nw-test-container {display: table; margin: 0;}</style>';
 
 		echo '<div class="nw-test-container">';
 			echo '<hr>';
-			echo '<h1>Code Section</h1>';
+			echo '<h1>' . $desc . ' Section <small>(Code Box)</small></h1>';
 			echo '<pre class="prettyprint">';
 				print_r( $data );
 			echo '</pre>';
@@ -51,13 +53,13 @@ class NDebugOut
 	/**
 	 * Code Section
 	 */
-	public function setHtmlBox( $data )
+	public function setHtmlBox( $data, $desc = 'html' )
 	{
 		echo '<style>.nw-test-container {display: table; margin: 0 50px; min-height: 1px;} rt-container .nw-test-container {display: table; margin: 0;}</style>';
 
 		echo '<div class="nw-test-container">';
 			echo '<hr>';
-			echo '<h1>HTML Section</h1>';
+			echo '<h1>' . $desc . ' Section <small>(HTML Box)</small></h1>';
 			echo '<pre class="prettyprint">';
 				print_r( htmlentities( $data ) );
 			echo '</pre>';
