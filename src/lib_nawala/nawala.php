@@ -22,23 +22,11 @@ if (!defined('NAWALA_VERSION')) {
 	// Register the library.
 	JLoader::registerPrefix('N', JPATH_LIBRARIES . '/nawala');
 
-	/**
-	 * @name NAWALA_VERSION
-	 */
-	$nawala_updates = NCoreUpdates::getInstance();
-	$nawalaCurrent = $nawala_updates->getCurrentVersion();
-
-	define('NAWALA_VERSION', $nawalaCurrent);
-
 	if (!defined('DS')) {
 		define('DS', DIRECTORY_SEPARATOR);
 	}
 
 	define( 'NAWALA_LIBRARY', JPATH_LIBRARIES . '/nawala' );
-
-	define( 'NAWALA_BASEPATH_URL', JURI::root(true) );
-	define( 'NAWALA_BASEPATH_FULLURL', JURI::root(false) );
-	define( 'NAWALA_BASEPATH_FILESYSTEM', JPATH_ROOT );
 
 	// Load and init the factory if necessary.
 	if (!class_exists('NFactory'))
@@ -47,4 +35,6 @@ if (!defined('NAWALA_VERSION')) {
 	}
 }
 
+// Initialize nawala and register session
 $nawala = new NCoreSetup();
+$nawala->registerSession();
