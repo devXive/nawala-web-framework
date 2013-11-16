@@ -28,35 +28,6 @@ class NFactory
 
 
 	/**
-	 * Initializer
-	 */
-	static function init()
-	{
-		$session = JFactory::getSession();
-		$sessionHelper = new NObject;
-
-		$sessionHelper->set(
-			'library', array(
-				'name' => 'nawala',
-				'version' => NAWALA_VERSION
-			)
-		);
-
-		$sessionHelper->set(
-			'template', array(
-				'name' => JFactory::getApplication()->getTemplate(),
-				'version' => '1.0.0',
-				'css' => array(),
-				'js' => array()
-			)
-		);
-
-		// Set the initial session object
-		$session->set('nawala', $sessionHelper);
-	}
-
-
-	/**
 	 * Adds a script file to the document with platform based checks
 	 *
 	 * @param  $file
