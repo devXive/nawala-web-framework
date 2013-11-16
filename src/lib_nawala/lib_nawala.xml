@@ -15,6 +15,7 @@
         <folder>assets</folder>
         <folder>compiler</folder>
         <folder>core</folder>
+        <folder>debug</folder>
         <folder>gantry</folder>
         <folder>object</folder>
         <filename>CHANGELOG.php</filename>
