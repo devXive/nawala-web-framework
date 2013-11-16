@@ -1,22 +1,30 @@
 <?php
 /**
- * @version   $Id: gantryupdates.class.php 4060 2012-10-02 18:03:24Z btowles $
- * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Nawala - Library
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
-defined('_NRDKRA') or die();
 
-// Require Lessc
-require "lessc.inc.php";
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die;
 
 /**
+ * Nawala Framework CompilerLessphp Class
  *
+ * This class allows to compile less files and add ability to store file informations
+ * for simple and secure caching.
+ *
+ * @package       Framework
+ * @subpackage    Compiler
+ * @since         1.0
  */
-class NCompilerLess extends lessc
+
+require_once(dirname(__FILE__) . '/phpless/Less.php');
+
+class NCompilerLessphp
 {
 	/**
 	 * Template name of the active template
@@ -60,28 +68,18 @@ class NCompilerLess extends lessc
 			'templates/' . $this->template . '/less',
 			'libraries/nawala/assets/less'
 		);
+
+		// Check for existing index.html file in cache/nawala/compiler/phpless folder. If not exist, create the file, folder will be created automatically
+		$indexFile = JPATH_ROOT . '/cache/nawala/compiler/phpless/index.html';
+		if ( !JFile::exists($indexFile) ) {
+			$buffer = '<!DOCTYPE html><title></title>';
+			JFile::write($indexFile, $buffer);
+		}
 	}
 
 
 	/**
-	 * Compile Less Style and add to Header
-	 *
-	 * @param     string    $styleDeclaration    Adding custom styles to less compiler. Eg: '.block { padding: 3 + 4px }'
-	 *
-	 * @return    void
-	 */
-	public function addLessStyle( $styleDeclaration )
-	{
-		$doc = JFactory::getDocument();
-
-		$style = parent::compile( $styleDeclaration );
-
-		$doc->addStyleDeclaration( $style );
-	}
-
-
-	/**
-	 * Compile Less File and add to Header
+	 * Compile Less File
 	 *
 	 * @param     string    $file        Filename of the file to compile. Looks first in templates less folder, then in nawala library assets/less folder
 	 * @param     string    $compiled    Filename of the compiled file in templates css-compiled folder
@@ -90,20 +88,13 @@ class NCompilerLess extends lessc
 	 *
 	 * @return    void
 	 */
-	public function addLess( $file, $compiled = false, $priority = 0, $lessVariables = false, $check = true )
+	public function compile( $file, $compiled = false, $priority = 0, $lessVariables = false, $check = true )
 	{
 		$doc = JFactory::getDocument();
 
 		// Find the file in the appropriate pathArray
 		if ( !$fileIn = JPath::find($this->pathArray, $file) ) {
 			return false;
-		}
-
-		// Check for existing index.html file in templates css-compiled folder. If not exist, create the file, folder will be created automatically
-		$indexFile = $this->templatePath . '/css-compiled/index.html';
-		if ( !JFile::exists($indexFile) ) {
-			$buffer = '<!DOCTYPE html><title></title>';
-			JFile::write($indexFile, $buffer);
 		}
 
 		if ( !$compiled ) {
@@ -122,48 +113,9 @@ class NCompilerLess extends lessc
 			$style = parent::compileFile( $fileIn, $fileOut );
 		}
 
+		// build url to the compiled file
 		$fileUrl = $this->urlPath . '/templates/' . $this->template . '/css-compiled/' . $compiled;
 
-		// Add the style
-		NFactory::addStyle( $fileUrl, $priority );
-	}
-
-
-	/**
-	 * Method to add include paths where the compiler should look in to find the appropriate file
-	 *
-	 * @return mixed
-	 */
-	public function addPath( $addPath )
-	{
-		$newPaths = array();
-
-		// Get existing paths
-		if ( isset($this->pathArray) ) {
-			foreach ( $this->pathArray as $key => $val ) {
-				array_push($newPaths, NAWALA_BASEPATH_FILESYSTEM . '/' . $val);
-			}
-		}
-
-		// Check and get new path/s
-		if ( is_array($addPath) ) {
-			foreach ( $addPath as $paths ) {
-				array_push($newPaths, NAWALA_BASEPATH_FILESYSTEM . '/' . $paths);
-			}
-		} else {
-			array_push($newPaths, NAWALA_BASEPATH_FILESYSTEM . '/' . $addPath);
-		}
-
-		return self::$pathArray = array_unique($newPaths);
-	}
-
-
-	/**
-	 * Render Method (Used as last instance) after that function is called, no other less file will be imported
-	 *
-	 * @return mixed
-	 */
-	public function renderLess( $file )
-	{
+		return $fileOut;
 	}
 }
