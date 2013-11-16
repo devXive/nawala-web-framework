@@ -12,7 +12,7 @@
 defined('_NRDKRA') or die;
 
 /**
- * Nawala Framework Factory class
+ * Nawala Framework Factory Class
  *
  * @package  Framework
  * @since    1.0

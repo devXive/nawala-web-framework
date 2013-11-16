@@ -1,18 +1,24 @@
 <?php
 /**
- * @version   $Id: gantryupdates.class.php 4060 2012-10-02 18:03:24Z btowles $
- * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
- * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Nawala - Library
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
-defined('_NRDKRA') or die();
 
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die;
 
 /**
+ * Nawala Framework Object Class
  *
+ * This class allows for ???? TODO: Set Description
+ *
+ * @package       Framework
+ * @subpackage    Core
+ * @since         1.0
  */
 class NCoreUpdates
 {

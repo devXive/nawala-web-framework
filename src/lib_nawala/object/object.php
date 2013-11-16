@@ -1,23 +1,25 @@
 <?php
 /**
- * @package     Joomla.Platform
- * @subpackage  Object
- *
- * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Nawala - Library
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
 
-defined('JPATH_PLATFORM') or die;
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die;
 
 /**
- * Joomla Platform Object Class
+ * Nawala Framework Object Class
  *
  * This class allows for simple but smart objects with get and set methods
  * and an internal error handler.
  *
- * @package     Joomla.Platform
- * @subpackage  Object
- * @since       11.1
+ * @package       Framework
+ * @subpackage    Object
+ * @since         1.0
  */
 class NObject
 {

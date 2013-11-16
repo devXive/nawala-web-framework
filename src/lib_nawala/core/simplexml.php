@@ -1,15 +1,27 @@
 <?php
 /**
- * @version   $Id: gantrysimplexmlelement.class.php 2325 2012-08-13 17:46:48Z btowles $
- * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
- *
+ * @package          Nawala Rapid Development Kit
+ * @subPackage	Nawala - Library
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
-defined('_NRDKRA') or die();
+
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die;
 
 /**
- * Nawala Core SimpleXML Class
+ * Nawala Framework CoreSimplexml Class
+ *
+ * This class allows for simple but smart objects with get and set methods
+ * and an internal error handler.
+ *
+ * @package       Framework
+ * @subpackage    Core
+ * @since         1.0
+ *
+ * EXAMPLES
  *
  * @param     string    $file    Full path of the file, eg: 'templates/template/template.xml'
  * @param     string    $var     Name of variable to get value from. If no var is set, then the JXMLElement Object is returned. Use for example: "(string) $manifest->version" to get the stringified version number
@@ -18,7 +30,6 @@ defined('_NRDKRA') or die();
  *        echo $xml->get('version');
  *
  * Reference http://us2.php.net/manual/en/book.simplexml.php
- *
  */
 class NCoreSimplexml extends SimpleXMLElement
 {
