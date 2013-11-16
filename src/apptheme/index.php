@@ -15,6 +15,9 @@ defined( '_JEXEC' ) or die( 'Restricted index access' );
 require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
 $gantry->init();
 
+// Inititialize GantryHelper class
+$gantryHelper = new NGantryHelper();
+
 // get the current preset
 $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 
