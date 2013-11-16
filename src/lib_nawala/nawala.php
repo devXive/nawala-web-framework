@@ -14,6 +14,10 @@ defined('_JEXEC') or die;
 // Define Nawala Rapid Development Kit Restricted Access (NRDKRA) as entrypoint and further check to ensure this file is included in Nawala!RDK environment
 define('_NRDKRA', 1);
 
+/** @var $nawala Nawala */
+global $nawala;
+$app = JFactory::getApplication();
+
 if (!defined('NAWALA_VERSION')) {
 	// Register the library.
 	JLoader::registerPrefix('N', JPATH_LIBRARIES . '/nawala');
@@ -43,3 +47,5 @@ if (!defined('NAWALA_VERSION')) {
 		NFactory::init();
 	}
 }
+
+$nawala = new NCoreSetup();
