@@ -44,7 +44,6 @@ if (!defined('NAWALA_VERSION')) {
 	if (!class_exists('NFactory'))
 	{
 		require_once( NAWALA_LIBRARY . '/factory.php' );
-		NFactory::init();
 	}
 }
 
