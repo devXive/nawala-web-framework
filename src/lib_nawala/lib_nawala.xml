@@ -17,7 +17,6 @@
         <folder>core</folder>
         <folder>debug</folder>
         <folder>gantry</folder>
-        <folder>object</folder>
         <folder>session</folder>
         <filename>CHANGELOG.php</filename>
         <filename>checksums</filename>
