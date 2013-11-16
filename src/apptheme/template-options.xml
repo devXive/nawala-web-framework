@@ -314,11 +314,19 @@
 
 		<field name="selectivizr-enabled" type="toggle" default="0" label="SELECTIVIZR" description="SELECTIVIZR_DESC"/>
 
+		<fields name="css" type="chain" label="CSS_SETTINGS" description="CSS_SETTINGS_DESC">
+			<field name="compression" type="toggle" default="1" label="CSS_COMPRESSION" description="CSS_COMPRESSION_DESC"/>
+		</fields>
+
 		<fields name="less" type="chain" label="LESS_COMPILER" description="LESS_COMPILER_DESC">
 			<field name="compression" type="toggle" default="1" label="LESS_COMPRESSION" description="LESS_COMPRESSION_DESC"/>
 			<field name="compilewait" type="textplus" default="2" append="sec" label="LESS_COMPILEWAIT" description="LESS_COMPILEWAIT_DESC" class="text-short" />
 			<field name="debugheader" type="toggle" default="0" label="LESS_DEBUGHEADER" description="LESS_DEBUGHEADER_DESC"/>
 			<field name="clear" type="ajaxbutton" text="LESS_COMPILE_CLEAR_TEXT" model="lesscompiler" action="clear" label="LESS_COMPILE_CLEAR" setinoverride="false" />
+		</fields>
+
+		<fields name="js" type="chain" label="JS_SETTINGS" description="JS_SETTINGS_DESC">
+			<field name="compression" type="toggle" default="1" label="JS_COMPRESSION" description="JS_COMPRESSION_DESC"/>
 		</fields>
 	</fieldset>
 
