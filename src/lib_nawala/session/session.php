@@ -27,21 +27,34 @@ class NSession
 	 */
 	static $instance;
 
+
+	/**
+	 * Check and create session object if not exist
+	 */
+	public function __construct()
+	{
+		$session = JFactory::getSession();
+
+		$nawalaSessionObject = new JObject;
+
+		if ( !$session->get('nawala') ) {
+			$session->set('nawala', $nawalaSessionObject);
+		}
+	}
+
+
 	/**
 	 * Get data from session object
 	 */
-	public function get($name = false)
+	static function get( $data = false )
 	{
-		$session = JFactory::getSession()->get('nawala');
+		$session = JFactory::getSession();
+		$nawalaSessionObject = $session->get('nawala');
 
-		foreach ( $session as $key => $val ) {
-			$return->$key = (object) $val;
-		}
-
-		if ( $name ) {
-			return $return->$name;
+		if ( $data ) {
+			return $nawalaSessionObject->get((string)$data, null);
 		} else {
-			return $return;
+			return $nawalaSessionObject;
 		}
 	}
 
@@ -49,18 +62,28 @@ class NSession
 	/**
 	 * Update session object
 	 */
-	public function update($name = false)
+	public function set( $string = false, $value = false )
 	{
-		$session = JFactory::getSession()->get('nawala');
+		$session = JFactory::getSession();
+		$nawalaSessionObject = $session->get('nawala');
 
-		foreach ( $session as $key => $val ) {
-			$return->$key = (object) $val;
+		if ( $string && $value ) {
+			$nawalaSessionObject->set($string, $value);
 		}
+	}
 
-		if ( $name ) {
-			return $return->$name;
+
+	/**
+	 * Simple function to check if the nawala session object exist or not
+	 */
+	public function exist()
+	{
+		$session = JFactory::getSession();
+
+		if ( $session->get('nawala') ) {
+			return true;
 		} else {
-			return $return;
+			return false;
 		}
 	}
 }
