@@ -76,10 +76,14 @@ class NCoreSetup
 
 		// Set optionals
 		$this->set( $data );
+
+		// Init the nawala session object
+		new NSession;
 	}
 
 
-	public function init() {
+	public function init()
+	{
 		// Init global
 		global $nawala;
 
@@ -116,7 +120,7 @@ class NCoreSetup
 		/**
 		 * Nawala Platform Object
 		 */
-		$nawalaLibrary = new NObject();
+		$nawalaLibrary = new JObject;
 		$nawalaLibrary->set('name', 'nawala');
 		$nawalaLibrary->set('version', $nawalaApp->getCurrentVersion() );
 		$nawalaLibrary->set('basePath', $this->basePath . '/libraries/nawala');
@@ -125,21 +129,70 @@ class NCoreSetup
 		$this->platform = $nawalaLibrary;
 
 		/**
+		 * Applications Object
+		 */
+		$nawalaDocument = new JObject;
+		$nawalaDocument->set('session.token', JFactory::getSession()->get('session.token'));
+
+		$this->nawalaDocument = $nawalaDocument;
+
+		/**
 		 * aggregated informations
 		 */
-		$this->nawalaApplication =& $nawalaApp;
-		$this->application =& $app;
-		$this->document =& $doc;
+//		$this->nawalaApplication =& $nawalaApp;
+//		$this->application =& $app;
+//		$this->document =& $doc;
 	}
 
 
-	public function set( array $data = array() ) {
+	/**
+	 * Method to set vars
+	 */
+	public function set(  $string = false, $value = false )
+	{
 		// Init global
 		global $nawala;
 
-		if ( is_array($data) && $data ) {
-			foreach ( $data as $key => $val ) {
-				$this->$key = $val;
+		if ( $string && $value ) {
+			$this->$string = $value;
+		}
+	}
+
+
+	/**
+	 * Register Session Object. Load only if it yet not exist or if setup object has been updated
+	 *
+	 * @var    boolean    $debug    Draw a message if the session has been updated or not
+	 */
+	public function registerSession( $debug = false )
+	{
+		// Init global
+		global $nawala;
+
+		$currentSessionScope = array();
+		$currentSessionScope['md5'] = md5( serialize($nawala) );
+		$currentSessionScope['now'] = time();
+
+		$lastSessionScope = NSession::get('sessionScope');
+
+		// Check existing session
+		if ( NSession::exist() ) {
+			// Check for lastSessionScope
+			if ( !isset($lastSessionScope['md5']) || ($lastSessionScope['md5'] != $currentSessionScope['md5']) ) {
+				$sessionScope = array();
+				$sessionScope['md5'] = $currentSessionScope['md5'];
+				$sessionScope['updated'] = $currentSessionScope['now'];
+
+				NSession::set('sessionScope', $sessionScope);
+				NSession::set('scope', $nawala);
+
+				if ( $debug ) {
+					JFactory::getApplication()->enqueueMessage(JText::_('LIB_NAWALA_CORE_SETUP_SESSION_UPDATED_SUCCESSFULL'), 'notice');
+				}
+			} else {
+				if ( $debug ) {
+					JFactory::getApplication()->enqueueMessage(JText::_('LIB_NAWALA_CORE_SETUP_SESSION_NO_UPDATE_NEEDED'), 'success');
+				}
 			}
 		}
 	}
