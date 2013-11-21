@@ -42,11 +42,10 @@ class GantryDropdownLayout extends AbstractRokMenuLayout
 		if (!self::$jsLoaded && $gantry->get('layout-mode', 'responsive') == 'responsive'){
             if (!($gantry->browser->name == 'ie' && $gantry->browser->shortver < 9)){
                 $gantry->addScript($gantry->baseUrl . 'modules/mod_roknavmenu/themes/default/js/rokmediaqueries.js');
-
-                if (!file_exists($gantry->basePath . '/modules/mod_roknavmenu/themes/default/js/sidemenu.js')){
+                if ($this->args['responsive-menu'] == 'selectbox') {
                     $gantry->addScript($gantry->baseUrl . 'modules/mod_roknavmenu/themes/default/js/responsive.js');
-                    if ($this->args['responsive-menu'] == 'selectbox') $gantry->addScript($gantry->baseUrl . 'modules/mod_roknavmenu/themes/default/js/responsive-selectbox.js');
-                } else {
+                    $gantry->addScript($gantry->baseUrl . 'modules/mod_roknavmenu/themes/default/js/responsive-selectbox.js');
+                } else if (file_exists($gantry->basePath . '/modules/mod_roknavmenu/themes/default/js/sidemenu.js') && ($this->args['responsive-menu'] == 'panel')) {
                     $gantry->addScript($gantry->baseUrl . 'modules/mod_roknavmenu/themes/default/js/sidemenu.js');
                 }
             }

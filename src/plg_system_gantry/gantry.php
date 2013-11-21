@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        4.1.18 November 6, 2013
+ * @version        4.1.19 November 18, 2013
  * @author         RocketTheme http://www.rockettheme.com
  * @copyright      Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license        http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -26,7 +26,8 @@ class plgSystemGantry extends JPlugin
 	protected $bootstrapTriggers = array(
 		'data-toggle="tab"',
 		'data-toggle="pill"',
-		'data-dismiss="alert"'
+		'data-dismiss="alert"',
+		'data-toggle="collapse"'
 	);
 	/**
 	 * @var array
@@ -273,7 +274,7 @@ class plgSystemGantry extends JPlugin
 						pq('td > input[value=' . $gantry['id'] . ']')->parent()->next()->append('<span style="white-space:nowrap;margin:0 10px;background:#999;color:#fff;padding:2px 4px;font-family:Helvetica,Arial,sans-serif;border-radius:3px;">Override</span>');
 					}
 
-					$link  = pq('td > input[value=' . $gantry['id'] . ']')->parent()->next()->find('a:not([title])');
+					$link  = pq('td > input[value=' . $gantry['id'] . ']')->parent()->next()->find('a[href*="com_templates"');
 					$value = str_replace('style.edit', 'template.edit', str_replace('com_templates', 'com_gantry', $link->attr('href')));
 					$link->attr('href', $value);
 				}

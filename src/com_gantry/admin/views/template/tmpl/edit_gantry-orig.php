@@ -56,7 +56,7 @@ function gantry_admin_render_menu($view, $item)
 		<li class="rok-dropdown-group">
 			<div class="rok-buttons-group">
 
-				<div class="rok-button rok-button-primary" id="toolbar-apply" data-g4-toolbaraction="template.apply">Save</div>
+				<div class="rok-button rok-button-primary" id="toolbar-apply" data-g4-toolbaraction="template.apply">Save</div
 				<div data-g4-toggle="save" class="rok-button rok-button-primary">
 					<span class="caret"></span>
 					<ul data-g4-dropdown="save" class="rok-dropdown">
