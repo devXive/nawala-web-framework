@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantry.class.php 2886 2012-08-30 15:34:38Z btowles $
+ * @version   $Id: gantry.class.php 3002 2012-09-01 17:06:29Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -1553,12 +1553,15 @@ class Gantry
 		$instance_filesystem_path    = $this->cleanPath(JPATH_ROOT);
 		$server_filesystem_root_path = $this->cleanPath($_SERVER['DOCUMENT_ROOT']);
 
+		$missing_ds  = (substr($parsed_url['path'], 0, 1) != '/')?'/':'';
+
 
 		if (!empty($instance_url_path) && strpos($parsed_url['path'], $instance_url_path) === 0) {
-			$missing_ds  = (substr($parsed_url['path'], 0, 1) != '/' && ($root_last_char_pos = strlen($instance_url_path) - 1) >= 0 && $instance_url_path[$root_last_char_pos] != '/') ? '/' : '';
 			$return_path = $instance_filesystem_path . $missing_ds . $this->cleanPath(str_replace($instance_url_path, '', $this->cleanPath($parsed_url['path'])));
-		} else {
-			$missing_ds  = (substr($parsed_url['path'], 0, 1) != '/' && ($root_last_char_pos = strlen($server_filesystem_root_path) - 1) >= 0 && $server_filesystem_root_path[strlen($root_last_char_pos)] != '/') ? '/' : '';
+		} elseif (empty($instance_url_path) && file_exists($instance_filesystem_path.$missing_ds.$parsed_url['path'])) {
+			$return_path = $instance_filesystem_path.$missing_ds.$parsed_url['path'];
+		}
+		else {
 			$return_path = $server_filesystem_root_path . $missing_ds . $this->cleanPath($parsed_url['path']);
 		}
 		return $return_path;
@@ -1579,9 +1582,14 @@ class Gantry
 		if (preg_match('/^WIN/', PHP_OS)) {
 			$return_url_path = $path;
 		}
+		if (!file_exists($return_url_path))
+		{
+			return $return_url_path;
+		}
 		$instance_url_path           = JURI::root(true);
 		$instance_filesystem_path    = $this->cleanPath(JPATH_ROOT);
 		$server_filesystem_root_path = $this->cleanPath($_SERVER['DOCUMENT_ROOT']);
+
 
 		// check if the path seems to be in the instances  or  server path
 		// leave it as is if not one of the two
@@ -1603,7 +1611,12 @@ class Gantry
 
 	public function cleanPath($path)
 	{
-		return preg_replace('#[/\\\\]+#', '/', $path);
+		if (!preg_match('#^/$#', $path))
+		{
+			$path = preg_replace('#[/\\\\]+#', '/', $path);
+			$path = preg_replace('#/$#','',$path);
+		}
+		return $path;
 	}
 
 

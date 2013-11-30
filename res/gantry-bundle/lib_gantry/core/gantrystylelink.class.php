@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantrystylelink.class.php 2387 2012-08-15 05:36:16Z btowles $
+ * @version   $Id: gantrystylelink.class.php 2996 2012-09-01 15:14:54Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -27,7 +27,7 @@ class GantryStyleLink
 	 * @access private
 	 * @var string
 	 */
-	protected $path;
+	protected  $path;
 
 	/**
 	 * The url for the style link, local or full

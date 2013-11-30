@@ -2,7 +2,7 @@
 /**
  * @package    gantry
  * @subpackage core
- * @version    4.0.0 August 31, 2012
+ * @version    4.0.1 September 1, 2012
  * @author     RocketTheme http://www.rockettheme.com
  * @copyright  Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -18,7 +18,7 @@ jimport('joomla.application.component.view');
 
 class GantryViewTemplate extends JView
 {
-	protected $_version = '4.0.0';
+	protected $_version = '4.0.1';
 
 	protected $item;
 	protected $form;
@@ -200,8 +200,14 @@ class GantryViewTemplate extends JView
 		$less_path = JPATH_COMPONENT_ADMINISTRATOR . '/assets/less';
 		if (is_dir($less_path)) {
 			$gantry->addLess($less_path . '/global.less', JURI::root(true) . '/libraries/gantry/admin/widgets/gantry-administrator.css');
+			if ($gantry->browser->name == 'ie'){
+				$gantry->addLess($less_path . '/fixes-ie.less', JURI::root(true) . '/libraries/gantry/admin/widgets/fixes-ie.css');
+			}
 		} else {
 			$gantry->addStyle(JURI::root(true) . '/libraries/gantry/admin/widgets/gantry-administrator.css');
+			if ($gantry->browser->name == 'ie'){
+				$gantry->addStyle(JURI::root(true) . '/libraries/gantry/admin/widgets/fixes-ie.css');
+			}
 		}
 	}
 }

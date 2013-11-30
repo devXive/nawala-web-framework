@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantrygzipper.class.php 2468 2012-08-17 06:16:57Z btowles $
+ * @version   $Id: gantrygzipper.class.php 2996 2012-09-01 15:14:54Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -35,7 +35,7 @@ class GantryGZipper
 
 		foreach ($gantry->_styles as $priorities) {
 			foreach ($priorities as $links) {
-				$css_links[$links->path] = $links->url;
+				$css_links[$links->getPath()] = $links->getUrl();
 			}
 		}
 
@@ -47,13 +47,13 @@ class GantryGZipper
 			$order_keeper = 0;
 			$bump_ok      = false;
 			foreach ($styles as $style_entry) {
-				if ($style_entry->type == 'url') {
+				if ($style_entry->getType() == 'url') {
 					$directory = 'REMOTE_URL';
-					$filename  = $style_entry->url;
+					$filename  = $style_entry->getUrl();
 					$bump_ok   = true;
 				} else {
-					$directory = dirname($style_entry->path);
-					$filename  = basename($style_entry->path);
+					$directory = dirname($style_entry->getPath());
+					$filename  = basename($style_entry->getPath());
 				}
 				$grouped_priories[$style_priority][$order_keeper][$directory][$filename] = $style_entry;
 				if ($bump_ok) {
@@ -68,7 +68,7 @@ class GantryGZipper
 					// Process full urls
 					if ($dir == 'REMOTE_URL') {
 						foreach ($files as $file => $link) {
-							$gantry->document->addStyleSheet($link->url);
+							$gantry->document->addStyleSheet($link->getUrl());
 						}
 						continue;
 					} // Process
@@ -76,7 +76,7 @@ class GantryGZipper
 
 						if (!is_writable($dir)) {
 							foreach ($files as $css_file) {
-								$gantry->document->addStyleSheet($css_file->url);
+								$gantry->document->addStyleSheet($css_file->getUrl());
 							}
 							continue;
 						}
@@ -87,10 +87,10 @@ class GantryGZipper
 
 						//first trip through to build filename
 						foreach ($files as $file => $details) {
-							$md5sum .= md5($details->url);
+							$md5sum .= md5($details->getUrl());
 							$detailspath = $dir . '/' . $file;
 							if (JFile::exists($detailspath)) {
-								$path = dirname($details->url);
+								$path = dirname($details->getUrl());
 							}
 						}
 

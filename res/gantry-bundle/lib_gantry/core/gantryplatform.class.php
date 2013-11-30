@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantryplatform.class.php 2468 2012-08-17 06:16:57Z btowles $
+ * @version   $Id: gantryplatform.class.php 3003 2012-09-01 17:12:52Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -20,37 +20,37 @@ class GantryPlatform
 	/**
 	 * @var string
 	 */
-	protected $php_version;
+	public $php_version;
 
 	/**
 	 * @var string
 	 */
-	protected $platform;
+	public $platform;
 
 	/**
 	 * @var string
 	 */
-	protected $platform_version;
+	public $platform_version;
 
 	/**
 	 * @var string
 	 */
-	protected $jslib;
+	public $jslib;
 
 	/**
 	 * @var string
 	 */
-	protected $jslib_version;
+	public $jslib_version;
 
 	/**
 	 * @var string
 	 */
-	protected $jslib_shortname;
+	public $jslib_shortname;
 
 	/**
 	 * @var array
 	 */
-	protected $_js_file_checks = array();
+	public $_js_file_checks = array();
 
 	/**
 	 *

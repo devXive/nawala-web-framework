@@ -7,13 +7,13 @@
     <!-- Generic Metadata -->
     <name>Gantry</name>
     <author>RocketTheme, LLC</author>
-    <creationDate>August 31, 2012</creationDate>
+    <creationDate>September 1, 2012</creationDate>
     <copyright>(C) 2005 - 2012 RocketTheme, LLC. All rights reserved.</copyright>
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
     <authorEmail>support@rockettheme.com</authorEmail>
     <authorUrl>http://www.rockettheme.com</authorUrl>
-    <version>4.0.0</version>
-    <description>Gantry Starting Template for Joomla! v4.0.0</description>
+    <version>4.0.1</version>
+    <description>Gantry Starting Template for Joomla! v4.0.1</description>
 
     <!-- Front end file, media and language specification -->
     <files folder="site">
@@ -26,7 +26,6 @@
         <!-- Administrator file and language specification;
               Note: administrator doesn't have media -->
         <files folder="admin">
-            <folder>assets</folder>
             <folder>views</folder>
             <filename>controller.php</filename>
             <folder>language</folder>

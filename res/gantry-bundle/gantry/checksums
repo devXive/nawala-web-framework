@@ -14,7 +14,7 @@ efcbbbb748b2702bfa7c5996149cc480 admin/forms/fields/imagepicker/images/button.pn
 2cad08a88859cefd7758dc2754a2259d admin/presets/preset4.png
 8a3edb0428f11a404535d9134c90063f admin/tips/index.html
 2afd5df9f103032d5055019dbd72da38 admin/tips/overview.xml
-d166ab25798e8f69b51cfc1e11b9cad5 checksums
+02cfff424e86069b446f45c958bded33 checksums
 99f41f794836af4f9b330e494fd9d061 component.php
 17348f7ab4554a713d0dd9e70f826e8b css-compiled/1200fixed.css
 d5677663e9815358410b0362a69b30e9 css-compiled/960fixed.css
@@ -122,7 +122,7 @@ c48fbff2e4212fe5df8b7625003ed0ad offline.php
 b859c161a2ed309f8007ab4c4ed0470b template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-e330397104894b7ecc3499a4e7a58419 templateDetails.xml
+0b6eba3b3d65eb5ddc3fc08d3e4a3aba templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 cfbb0f9881958ece19bd7552b91cb67c tests.php
