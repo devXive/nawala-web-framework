@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        4.1.3 November 21, 2012
+ * @version        4.1.4 November 22, 2012
  * @author         RocketTheme http://www.rockettheme.com
  * @copyright      Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license        http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -94,10 +94,10 @@ class plgSystemGantry extends JPlugin
 	{
 		$app = JFactory::getApplication();
 		if ($app->isSite()) {
-			$template_info = $app->getTemplate(true);
-			if ($this->isGantryTemplate($template_info->id)) {
-				require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
-			}
+//			$template_info = $app->getTemplate(true);
+//			if ($this->isGantryTemplate($template_info->id)) {
+//				include(JPATH_LIBRARIES . '/gantry/gantry.php');
+//			}
 		} else {
 			if (array_key_exists('option', $_REQUEST) && array_key_exists('task', $_REQUEST)) {
 				$option = JRequest::getVar('option');
@@ -266,7 +266,7 @@ class plgSystemGantry extends JPlugin
 			if (empty($buffer) && !count($messages)) return;
 
 			// wether to load bootstrap jui or not
-			if ($this->_contains($buffer, $this->bootstrapTriggers) || count($messages)) {
+			if (($this->_contains($buffer, $this->bootstrapTriggers) || count($messages)) && version_compare(JVERSION, '3.0.0') >= 0) {
 				JHtml::_('bootstrap.framework');
 			}
 		}
