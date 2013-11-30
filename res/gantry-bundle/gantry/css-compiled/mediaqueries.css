@@ -1,149 +1,149 @@
 @media only screen and (min-width: 1200px) {
-  .visible-large {
+  body.layout-mode-responsive .visible-large {
     display: inherit !important;
   }
-  .hidden-large {
+  body.layout-mode-responsive .hidden-large {
     display: none !important;
   }
-  .visible-desktop {
+  body.layout-mode-responsive .visible-desktop {
     display: inherit !important;
   }
-  .hidden-desktop {
+  body.layout-mode-responsive .hidden-desktop {
     display: none !important;
   }
 }
 @media only screen and (min-width: 960px) and (max-width: 1199px) {
-  .visible-large {
+  body.layout-mode-responsive .visible-large {
     display: none !important;
   }
-  .hidden-large {
+  body.layout-mode-responsive .hidden-large {
     display: inherit !important;
   }
-  .visible-desktop {
+  body.layout-mode-responsive .visible-desktop {
     display: inherit !important;
   }
-  .hidden-desktop {
+  body.layout-mode-responsive .hidden-desktop {
     display: none !important;
   }
-  .promo h1 {
+  body.layout-mode-responsive .promo h1 {
     font-size: 3.7em;
   }
-  .promo p {
+  body.layout-mode-responsive .promo p {
     font-size: 1.3em;
   }
-  .promo-image {
+  body.layout-mode-responsive .promo-image {
     width: 40%;
   }
-  .promo-image img {
+  body.layout-mode-responsive .promo-image img {
     max-width: 100%;
   }
 }
 @media (min-width: 768px) and (max-width: 959px) {
-  .visible-tablet {
+  body.layout-mode-responsive .visible-tablet {
     display: inherit !important;
   }
-  .hidden-tablet {
+  body.layout-mode-responsive .hidden-tablet {
     display: none !important;
   }
-  .hidden-desktop {
+  body.layout-mode-responsive .hidden-desktop {
     display: inherit !important;
   }
-  .visible-desktop {
+  body.layout-mode-responsive .visible-desktop {
     display: none !important;
   }
-  .visible-large {
+  body.layout-mode-responsive .visible-large {
     display: none !important;
   }
-  .hidden-large {
+  body.layout-mode-responsive .hidden-large {
     display: inherit !important;
   }
-  .promo-image {
+  body.layout-mode-responsive .promo-image {
     width: 38%;
   }
-  .promo-image img {
+  body.layout-mode-responsive .promo-image img {
     max-width: 100%;
   }
-  .promo h1 {
+  body.layout-mode-responsive .promo h1 {
     font-size: 2.9em;
   }
-  .promo p {
+  body.layout-mode-responsive .promo p {
     font-size: 1.1em;
   }
-  .promo-desc {
+  body.layout-mode-responsive .promo-desc {
     padding-top: 0;
   }
 }
 @media (max-width: 767px) {
-  body {
+  body.layout-mode-responsive {
     padding: 0;
   }
-  .visible-phone {
+  body.layout-mode-responsive .visible-phone {
     display: inherit !important;
   }
-  .hidden-phone {
+  body.layout-mode-responsive .hidden-phone {
     display: none !important;
   }
-  .hidden-desktop {
+  body.layout-mode-responsive .hidden-desktop {
     display: inherit !important;
   }
-  .visible-desktop {
+  body.layout-mode-responsive .visible-desktop {
     display: none !important;
   }
-  .hidden-large {
+  body.layout-mode-responsive .hidden-large {
     display: inherit !important;
   }
-  .visible-large {
+  body.layout-mode-responsive .visible-large {
     display: none !important;
   }
-  #rt-logo {
+  body.layout-mode-responsive #rt-logo {
     margin: 0 auto;
   }
-  body .component-content .column-1,
-  body .component-content .column-2,
-  body .component-content .column-3,
-  body .component-content .column-4 {
+  body.layout-mode-responsive body .component-content .column-1,
+  body.layout-mode-responsive body .component-content .column-2,
+  body.layout-mode-responsive body .component-content .column-3,
+  body.layout-mode-responsive body .component-content .column-4 {
     width: 100% !important;
     float: none !important;
     margin: 0 !important;
   }
-  #gantry-totop {
+  body.layout-mode-responsive #gantry-totop {
     margin: 0 auto;
     text-align: center;
     width: 100%;
   }
-  .gantry-width-20,
-  .gantry-width-25,
-  .gantry-width-30,
-  .gantry-width-33,
-  .gantry-width-40,
-  .gantry-width-50,
-  .gantry-width-60,
-  .gantry-width-66,
-  .gantry-width-70,
-  .gantry-width-75,
-  .gantry-width-80 {
+  body.layout-mode-responsive .gantry-width-20,
+  body.layout-mode-responsive .gantry-width-25,
+  body.layout-mode-responsive .gantry-width-30,
+  body.layout-mode-responsive .gantry-width-33,
+  body.layout-mode-responsive .gantry-width-40,
+  body.layout-mode-responsive .gantry-width-50,
+  body.layout-mode-responsive .gantry-width-60,
+  body.layout-mode-responsive .gantry-width-66,
+  body.layout-mode-responsive .gantry-width-70,
+  body.layout-mode-responsive .gantry-width-75,
+  body.layout-mode-responsive .gantry-width-80 {
     width: 100%;
   }
-  .gantry-width-spacer {
+  body.layout-mode-responsive .gantry-width-spacer {
     margin: 5px;
   }
-  .row {
+  body.layout-mode-responsive .row {
     margin: 0;
     display: block;
   }
-  .row .cell {
+  body.layout-mode-responsive .row .cell {
     display: block;
     width: 100%;
   }
-  .form-horizontal .control-group .control-label {
+  body.layout-mode-responsive .form-horizontal .control-group .control-label {
     float: none;
     width: auto;
     text-align: left;
   }
-  .form-horizontal .control-group .controls {
+  body.layout-mode-responsive .form-horizontal .control-group .controls {
     margin-left: 0;
   }
-  select {
+  body.layout-mode-responsive select {
     width: 100%;
   }
 }
