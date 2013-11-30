@@ -2,7 +2,7 @@
 /**
  * @version   $Id: install.script.php 4562 2012-10-26 19:53:26Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
+ * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 if (!class_exists('PlgSystemgantry_installerInstallerScript')) {
