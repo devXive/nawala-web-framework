@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantrybrowser.class.php 2468 2012-08-17 06:16:57Z btowles $
+ * @version   $Id: gantrybrowser.class.php 3215 2012-09-04 15:12:13Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -62,6 +62,15 @@ class GantryBrowser
 		switch ($name) {
 			case 'checks':
 				return null;
+				break;
+			case 'shortver':
+				return $this->shortversion;
+				break;
+			case 'longver':
+				return $this->version;
+				break;
+			case 'browser':
+				return $this->name;
 				break;
 			default:
 				if (property_exists($this, $name) && isset($this->$name)) {
