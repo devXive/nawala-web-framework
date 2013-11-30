@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantry.class.php 3019 2012-09-01 19:10:32Z btowles $
+ * @version   $Id: gantry.class.php 3369 2012-09-06 22:03:33Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -1555,10 +1555,13 @@ class Gantry
 		$server_filesystem_root_path = $this->cleanPath($_SERVER['DOCUMENT_ROOT']);
 
 		$missing_ds  = (substr($parsed_url['path'], 0, 1) != '/')?'/':'';
-
-
 		if (!empty($instance_url_path) && strpos($parsed_url['path'], $instance_url_path) === 0) {
-			$return_path = $instance_filesystem_path . $missing_ds . $this->cleanPath(str_replace($instance_url_path, '', $this->cleanPath($parsed_url['path'])));
+			$stripped_base = $this->cleanPath($parsed_url['path']);
+			if (strpos($stripped_base, $instance_url_path) == 0)
+			{
+				$stripped_base = substr_replace($stripped_base,'',0,strlen($instance_url_path));
+			}
+			$return_path = $instance_filesystem_path . $missing_ds . $this->cleanPath($stripped_base);
 		} elseif (empty($instance_url_path) && file_exists($instance_filesystem_path.$missing_ds.$parsed_url['path'])) {
 			$return_path = $instance_filesystem_path.$missing_ds.$parsed_url['path'];
 		}
@@ -1583,7 +1586,7 @@ class Gantry
 		if (preg_match('/^WIN/', PHP_OS)) {
 			$return_url_path = $path;
 		}
-		if (!file_exists($return_url_path))
+		if (!@file_exists($return_url_path))
 		{
 			return $return_url_path;
 		}

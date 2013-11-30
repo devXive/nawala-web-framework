@@ -5,6 +5,8 @@
 * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
 */
 
+body #rt-page-surround {overflow: visible;}
+
 .rt-container {width: 1200px;margin: 0 auto;position: relative;
 	.rt-grid-1 {width: 100px;}
 	.rt-grid-2 {width: 200px;}
@@ -56,24 +58,11 @@
 	.rt-prefix-11 {padding-left: 1100px;}
 }
 
-@media only screen and (min-width: 768px) {
-	.rt-menu-mobile {display: none;}
+body .rt-container [class*="rt-grid"] {
+	display: inline;
+	float: left;
 }
 
-@media only screen and (min-width: 481px) and (max-width: 767px) {
-	body {-webkit-tap-highlight-color: transparent;
-	.rt-container {width: 480px;}
-	.rt-container [class*="rt-grid"] {display: block;float: none;position: relative;width: 100%;}
-	.rt-container [class*="rt-push"], [class*="rt-pull"] {left: auto;}
-	.rt-container [class*="rt-prefix"] {padding-left: 0;}
-	}
-}
+.rt-menu-mobile {display: none !important;}
 
-@media only screen and (max-width: 480px) {
-	body {-webkit-tap-highlight-color: transparent;
-	.rt-container {width: 95%;}
-	.rt-container [class*="rt-grid"] {display: block;float: none;position: relative;width: 100%;}
-	.rt-container [class*="rt-push"], [class*="rt-pull"] {left: auto;}
-	.rt-container [class*="rt-prefix"] {padding-left: 0;}
-	}
-}
+

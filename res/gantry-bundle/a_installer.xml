@@ -1,13 +1,13 @@
 <extension version="1.6" type="plugin" group="system" method="upgrade">
     <name>Installer</name>
 	<author>RocketTheme, LLC</author>
-	<creationDate>September 4, 2012</creationDate>
+	<creationDate>September 7, 2012</creationDate>
 	<copyright>(C) 2005 - 2012 RocketTheme, LLC. All rights reserved.</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>support@rockettheme.com</authorEmail>
 	<authorUrl>http://www.rockettheme.com</authorUrl>
-	<version>4.0.3</version>
-	<description>Gantry Starting Template for Joomla! v4.0.3</description>
+	<version>4.0.4</version>
+	<description>Gantry Starting Template for Joomla! v4.0.4</description>
     <scriptfile>install.script.php</scriptfile>
     <files>
         <filename plugin="installer">installer.php</filename>
@@ -31,7 +31,7 @@
         <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
             gantry
             <name>Gantry Default Template for Joomla</name>
-            <description>Gantry Starting Template for Joomla! v4.0.3</description>
+            <description>Gantry Starting Template for Joomla! v4.0.4</description>
             <style name="gantry - Default" default="false" master="true" paramsfile="template-options.xml"/>
         </cog>
         <cog type="plugin" client="site" ordering="1" access="1" enabled="true" protected="false">

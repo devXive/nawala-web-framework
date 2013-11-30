@@ -1,6 +1,6 @@
 <?php
 /**
-* @version   $Id: styledeclaration.php 2924 2012-08-31 01:57:44Z kevin $
+* @version   $Id: styledeclaration.php 3364 2012-09-06 18:54:59Z kevin $
  * @author		RocketTheme http://www.rockettheme.com
  * @copyright 	Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
  * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -45,7 +45,7 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 	    $this->_disableRokBoxForiPhone();
 
         $gantry->addInlineStyle($css);
-        if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('desktop-mediaqueries.less');
+        if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('mediaqueries.less');
         if ($gantry->get('layout-mode')=="960fixed") $gantry->addLess('960fixed.less');
         if ($gantry->get('layout-mode')=="1200fixed") $gantry->addLess('1200fixed.less');
 

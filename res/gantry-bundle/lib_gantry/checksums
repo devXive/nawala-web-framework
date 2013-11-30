@@ -1,5 +1,5 @@
-ae593e1812dacf2b12a2b4e6f76c8fde CHANGELOG.php
-775a8c2c1ed63ea131dba1f51e8cf76b CREDITS.php
+38f89c5386aa3954402764d5b53e12e2 CHANGELOG.php
+bf23510e4c104990b0d56c0312c9abba CREDITS.php
 8b35e517ddaba5f278e0415790ad17db admin/ajax-models/cache.php
 2066475db05fcc27bb54fdf92ba3a5e1 admin/ajax-models/diagnostics.php
 e5e2cc2764012c5b944a0ceffe7be750 admin/ajax-models/example.php
@@ -53,7 +53,7 @@ dab59dfb625ea4beae67e6e7a9f7440a admin/forms/fields/showmax.php
 e4e1e644df329e1ec82ef565fafd3ff3 admin/forms/fields/textplus.php
 f9dffda3617be11a59147f9a89ea9ce0 admin/forms/fields/tips.php
 f717f6009591c3461d7dea2aa2402238 admin/forms/fields/toggle.php
-ebad68e4df0501093e40aaa0fa12b85f admin/forms/fields/updater.php
+4b8685ac90a4b80d12939d09600a9423 admin/forms/fields/updater.php
 289fa6af5a5bb4e0f2cfd3178dc24c89 admin/forms/groups/chain.php
 38848ceba75972f66eb06b4cf3aa891c admin/forms/groups/columns.php
 62be7a3e394946dc94fad43b1657f8ff admin/forms/groups/enabledgroup.php
@@ -77,7 +77,7 @@ c61ccd45ec19a7c1e8576da1d1a97681 admin/widgets/assignments/js/assignments.js
 8a3edb0428f11a404535d9134c90063f admin/widgets/checkbox/images/index.html
 8a3edb0428f11a404535d9134c90063f admin/widgets/checkbox/index.html
 8a3edb0428f11a404535d9134c90063f admin/widgets/colorchooser/css/index.html
-c376b52a8873f72b8ca238371f741f22 admin/widgets/colorchooser/css/mooRainbow-2.0.css
+2d6bedc8df665b9fcdedef51f133f564 admin/widgets/colorchooser/css/mooRainbow-2.0.css
 9ef69ba9dd7d4a9231802c88f9d430d9 admin/widgets/colorchooser/css/mooRainbow-2.0.less
 3b648642d31d59b11130f0d1de8457c9 admin/widgets/colorchooser/css/mooRainbow.css
 1b9f97537b7ae7a6baa2d3ce47a4a198 admin/widgets/colorchooser/images/blank.gif
@@ -218,7 +218,7 @@ bd066596fa5bf9c6d7554fe0dbc3509f core/config/gantryformgroup.class.php
 d021132b628a5cd060e78cb8c3365009 core/config/gantryformnaminghelper.class.php
 30f7a055539aed00cf0c49b44caf002c core/config/gantryhtmlselect.class.php
 8a3edb0428f11a404535d9134c90063f core/config/index.html
-27a241f4ac6636fae41ecd2efecd63bd core/gantry.class.php
+5afb28195f7472e14f7e87ee735da411 core/gantry.class.php
 9e2c6ffde460b9f9939e8e9a1227e134 core/gantrybrowser.class.php
 e8c1cdeab0d4a34ba6cf5499f38e1396 core/gantrydiagnostic.class.php
 e8f86fedbdbc33a8fd448f1e435b5ea6 core/gantryfeature.class.php
@@ -257,7 +257,7 @@ c1dbc4d4216c0bf33121d626b2f05ec1 core/utilities/cache/cacheDriver.interface.php
 436206f2d881944579717e0bc0c6d774 core/utilities/cache/joomlaCacheDriver.class.php
 94b1ed994bbeb6cc7d0c11ac7f631dc5 core/utilities/cache/joomlaNoExpireCacheDriver.php
 a19c1d72bd500d432ec74b4e53b2d0af core/utilities/gantryarrayhelper.class.php
-160ad44edeaa8c86c130a718b79dcc3b core/utilities/gantrycache.class.php
+28d9f6917e159870298106fde5e5c9c5 core/utilities/gantrycache.class.php
 1704fe2e5908a7cc73ac226993e54c72 core/utilities/gantrydate.class.php
 2552b992794c95aa47cbf0abf5ea98d3 core/utilities/gantryjformfieldaccessor.class.php
 bc20b2a13f48797c04d8f984be379502 core/utilities/gantrylesscompiler.class.php
@@ -272,16 +272,16 @@ b2827700eb8e00b42f1656919c6ee00f core/utilities/gantrysimplexmlelement.class.php
 7f95a3e1b5164fe529e7d4a798aa810c core/utilities/registry/format/xml.php
 d4291aeb00b7ce69f79d85a226476800 core/utilities/registry/gantryregistryformat.class.php
 8a3edb0428f11a404535d9134c90063f core/utilities/registry/index.html
-68568f7b7c40a428b2afcc89568a84c7 css/gantry-ie6.css
-756668d60a8f339063562b235d1b0e01 css/gantry.css
-b768e1f6f53665db7f73e68c41d28780 css/grid-12.css
-ca7dbb08cdfa468ba94047fad1acc3b5 css/grid-16.css
+b8ff1703027422fb3483356a96d9a604 css/gantry-ie6.css
+9642ad1a5030a8d7e659b455f0925153 css/gantry.css
+e889d777637a19a78565b37c17c2bf23 css/grid-12.css
+68552b2990fa3581d864d305a4490e93 css/grid-16.css
 6d953fe612ef20215813c365a9d86eb6 css/grid-responsive.css
 8a3edb0428f11a404535d9134c90063f css/index.html
-8bc4a48485a7026f4c5b98417f157cba css/iphone-gantry.css
-8361bb33148a8794790907dde826e065 css/joomla-ie6.css
-c116923020d3311a33c8f8a6652e0cc8 css/joomla-ie7.css
-fa58a498d1b046de1b2536056d0dd40c css/joomla.css
+f2b88351eda0046c2a8d44d0c5dc10a4 css/iphone-gantry.css
+816cd17b1eb6aed6c855ba0d19d7ecdd css/joomla-ie6.css
+beef593444f9478b5659e93fad852d84 css/joomla-ie7.css
+ea7feec77622c43cdd0e577142621898 css/joomla.css
 8a3edb0428f11a404535d9134c90063f facets/index.html
 e48d7d2015a6ed5f87ccea5dd4cfe531 facets/menu/gantrymenu.class.php
 986d8cc746eadfc562e222b6aaa51235 facets/menu/gantrymenuformatter.class.php
@@ -322,7 +322,7 @@ f4b0c18aa3a4a77bbb3f85a5ad563eb2 features/totop.php
 5b58fd49934b6219e69366720eb8d494 features/touchmenu.php
 02c1f1caa2ba21b9aae9a6c1aa397d68 features/viewswitcher.php
 508f5347c3285c638caf551bc707f4c3 gantry.config.php
-b13bd43d34581b6ebf08a9226491324d gantry.php
+1036ba49fa352b7548a1e3e3d58ad508 gantry.php
 8a3edb0428f11a404535d9134c90063f html/index.html
 5134e3efbe7487e6b4e140ab3ca3e51d html/layouts/body_debugmainbody.php
 5a01bdab72764e7078b557b73d3773c1 html/layouts/body_iphonemainbody.php
@@ -372,7 +372,7 @@ e7211fe43f17f995a531afd7f7ec2331 js/gantry-totop.js
 65f6ecdbaa493440d90d6b12b41f90ad js/iscroll.js
 b963470ab2db0366cdb97a2ed2105fd6 js/mootools.js
 1ca3b2b0ed9890bcb5268657f3fd098b js/selectivizr-min.js
-3c96b5484c1ed1b1992ab172c38ae997 lib_gantry.xml
+b054bff61982d96f6d3534d66759af2a lib_gantry.xml
 8a3edb0428f11a404535d9134c90063f libs/google-code-prettify/index.html
 ca6c5faabd5f42cc09309d935c6dd150 libs/google-code-prettify/lang-apollo.js
 4570c075cc21c2cc97676fd1cecf76b8 libs/google-code-prettify/lang-clj.js

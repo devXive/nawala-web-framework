@@ -1,8 +1,8 @@
-var GantryColorChooser={add:function(e,d){var b=e.replace(/-/,"_"),c;if(!window.moorainbow){window.moorainbow={};}var a=function(){var f=document.id(e);
-f.getParent().removeEvent("mouseenter",a);c=new MooRainbow("mooRainbow_"+e+"_input",{id:"mooRainbow_"+e,startColor:document.id(e).get("value").hexToRgb(true)||[255,255,255],imgPath:GantryURL+"/admin/widgets/colorchooser/images/",transparent:d,onChange:function(g){if(g=="transparent"){f.getNext().getFirst().addClass("overlay-transparent").setStyle("background-color","transparent");
-f.value="transparent";}else{f.getNext().getFirst().removeClass("overlay-transparent").setStyle("background-color",g.hex);f.value=g.hex;}if(this.visible){this.okButton.focus();
-}}});c.hide();window.moorainbow["r_"+b]=c;c.okButton.setStyle("outline","none");document.id("mooRainbow_"+e+"_input").addEvent("click",function(){(function(){c.okButton.focus();
-}).delay(10);});f.addEvent("keyup",function(k){if(k){k=new Event(k);}if((this.value.length==4||this.value.length==7)&&this.value[0]=="#"){var i=new Color(this.value);
-var j=this.value;var g=i.rgbToHsb();var h={hex:j,rgb:i,hsb:g};c.fireEvent("onChange",h);c.manualSet(h.rgb);}});f.getNext().getFirst().setStyle("background-color",c.sets.hex);
-GantryColorChooser.load("mooRainbow_"+e);};a();},load:function(a,b){if(b){document.id(a+"_input").getPrevious().value=b;document.id(a+"_input").getFirst().setStyle("background-color",b);
+var GantryColorChooser={add:function(h,i){var f=h.replace(/-/,"_"),j;if(!window.moorainbow){window.moorainbow={};}var g=function(){var a=document.id(h);
+a.getParent().removeEvent("mouseenter",g);j=new MooRainbow("mooRainbow_"+h+"_input",{id:"mooRainbow_"+h,startColor:document.id(h).get("value").hexToRgb(true)||[255,255,255],imgPath:GantryURL+"/admin/widgets/colorchooser/images/",transparent:i,onChange:function(b){if(b=="transparent"){a.getNext().getFirst().addClass("overlay-transparent").setStyle("background-color","transparent");
+a.value="transparent";}else{a.getNext().getFirst().removeClass("overlay-transparent").setStyle("background-color",b.hex);a.value=b.hex;}if(this.visible){this.okButton.focus();
+}}});j.hide();window.moorainbow["r_"+f]=j;j.okButton.setStyle("outline","none");document.id("mooRainbow_"+h+"_input").addEvent("click",function(){(function(){j.okButton.focus();
+}).delay(10);});a.addEvent("keyup",function(b){if(b){b=new Event(b);}if((this.value.length==4||this.value.length==7)&&this.value[0]=="#"){var d=new Color(this.value);
+var c=this.value;var l=d.rgbToHsb();var e={hex:c,rgb:d,hsb:l};j.fireEvent("onChange",e);j.manualSet(e.rgb);}});a.getNext().getFirst().setStyle("background-color",j.sets.hex);
+GantryColorChooser.load("mooRainbow_"+h);};g();},load:function(d,c){if(c){document.id(d+"_input").getPrevious().value=c;document.id(d+"_input").getFirst().setStyle("background-color",c);
 }}};

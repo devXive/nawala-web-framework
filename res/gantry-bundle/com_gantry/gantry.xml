@@ -7,13 +7,13 @@
     <!-- Generic Metadata -->
     <name>Gantry</name>
     <author>RocketTheme, LLC</author>
-    <creationDate>September 4, 2012</creationDate>
+    <creationDate>September 7, 2012</creationDate>
     <copyright>(C) 2005 - 2012 RocketTheme, LLC. All rights reserved.</copyright>
     <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
     <authorEmail>support@rockettheme.com</authorEmail>
     <authorUrl>http://www.rockettheme.com</authorUrl>
-    <version>4.0.3</version>
-    <description>Gantry Starting Template for Joomla! v4.0.3</description>
+    <version>4.0.4</version>
+    <description>Gantry Starting Template for Joomla! v4.0.4</description>
 
     <!-- Front end file, media and language specification -->
     <files folder="site">

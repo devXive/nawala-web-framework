@@ -2,7 +2,7 @@
 /**
  * @package    gantry
  * @subpackage core
- * @version    4.0.3 September 4, 2012
+ * @version    4.0.4 September 7, 2012
  * @author     RocketTheme http://www.rockettheme.com
  * @copyright  Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license    http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -18,7 +18,7 @@ jimport('joomla.application.component.view');
 
 class GantryViewTemplate extends JView
 {
-	protected $_version = '4.0.3';
+	protected $_version = '4.0.4';
 
 	protected $item;
 	protected $form;
