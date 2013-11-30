@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantry.class.php 12525 2013-08-07 23:02:42Z btowles $
+ * @version   $Id: gantry.class.php 13269 2013-09-05 01:37:10Z djamil $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -365,7 +365,7 @@ class Gantry
 		}
 
 		// Set the main class vars to match the call
-		JHTML::_('behavior.framework');
+		//JHTML::_('behavior.framework');
 		$doc = JFactory::getDocument();
 		//$doc->setMetaData('templateframework','Gantry Framework for Joomla!');
 		$this->document    =& $doc;
