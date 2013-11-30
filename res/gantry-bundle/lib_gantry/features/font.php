@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: font.php 2780 2012-08-27 23:19:41Z djamil $
+ * @version   $Id: font.php 3103 2012-09-03 16:58:49Z djamil $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -72,6 +72,7 @@ class GantryFeatureFont extends GantryFeature
 		} else {
 			$delimiter = false;
 			$name      = $font_family;
+			$variant   = null;
 		}
 
 		if (isset($variant) && $variant) $variant = ':' . $variant;

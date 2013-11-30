@@ -1,5 +1,5 @@
 /**
-* @version   $Id: typography.less 2975 2012-08-31 23:35:50Z rhuk $
+* @version   $Id: typography.less 3109 2012-09-03 17:52:26Z rhuk $
 * @author    RocketTheme http://www.rockettheme.com
 * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
 * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
@@ -603,7 +603,7 @@ input[type="checkbox"][readonly] {
     }
   }
   .uneditable-input {
-    border-left-color: #ccc;
+    border-left-color: @light-grey;
   }
   .add-on {
     display: inline-block;
@@ -648,8 +648,8 @@ input[type="checkbox"][readonly] {
     border-radius: 3px 0 0 3px;
   }
   .uneditable-input {
-    border-right-color: #ccc;
-    border-left-color: #eee;
+    border-right-color: @light-grey;
+    border-left-color: #eeeeee;
   }
   .add-on:last-child,
   .btn:last-child {
@@ -713,7 +713,7 @@ select:focus:required:invalid {
   white-space: nowrap;
   cursor: not-allowed;
   background-color: @inputBackground;
-  border-color: #eee;
+  border-color: #eeeeee;
   .box-shadow(inset 0 1px 2px rgba(0,0,0,.025));
 }
 
@@ -972,7 +972,7 @@ legend + .control-group {
 }
 
 .btn {
-  border-color: #ccc;
+  border-color: @light-grey;
   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
 }
 

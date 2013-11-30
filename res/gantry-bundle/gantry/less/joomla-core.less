@@ -1,5 +1,5 @@
 /**
-* @version   $Id: joomla-core.less 2924 2012-08-31 01:57:44Z kevin $
+* @version   $Id: joomla-core.less 3109 2012-09-03 17:52:26Z rhuk $
 * @author    RocketTheme http://www.rockettheme.com
 * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
 * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
@@ -92,7 +92,7 @@
 	}
 	.items-leading {margin-bottom: 25px;}
 	.img-intro-right, .img-fulltext-right {float: right;margin-left: 10px;margin-bottom: 10px;}
-	.img-intro-left, .img-fulltext-left {float: left;margin-right: 10px;margin-bottom: 10px;}	
+	.img-intro-left, .img-fulltext-left {float: left;margin-right: 10px;margin-bottom: 10px;}
 }
 
 // Editing
@@ -122,7 +122,7 @@
 
 // Calendar
 .calendar {
-	td.button {background-image: none;background-color: transparent;border: none;padding: 0;text-shadow: none;font-size: inherit;text-transform: inherit;color: #000;display: table-cell;}
+	td.button {background-image: none;background-color: transparent;border: none;padding: 0;text-shadow: none;font-size: inherit;text-transform: inherit;color: @black;display: table-cell;}
 	td.button:after {position: relative;}
 	td.title {font-size: 1.4em;}
 }
@@ -267,9 +267,9 @@ input[type="radio"], input[type="checkbox"] {margin-right: 5px;}
 .component-content #contact-email-copy {float: left;margin-right: 10px;}
 .component-content .contact .button {float: none !important;clear: left;display: block;margin: 20px 0 0 0;}
 .component-content dl.tabs {float: left;margin: 50px 0 0 0;z-index: 50;clear: both;}
-.component-content dl.tabs dt {float: left;padding: 4px 10px;border-left: 1px solid #ccc;border-right: 1px solid #ccc;border-top: 1px solid #ccc;margin-right: 3px;background: #f0f0f0;color: #666;}
-.component-content dl.tabs .open {background: #F9F9F9;border-bottom: 1px solid #F9F9F9;z-index: 100;color: #000;}
-.component-content .current {clear: both;border: 1px solid #ccc;padding: 10px 10px;}
+.component-content dl.tabs dt {float: left;padding: 4px 10px;border-left: 1px solid #ccc;border-right: 1px solid @light-grey;border-top: 1px solid @light-grey;margin-right: 3px;background: #f0f0f0;color: #666666;}
+.component-content dl.tabs .open {background: #F9F9F9;border-bottom: 1px solid #F9F9F9;z-index: 100;color: @black;}
+.component-content .current {clear: both;border: 1px solid @light-grey;padding: 10px 10px;}
 .component-content .current dd {padding: 0;margin: 0;}
 .component-content #content-pane.tabs {margin: 1px 0 0 0;}
 .component-content .contact .title {font-size: 1.3em;margin: 0 0 2px 0;border: 0;box-shadow: none;padding: 0;border-radius: 3px;}
@@ -333,5 +333,5 @@ input[type="radio"], input[type="checkbox"] {margin-right: 5px;}
 #system-message dd.notice ul {color: #A08B4C;background: #F5ECC1;border: 2px solid #F0DC7E;}
 
 /* Debug */
-#system-debug {color: #ccc;background-color: #fff;padding: 10px;margin: 10px;}
+#system-debug {color: @light-grey;background-color: @white;padding: 10px;margin: 10px;}
 #system-debug div {font-size: 11px;}

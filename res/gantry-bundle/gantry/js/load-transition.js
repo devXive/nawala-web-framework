@@ -1,28 +1,3 @@
-/**
-* @version   $Id: load-transition.js 1637 2012-07-13 00:13:40Z kevin $
-* @author    RocketTheme http://www.rockettheme.com
-* @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
-* @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
-*/
-
-((function(){
-
-var animation = function(){
-	var body = document.id('rt-transition');
-
-	if (Browser.Engine.gecko19 || (Browser.Engine.trident && !Browser.Engine.trident7)){
-		if (body){
-			body.set('tween', {duration: 800, transition: 'quad:out'});
-			body.setStyles({'visibility': 'hidden', 'opacity': 0});
-			body.removeClass('rt-hidden').fade('in');
-		}
-		
-		return;
-	}
-	
-	if (body) body.removeClass('rt-hidden').addClass('rt-visible');
-};
-
-window.addEvent('load', animation);
-
-})());
+((function(){var a=function(){var b=document.id("rt-transition");if(Browser.Engine.gecko19||(Browser.Engine.trident&&!Browser.Engine.trident7)){if(b){b.set("tween",{duration:800,transition:"quad:out"});
+b.setStyles({visibility:"hidden",opacity:0});b.removeClass("rt-hidden").fade("in");}return;}if(b){b.removeClass("rt-hidden").addClass("rt-visible");}};
+window.addEvent("load",a);})());

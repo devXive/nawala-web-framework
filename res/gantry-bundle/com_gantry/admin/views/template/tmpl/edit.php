@@ -1,6 +1,6 @@
 <?php
 /**
- * @version	$Id: edit.php 2956 2012-08-31 21:12:52Z djamil $
+ * @version	$Id: edit.php 3119 2012-09-03 18:58:03Z djamil $
  * @package Gantry
  * @copyright Copyright (C) 2009 RocketTheme. All rights reserved.
  * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE.php
@@ -82,6 +82,8 @@ function gantry_admin_render_menu($view, $item)
 
 function gantry_admin_render_edit_item($element)
 {
+	if ($element->type == 'tips' && (isset($element->element['tab']) && (string) $element->element['tab'] != 'overview')) return $element->getInput();
+
 	$buffer = '';
 	$buffer .= "				<div class=\"gantry-field " . $element->type . "-field g4-row\">\n";
 	$label = '';
@@ -99,6 +101,7 @@ function gantry_admin_render_edit_item($element)
 
 function  gantry_admin_render_edit_override_item($element)
 {
+	if ($element->type == 'tips' && (isset($element->element['tab']) && (string) $element->element['tab'] != 'overview')) return $element->getInput();
 
 	$buffer = "";
 	$buffer .= "				<div class=\"gantry-field " . $element->type . "-field g4-row\">\n";
@@ -338,6 +341,19 @@ $this->gantryForm->initialize();
 
 											$buffer .= "			</div>\n";
 											$buffer .= "		</div>\n";
+										}
+
+										if ($panel != 'overview' && $name == 'right'){
+											foreach($positions[$name][$panel] as $element) {
+												if (get_class($element) != 'GantryFormFieldTips') continue;
+
+												if (!$this->override){
+													$buffer .= $element->render('gantry_admin_render_edit_item');
+												}
+												else{
+													$buffer .= $element->render('gantry_admin_render_edit_override_item');
+												}
+											}
 										}
 									}
 								}

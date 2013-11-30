@@ -28,18 +28,20 @@ $gantry->addScript('rokmediaqueries.js');
 ob_start();
 ?>
 <body <?php echo $gantry->displayBodyTag(); ?>>
-	<div id="rt-top-surround">
-		<div id="rt-header">
-			<div class="rt-container">
-				<?php echo $gantry->displayModules('header','standard','standard'); ?>
-				<div class="clear"></div>
-			</div>
-		</div>
-	</div>
 	<div id="rt-offline-body">
 		<div class="rt-container">
 			<div class="component-content">
 				<div class="rt-grid-12">
+
+					<div class="rt-block offline-image">
+						<h1 class="sitename">
+							<?php echo htmlspecialchars($app->getCfg('sitename')); ?>
+						</h1>
+						<?php if ($app->getCfg('offline_image')) : ?>
+						<img src="<?php echo $app->getCfg('offline_image'); ?>" alt="<?php echo htmlspecialchars($app->getCfg('sitename')); ?>" />
+						<?php endif; ?>
+					</div>
+
 					<div class="rt-block">
 						<div class="table">
 							<div class="row">

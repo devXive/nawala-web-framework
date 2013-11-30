@@ -14,7 +14,7 @@ efcbbbb748b2702bfa7c5996149cc480 admin/forms/fields/imagepicker/images/button.pn
 2cad08a88859cefd7758dc2754a2259d admin/presets/preset4.png
 8a3edb0428f11a404535d9134c90063f admin/tips/index.html
 2afd5df9f103032d5055019dbd72da38 admin/tips/overview.xml
-02cfff424e86069b446f45c958bded33 checksums
+db954c95258ee7f7e802a10e8bf4fff3 checksums
 99f41f794836af4f9b330e494fd9d061 component.php
 17348f7ab4554a713d0dd9e70f826e8b css-compiled/1200fixed.css
 d5677663e9815358410b0362a69b30e9 css-compiled/960fixed.css
@@ -22,7 +22,7 @@ d5677663e9815358410b0362a69b30e9 css-compiled/960fixed.css
 601ce5664753fead7d61b7a84b9d8eb1 css-compiled/fusionmenu.css
 8a3edb0428f11a404535d9134c90063f css-compiled/index.html
 6b70feff8269d9e7326c58c020d44111 css-compiled/master-41fd3375bde2e7942037d9ae6407d8d9.css
-15de5ba92cdbdaf76445fa3daace89f0 css-compiled/master-72134c147fa81aa4e7fa5d6c2dd9257b.css
+785498034a6dd2aef38b4938f188debc css-compiled/master-72134c147fa81aa4e7fa5d6c2dd9257b.css
 3640b16bc593bb3d9128ca1c1f5d2eeb css-compiled/splitmenu.css
 8a3edb0428f11a404535d9134c90063f css/index.html
 538b4aa218489eb374eab47d2dbd9479 css/master-ie8.css
@@ -43,6 +43,27 @@ c5f7f5d5b783ce2efbd69dd077e3db42 features/styledeclaration.php
 04b9bfc362dcb9bc999c7d1bcb44a942 fonts/fontawesome-webfont.woff
 8a3edb0428f11a404535d9134c90063f fonts/index.html
 eb31c4e4d903c91316387e2b7aa5dadb gantry.config.php
+8a3edb0428f11a404535d9134c90063f home/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/index.html
+b682ce44f0c0f5d90626a7b64e2b8f4a home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/js/colorchooser.js
+cc1718bf2f07ea108c2d346019bfda45 home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/js/html5shim.js
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/js/index.html
+35f8483fdfeb16ed4ff96adad168b88f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/js/load-transition.js
+44a9d8f719af50189f2175f5cb2732e8 home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/js/rokmediaqueries.js
+1ca3b2b0ed9890bcb5268657f3fd098b home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/gantry/js/selectivizr-min.js
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/checkout/joomla/template/target/rocketlauncher/templates/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/gantry4 framework/workspace/trunk/target/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/build/jobs/index.html
+8a3edb0428f11a404535d9134c90063f home/jenkins/index.html
 d2caa20a9fc7c5fe8a48e22d0f04852d htaccess.txt
 8a3edb0428f11a404535d9134c90063f html/index.html
 8a3edb0428f11a404535d9134c90063f html/mod_roknavmenu/index.html
@@ -73,12 +94,12 @@ e3bd24a42dc4e6a60d7a6789d1742a92 images/logo/powered.png
 8a3edb0428f11a404535d9134c90063f images/patterns/index.html
 1ad4f07c0893cf7f3865ad7e4c5c115c images/patterns/noise.png
 055eb5bff2ca8be75f8e7fbf074eb284 index.php
-102389183a66e567b93da487fcefeff7 js/colorchooser.js
-69431f1ec831bacf31013dff2872cba0 js/html5shim.js
+0f85ccd78327fe95794bdc710ddce89d js/colorchooser.js
+6f0af76f490c57588f944fbfcc6bd5e2 js/html5shim.js
 8a3edb0428f11a404535d9134c90063f js/index.html
-c58bb9d8a2790840beb5b7c90d27cb5a js/load-transition.js
-2c2ea6095f8c98a86f792b0a543157ff js/rokmediaqueries.js
-ed32136af18ca3ea4a3080ff620fba16 js/selectivizr-min.js
+6d8ca69eb8798db4d1e9b3479fd0c2bf js/load-transition.js
+f738b5586c746fa816f556f67f9ebd0e js/rokmediaqueries.js
+1ca3b2b0ed9890bcb5268657f3fd098b js/selectivizr-min.js
 04f8ca39bdca52707e9edbe69ba7f48b language/en-GB/en-GB.tpl_gantry.ini
 8a3edb0428f11a404535d9134c90063f language/en-GB/index.html
 8a3edb0428f11a404535d9134c90063f language/index.html
@@ -90,16 +111,16 @@ ed32136af18ca3ea4a3080ff620fba16 js/selectivizr-min.js
 20d43dbb4c92e698332a87638d37735f less/fusionmenu-rtl.less
 6e520077093749e69d5177f27acf82df less/fusionmenu.less
 bfee3051435dc44d9004ec34e961171a less/gantry-core.less
-b7fff52745d8b777419d671aad4ae807 less/global.less
-d0f14007e6d5bb8083706b0bfe01f69a less/header-dark.less
-f74f16ad9ba2ffe7283e497c9ae8ea84 less/header-light.less
+82cd66deb4dea96591ba983f666fe7c8 less/global.less
+5a9a3fd6be0d0fa49b901e130e1411d1 less/header-dark.less
+b63371c9ad0b4cad47209737d07840e1 less/header-light.less
 8a3edb0428f11a404535d9134c90063f less/index.html
-1528cd7c3e9db5dd8564f311894024b9 less/joomla-core.less
+0a3cac9cd0305d7a736e45454b5d8869 less/joomla-core.less
 8a3edb0428f11a404535d9134c90063f less/mixins/bootstrap/index.html
-2fb8616bb0dd70abcb3d7b09b808125e less/mixins/bootstrap/mixins.less
+73483c8b841ac597c7cb373c2d6901ba less/mixins/bootstrap/mixins.less
 8a3edb0428f11a404535d9134c90063f less/mixins/index.html
 798f3fb3b9d2c8b2ac01de72007a61e6 less/mixins/index.less
-39f53ebf5f61557943600aa8bfda4ac1 less/mixins/rockettheme/buttons.less
+b9cbface2a1bf321eb68a04e87c495be less/mixins/rockettheme/buttons.less
 4c290b7a6af26d473c3749f204031f72 less/mixins/rockettheme/dropdowns.less
 faa37ee1ad9d5a949d09603ce4a56c1c less/mixins/rockettheme/icons.less
 8a3edb0428f11a404535d9134c90063f less/mixins/rockettheme/index.html
@@ -107,22 +128,23 @@ faa37ee1ad9d5a949d09603ce4a56c1c less/mixins/rockettheme/icons.less
 cc30740852b1c4b9de6a6cf4b5c954ed less/mixins/rockettheme/popover.less
 d56094f859fdb1c0a31e296d004ba230 less/mixins/rockettheme/utilities.less
 15e7190206e427cd54809a3cf02fe046 less/mobile-mediaqueries.less
-1d82af538a17480ba948fc3e8446bd80 less/offline.less
-40552b5ed547c873d86fc149a00d63d1 less/prettify.less
+c6f9d5bdfd61528b78b83d7d18ac13b4 less/offline.less
+75d84ba1e9c701f521e15897b7047415 less/prettify.less
 5786ba187a09669861beb62ca5ead1bd less/splitmenu.less
-19c1af1d63699a3829f926a347720703 less/style.less
-e9544ec327009e6337c19c30c0263a56 less/template.less
+4a88c9d9fe23b8728eea126ae70f5db0 less/style.less
+7ddb69a3a14d4aaf49d09a0b3f93aa8b less/template.less
 bd52599720a52592412223e71b62d678 less/typography-rtl.less
-c758f5d0a76faf841cbd1e40fa34e9ff less/typography.less
-2792358b37709150dd523487a53d0e0e less/variables.less
+abebf28d831802cac6275093f69acdb7 less/typography.less
+0b57cb9fbbd86b00f187d6bd05992764 less/utilities.less
+0cd4091b89e593b97d2c9a2ef0de7e68 less/variables.less
 5a477db4e56df6201b412cfa0ed03746 lib/gantry/gantry.php
 8a3edb0428f11a404535d9134c90063f lib/gantry/index.html
 8a3edb0428f11a404535d9134c90063f lib/index.html
-c48fbff2e4212fe5df8b7625003ed0ad offline.php
+1be59a0ef172e6cf4442c37155583314 offline.php
 b859c161a2ed309f8007ab4c4ed0470b template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-0b6eba3b3d65eb5ddc3fc08d3e4a3aba templateDetails.xml
+684ef156d2397f1c63e6b44511a73d6d templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 cfbb0f9881958ece19bd7552b91cb67c tests.php

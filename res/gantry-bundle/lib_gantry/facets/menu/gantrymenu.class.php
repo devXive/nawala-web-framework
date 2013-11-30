@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantrymenu.class.php 2473 2012-08-17 17:16:49Z btowles $
+ * @version   $Id: gantrymenu.class.php 3131 2012-09-03 20:44:06Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -43,7 +43,7 @@ class GantryMenu
 			$cache->setCaching(true);
 			$cache->setLifeTime($gantry->get("cache-time", $conf->getValue('config.cachetime') * 60));
 			$args     = array(&$params);
-			$checksum = md5($args[0]->_raw);
+			$checksum = md5($params->toString());
 
 			$gantrymenu = $cache->get(array(
 			                               'GantryMenu',

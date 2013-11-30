@@ -1,5 +1,5 @@
 /**
-* @version   $Id: buttons.less 2224 2012-08-07 21:51:29Z djamil $
+* @version   $Id: buttons.less 3109 2012-09-03 17:52:26Z rhuk $
 * @author    RocketTheme http://www.rockettheme.com
 * @copyright Copyright (C) 2007 - ${copyright_year} RocketTheme, LLC
 * @license   http://www.rockettheme.com/legal/license.php RocketTheme Proprietary Use License
@@ -42,7 +42,7 @@
 
 		.caret { .caret(#464646); }
 		@shadowCalc: darken(@endColor, 29%); // workaround: temp var so we can escape it next line
-		.box-shadow(~"0 0 0 1px @{shadowCalc}, 0 1px 1px #fff");
+		.box-shadow(~"0 0 0 1px @{shadowCalc}, 0 1px 1px @white");
 		#gradient > .vertical(darken(@startColor, 1%), darken(@endColor, 1%));
 	}
 
@@ -66,7 +66,7 @@
 
 /* dark button */
 .button(@startColor: #f0f0f0, @endColor: #ebebeb) when (lightness(@endColor) < 50%){
-	color: #fff;
+	color: @white;
 	border-width: 1px;
 	border-style: solid;
 	border-color: fade(@light, 45%) fade(@light, 15%) darken(@endColor, 2%);
@@ -75,20 +75,20 @@
 	.buttonStyle(@startColor, @endColor);
 
 	.caret {
-		.caret(#fff);
+		.caret(@white);
 	}
 
 	&:hover, &.rok-button-hover {
-		color: #fff;
+		color: @white;
 		#gradient > .vertical(lighten(@startColor, 6%), lighten(@endColor, 1%));
 	}
 
 	&:active, &.rok-button-active {
-		color: #fff;
+		color: @white;
 		border: 0;
 
 		@shadowCalc: darken(@endColor, 5%); // workaround: temp var so we can escape it next line
-		.box-shadow(~"0 0 0 1px @{shadowCalc}, 0 1px 1px #fff");
+		.box-shadow(~"0 0 0 1px @{shadowCalc}, 0 1px 1px @white");
 		#gradient > .vertical(darken(@startColor, 1%), darken(@endColor, 1%));
 
 	}
