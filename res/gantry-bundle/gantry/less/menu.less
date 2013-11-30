@@ -522,3 +522,63 @@
 		}
 	}
 }
+
+// RTL
+body.rtl {
+	.gf-menu {
+		&.l1 {
+			> li {
+				float: right;
+			}
+		}
+		li {
+			.item {
+				text-align: right;
+			}
+			&.parent {
+				> .item {
+					padding-right: 8px;
+					padding-left: 25px;
+					&:after {
+						right: inherit;
+						left: 6px;
+					}
+				}
+			}
+		}
+	}
+	.gf-menu-toggle {
+		left: inherit;
+		right: 10px;
+	}
+	.dropdown {
+		.border-radius(5px 0 5px 5px);
+		ul {
+			li {
+				&.parent {
+					> .item:after {
+						content: "\f053"; // icon-chevron-left
+						font-size: 11px;
+					}
+				}
+			}
+		}
+	}	
+}
+
+@media (max-width: 767px) {
+	.layout-mode-responsive.rtl {
+		.gf-menu {
+			&.l1 {
+				> li {
+					float: none;
+				}
+			}
+			li {
+				.item {
+					text-align: left;
+				}
+			}
+		}
+	}
+}

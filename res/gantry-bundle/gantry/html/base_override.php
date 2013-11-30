@@ -1,54 +1,69 @@
 <?php
 /**
- * @version   $Id: base_override.php 4060 2012-10-02 18:03:24Z btowles $
+ * @version   $Id: base_override.php 5317 2012-11-20 23:03:43Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
  */
 defined('_JEXEC') or die;
 
-$ro_app              = JFactory::getApplication();
-$ro_current_template = $ro_app->getTemplate(true);
-$ro_search_paths     = array();
-$ro_jversion         = new JVersion();
-$ro_backtrace        = debug_backtrace();
-$ro_called_path      = $path = preg_replace('#[/\\\\]+#', '/', $ro_backtrace[0]['file']);
-$ro_called_array     = explode('/', $ro_called_path);
+$go_app              = JFactory::getApplication();
+$go_current_template = $go_app->getTemplate(true);
+$go_search_paths     = array();
+$go_jversion         = new JVersion();
+$go_backtrace        = debug_backtrace();
+$go_called_path      = preg_replace('#[/\\\\]+#', '/', $go_backtrace[0]['file']);
+$go_called_array     = explode('/', $go_called_path);
 
-$ro_template  = array_pop($ro_called_array);
-$ro_view      = array_pop($ro_called_array);
-$ro_extension = array_pop($ro_called_array);
+$go_template  = array_pop($go_called_array);
+$go_view      = array_pop($go_called_array);
+$go_extension = array_pop($go_called_array);
 
-$ro_relative_template_override_path = $ro_view . '/' . $ro_template;
-if ($ro_extension != 'html') {
-	$ro_relative_template_override_path = $ro_extension . '/' . $ro_relative_template_override_path;
+$go_relative_template_override_path = $go_view . '/' . $go_template;
+if ($go_extension != 'html') {
+	$go_relative_template_override_path = $go_extension . '/' . $go_relative_template_override_path;
 }
 
-JLog::add(sprintf('Running RokOverride for template file %s.', $ro_backtrace[0]['file']), JLog::DEBUG, 'rokoverrides');
+JLog::add(JText::sprintf('PLG_SYSTEM_GANTRY_LOG_USING_OVERRRIDE', $go_backtrace[0]['file']), JLog::DEBUG, 'gantry');
 
 // add custom version paths
-$ro_search_paths[] = implode('/', array(
+$go_search_paths[] = implode('/', array(
                                        dirname(__FILE__),
                                        'joomla',
-                                       $ro_jversion->getShortVersion(),
-                                       $ro_relative_template_override_path
+                                       $go_jversion->getShortVersion(),
+                                       $go_relative_template_override_path
                                   ));
-$ro_search_paths[] = implode('/', array(
+$go_search_paths[] = implode('/', array(
                                        dirname(__FILE__),
                                        'joomla',
-                                       $ro_jversion->RELEASE,
-                                       $ro_relative_template_override_path
+                                       $go_jversion->RELEASE,
+                                       $go_relative_template_override_path
                                   ));
+if (defined('GANTRY_OVERRIDES_PATH')) {
+	$go_output = '';
 
-JLog::add(sprintf('Override search path is %s', implode(',', $ro_search_paths)), JLog::DEBUG, 'rokoverrides');
+	// add fallback rokoverride paths
+	$go_platform_versions = gantry_getAvailablePlatformVersions(GANTRY_OVERRIDES_PATH);
+	foreach ($go_platform_versions as $go_platform_version) {
+		$go_search_paths[] = implode('/', array(
+		                                       GANTRY_OVERRIDES_PATH,
+		                                       $go_platform_version,
+		                                       $go_current_template->params->get('override_set', '2.5'),
+		                                       $go_relative_template_override_path
+		                                  ));
+
+	}
+}
+
+JLog::add(JText::sprintf('PLG_SYSTEM_GANTRY_LOG_OVERRIDE_SEARCH_PATH', implode(',', $go_search_paths)), JLog::DEBUG, 'gantry');
 // cycle through the search path and use the first thats there
-foreach ($ro_search_paths as $ro_search_path) {
-	if (is_file($ro_search_path)) {
-		JLog::add(sprintf('Found override file %s.', $ro_search_path), JLog::DEBUG, 'rokoverrides');
+foreach ($go_search_paths as $go_search_path) {
+	if (is_file($go_search_path)) {
+		JLog::add(JText::sprintf('PLG_SYSTEM_GANTRY_LOG_FOUND_OVERRIDE_FILE', $go_search_path), JLog::DEBUG, 'gantry');
 		ob_start();
-		include $ro_search_path;
-		$ro_output = ob_get_clean();
-		echo $ro_output;
+		include $go_search_path;
+		$go_output = ob_get_clean();
+		echo $go_output;
 		return;
 	}
 }
@@ -57,23 +72,23 @@ foreach ($ro_search_paths as $ro_search_path) {
 if (isset($this) && isset($filetofind)) {
 	// Fallback for components
 	array_shift($this->_path['template']);
-	$ro_current_layout = $this->getLayout();
-	$ro_current_tpl    = preg_replace('/^' . $ro_current_layout . '_/', '', pathinfo($filetofind, PATHINFO_FILENAME));
-	if ($ro_current_tpl == pathinfo($filetofind, PATHINFO_FILENAME)) $ro_current_tpl = null;
-	echo $this->loadTemplate($ro_current_tpl);
+	$go_current_layout = $this->getLayout();
+	$go_current_tpl    = preg_replace('/^' . $go_current_layout . '_/', '', pathinfo($filetofind, PATHINFO_FILENAME));
+	if ($go_current_tpl == pathinfo($filetofind, PATHINFO_FILENAME)) $go_current_tpl = null;
+	echo $this->loadTemplate($go_current_tpl);
 	return;
 } elseif (isset($module) && isset($path) && isset($attribs)) {
 	// Build the base path for the layout
-	$ro_bPath = JPATH_BASE . '/modules/' . $module->module . '/tmpl/' . basename($ro_backtrace[0]['file']);
-	$ro_dPath = JPATH_BASE . '/modules/' . $module->module . '/tmpl/default.php';
+	$go_bPath = JPATH_BASE . '/modules/' . $module->module . '/tmpl/' . basename($go_backtrace[0]['file']);
+	$go_dPath = JPATH_BASE . '/modules/' . $module->module . '/tmpl/default.php';
 
-	if (file_exists($ro_bPath)) {
-		require $ro_bPath;
+	if (file_exists($go_bPath)) {
+		require $go_bPath;
 		return;
-	} elseif (file_exists($ro_dPath)) {
-		require $ro_dPath;
+	} elseif (file_exists($go_dPath)) {
+		require $go_dPath;
 		return;
 	}
 }
-JLog::add(sprintf('Unable to find fallback override to roll back to for call to %s', $ro_backtrace[0]['file']), JLog::ERROR, 'rokoverrides');
-throw new Exception(JText::sprintf('PLG_SYSTEM_ROKOVERRIDES_ERROR_UNABLE_TO_FIND_FALLBACK_OVERRIDE', $ro_backtrace[0]['file']));
+JLog::add(JText::sprintf('PLG_SYSTEM_GANTRY_LOG_UNABLE_TO_FIND_FALLBACK', $go_backtrace[0]['file']), JLog::ERROR, 'gantry');
+throw new Exception(JText::sprintf('PLG_SYSTEM_GANTRY_ERROR_UNABLE_TO_FIND_FALLBACK_OVERRIDE', $go_backtrace[0]['file']));

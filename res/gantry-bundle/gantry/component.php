@@ -1,6 +1,6 @@
 <?php
 /**
-* @version   $Id: component.php 4532 2012-10-26 16:42:16Z btowles $
+* @version   $Id: component.php 5057 2012-11-06 04:48:10Z rhuk $
  * @author RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -22,7 +22,13 @@ $gantry->init();
 	<!doctype html>
 	<html xml:lang="<?php echo $gantry->language; ?>" lang="<?php echo $gantry->language;?>" >
 		<head>
-			<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+			<?php if ($gantry->get('layout-mode') == '960fixed') : ?>
+			<meta name="viewport" content="width=960px">
+			<?php elseif ($gantry->get('layout-mode') == '1200fixed') : ?>
+			<meta name="viewport" content="width=1200px">
+			<?php else : ?>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<?php endif; ?>
 			<?php
 				$gantry->displayHead();
 				$gantry->addLess('global.less', 'master.css', 8, array('headerstyle'=>$gantry->get('headerstyle','dark')));

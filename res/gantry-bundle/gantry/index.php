@@ -1,6 +1,6 @@
 <?php
 /**
-* @version   $Id: index.php 4702 2012-10-29 20:23:19Z djamil $
+* @version   $Id: index.php 5057 2012-11-06 04:48:10Z rhuk $
  * @author RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -22,7 +22,13 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
 <!doctype html>
 <html xml:lang="<?php echo $gantry->language; ?>" lang="<?php echo $gantry->language;?>" >
 <head>
+	<?php if ($gantry->get('layout-mode') == '960fixed') : ?>
+	<meta name="viewport" content="width=960px">
+	<?php elseif ($gantry->get('layout-mode') == '1200fixed') : ?>
+	<meta name="viewport" content="width=1200px">
+	<?php else : ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<?php endif; ?>
     <?php
         $gantry->displayHead();
 

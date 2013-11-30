@@ -122,3 +122,44 @@
 		.box-shadow(@menuFullShadow);
 	}
 }
+
+// RTL
+body.rtl {
+	li {
+		&:hover, &.active:hover {
+			> .dropdown {
+				left: inherit;
+				right: -1px;
+			}
+		}
+	}
+	.dropdown {
+		ul {
+			li {
+				&:hover {
+					> .flyout {
+						left: inherit;
+						right: 100%;
+						.border-radius(5px 0 5px 5px);
+						margin-left: auto;
+						margin-right: -6px;
+					}
+					> .item {
+						// Left border fixer
+						.border-fixer {
+							right: inherit;
+							left: -1px;
+						}
+					}
+				}
+				&.parent {
+					&:hover {
+						> .item {
+							.border-radius(0 @menuItemRadius @menuItemRadius 0);
+						}
+					}
+				}
+			}
+		}
+	}
+}

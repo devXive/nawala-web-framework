@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        4.1.2 November 2, 2012
+ * @version        4.1.3 November 21, 2012
  * @author         RocketTheme http://www.rockettheme.com
  * @copyright      Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license        http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -57,6 +57,36 @@ class plgSystemGantry extends JPlugin
 		)
 	);
 
+
+	public function __construct(&$subject, $config = array())
+	{
+		parent::__construct($subject, $config);
+		$app = JFactory::getApplication();
+		$lang = JFactory::getLanguage();
+		$lang->load('plg_system_gantry', JPATH_ADMINISTRATOR);
+		JLog::addLogger(array('text_file' => 'gantry.php'), $this->params->get('debugloglevel', 63), array('gantry'));
+	}
+
+	/**
+	 *
+	 */
+	public function onAfterInitialise()
+	{
+		$app = JFactory::getApplication();
+		if ($app->isSite()) {
+			if (!defined('GANTRY_OVERRIDES_PATH')) {
+				define('GANTRY_OVERRIDES_PATH', dirname(__FILE__) . '/overrides');
+				JLog::add(sprintf('Setting override path to %s', GANTRY_OVERRIDES_PATH), JLog::DEBUG, 'rokoverrides');
+			}
+			require_once dirname(__FILE__) . '/functions.php';
+		}
+	}
+
+	public function onGantryTemplateInit($filename)
+	{
+		JLog::add(JText::sprintf('GANTRY_INITIALIZED_FROM', $filename), JLog::DEBUG, 'gantry');
+	}
+
 	/**
 	 * Catch the routed functions for
 	 */
@@ -64,10 +94,10 @@ class plgSystemGantry extends JPlugin
 	{
 		$app = JFactory::getApplication();
 		if ($app->isSite()) {
-//			$template_info = $app->getTemplate(true);
-//			if ($this->isGantryTemplate($template_info->id)) {
-//				require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
-//			}
+			$template_info = $app->getTemplate(true);
+			if ($this->isGantryTemplate($template_info->id)) {
+				require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
+			}
 		} else {
 			if (array_key_exists('option', $_REQUEST) && array_key_exists('task', $_REQUEST)) {
 				$option = JRequest::getVar('option');
@@ -141,28 +171,7 @@ class plgSystemGantry extends JPlugin
 	 */
 	public function onBeforeCompileHead()
 	{
-		$app = JFactory::getApplication();
 
-		if ($app->isAdmin()) return;
-
-		$document = JFactory::getDocument();
-		$doctype  = $document->getType();
-		if ($doctype == 'html') {
-			$buffer      = "";
-			$tmp_buffers = $document->getBuffer();
-			if (is_array($tmp_buffers)) {
-				foreach ($document->getBuffer() as $key => $value) {
-					$buffer .= $document->getBuffer($key);
-				}
-			}
-
-			if (empty($buffer)) return;
-
-			// wether to load bootstrap jui or not
-			if ($this->_contains($buffer, $this->bootstrapTriggers)) {
-				JHtml::_('bootstrap.framework');
-			}
-		}
 	}
 
 	/**
@@ -237,6 +246,31 @@ class plgSystemGantry extends JPlugin
 	 */
 	public function onAfterDispatch()
 	{
+		$app = JFactory::getApplication();
+
+		if ($app->isAdmin()) return;
+
+		$document = JFactory::getDocument();
+		$doctype  = $document->getType();
+		$messages = JFactory::getSession()->get('application.queue');
+
+		if ($doctype == 'html') {
+			$buffer      = "";
+			$tmp_buffers = $document->getBuffer();
+			if (is_array($tmp_buffers)) {
+				foreach ($document->getBuffer() as $key => $value) {
+					$buffer .= $document->getBuffer($key);
+				}
+			}
+
+			if (empty($buffer) && !count($messages)) return;
+
+			// wether to load bootstrap jui or not
+			if ($this->_contains($buffer, $this->bootstrapTriggers) || count($messages)) {
+				JHtml::_('bootstrap.framework');
+			}
+		}
+
 	}
 
 	/**
@@ -247,12 +281,6 @@ class plgSystemGantry extends JPlugin
 
 	}
 
-	/**
-	 *
-	 */
-	public function onAfterInitialise()
-	{
-	}
 
 
 	/**

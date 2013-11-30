@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantrymenutree.class.php 3911 2012-09-25 22:22:58Z btowles $
+ * @version   $Id: gantrymenutree.class.php 5159 2012-11-13 23:04:58Z djamil $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -71,10 +71,10 @@ class GantryMenuTree extends GantryMenuTreeBase
 
 		$tmp = null;
 		// Menu Link is a special type that is a link to another item
-		if ($item->type == 'menulink') {
+		if ($item->type == 'menulink' || $item->type == 'alias') {
 			$app   = JFactory::getApplication();
 			$menu = $app->getMenu();
-			if ($newItem = $menu->getItem($item->query['Itemid'])) {
+			if ($newItem = $menu->getItem(strlen($item->query['Itemid']) ? $item->query['Itemid'] : $item->params->get('aliasoptions'))) {
 				$tmp            = clone($newItem);
 				$tmp->name      = addslashes(htmlspecialchars($item->title, ENT_QUOTES, 'UTF-8'));
 				$tmp->mid       = $item->id;
@@ -86,7 +86,7 @@ class GantryMenuTree extends GantryMenuTreeBase
 			}
 		}
 
-		if ($item->type != 'menulink' || ($item->type == 'menulink' && $tmp == null)) {
+		if (($item->type != 'menulink' && $item->type != 'alias') || (($item->type == 'menulink' || $item->type == 'alias') && $tmp == null)) {
 			$tmp            = clone($item);
 			$tmp->name      = addslashes(htmlspecialchars($item->title, ENT_QUOTES, 'UTF-8'));
 			$tmp->mid       = $tmp->id;

@@ -29,8 +29,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -86,9 +86,9 @@
     "700"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "greek",
-    "latin"
+    "greek"
    ]
   },
   {
@@ -98,8 +98,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -109,8 +109,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -120,8 +120,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -146,8 +146,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -162,8 +162,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -173,8 +173,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -225,8 +225,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -256,8 +256,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -270,8 +270,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -291,8 +291,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -336,8 +336,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -347,8 +347,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -358,10 +358,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -394,12 +394,12 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -439,8 +439,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -461,8 +461,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -472,8 +472,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -493,8 +493,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -507,8 +507,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -531,8 +531,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -542,8 +542,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -579,8 +579,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -642,8 +642,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -653,8 +653,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -664,8 +664,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -675,8 +675,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -686,8 +686,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -742,8 +742,8 @@
     "regular"
    ],
    "subsets": [
-    "cyrillic",
-    "latin"
+    "latin",
+    "cyrillic"
    ]
   },
   {
@@ -773,8 +773,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -825,8 +825,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -838,8 +838,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -859,8 +859,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -890,8 +890,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -901,8 +901,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -914,8 +914,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -925,8 +925,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -976,8 +976,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -997,8 +997,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1008,8 +1008,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1019,8 +1019,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1041,8 +1041,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1052,8 +1052,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1063,8 +1063,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1178,8 +1178,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1189,8 +1189,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1200,8 +1200,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1213,10 +1213,10 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
+    "latin",
     "greek-ext",
-    "latin"
+    "latin-ext",
+    "greek"
    ]
   },
   {
@@ -1269,10 +1269,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
+    "latin",
     "greek-ext",
-    "latin"
+    "latin-ext",
+    "greek"
    ]
   },
   {
@@ -1313,8 +1313,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1325,8 +1325,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1336,8 +1336,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1347,8 +1347,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1379,8 +1379,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1400,8 +1400,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1470,8 +1470,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1481,8 +1481,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1494,11 +1494,11 @@
     "700"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "greek",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -1518,8 +1518,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1529,8 +1529,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1602,8 +1602,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1668,8 +1668,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1707,9 +1707,9 @@
     "700italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -1719,8 +1719,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1730,8 +1730,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1833,8 +1833,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1844,12 +1844,12 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -1859,8 +1859,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1870,8 +1870,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1881,8 +1881,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1908,8 +1908,8 @@
     "800"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1919,8 +1919,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1964,8 +1964,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1975,8 +1975,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -1986,11 +1986,11 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "vietnamese",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "vietnamese"
    ]
   },
   {
@@ -2000,8 +2000,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2011,8 +2011,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2025,8 +2025,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2046,8 +2046,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2057,8 +2057,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2079,8 +2079,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2100,8 +2100,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2111,8 +2111,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2122,8 +2122,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2150,8 +2150,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2249,8 +2249,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2260,8 +2260,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2313,8 +2313,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2334,10 +2334,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -2347,8 +2347,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2388,8 +2388,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2452,8 +2452,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2466,8 +2466,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2480,8 +2480,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2542,8 +2542,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2553,8 +2553,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2635,8 +2635,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2646,8 +2646,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2657,8 +2657,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2670,8 +2670,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2681,8 +2681,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2692,8 +2692,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2724,8 +2724,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2735,8 +2735,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2756,8 +2756,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2787,8 +2787,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2923,8 +2923,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2935,8 +2935,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2946,8 +2946,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2968,8 +2968,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -2992,10 +2992,10 @@
     "700italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -3015,8 +3015,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3046,8 +3046,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3057,8 +3057,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3068,8 +3068,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3139,8 +3139,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3163,12 +3163,12 @@
     "600"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -3212,8 +3212,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3223,8 +3223,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3234,9 +3234,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -3276,8 +3276,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3287,8 +3287,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3340,8 +3340,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3410,9 +3410,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -3444,8 +3444,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3455,8 +3455,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3466,8 +3466,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3488,10 +3488,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -3587,8 +3587,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3650,8 +3650,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3681,8 +3681,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3692,8 +3692,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3703,9 +3703,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -3725,9 +3725,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -3784,8 +3784,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3805,8 +3805,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3836,8 +3836,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3880,8 +3880,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3891,8 +3891,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3952,8 +3952,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3963,8 +3963,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3974,8 +3974,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -3985,8 +3985,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4016,8 +4016,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4111,8 +4111,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4122,8 +4122,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4133,8 +4133,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4144,8 +4144,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4155,8 +4155,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4179,8 +4179,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4190,8 +4190,8 @@
     "regular"
    ],
    "subsets": [
-    "cyrillic",
-    "latin"
+    "latin",
+    "cyrillic"
    ]
   },
   {
@@ -4206,8 +4206,8 @@
     "800"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4218,8 +4218,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4229,8 +4229,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4274,8 +4274,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4285,8 +4285,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4309,9 +4309,9 @@
     "700italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "vietnamese",
-    "latin"
+    "vietnamese"
    ]
   },
   {
@@ -4341,8 +4341,8 @@
     "regular"
    ],
    "subsets": [
-    "greek",
-    "latin"
+    "latin",
+    "greek"
    ]
   },
   {
@@ -4456,8 +4456,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4468,8 +4468,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4488,13 +4488,13 @@
     "800italic"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
-    "vietnamese",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek",
+    "vietnamese"
    ]
   },
   {
@@ -4506,13 +4506,13 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
-    "vietnamese",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek",
+    "vietnamese"
    ]
   },
   {
@@ -4522,10 +4522,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4549,8 +4549,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4560,8 +4560,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4583,8 +4583,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4609,8 +4609,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4620,8 +4620,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4643,8 +4643,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4654,8 +4654,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4665,10 +4665,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4681,9 +4681,9 @@
     "700italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4694,9 +4694,9 @@
     "700"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4707,9 +4707,9 @@
     "700"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4722,8 +4722,8 @@
     "700italic"
    ],
    "subsets": [
-    "cyrillic",
-    "latin"
+    "latin",
+    "cyrillic"
    ]
   },
   {
@@ -4734,8 +4734,8 @@
     "italic"
    ],
    "subsets": [
-    "cyrillic",
-    "latin"
+    "latin",
+    "cyrillic"
    ]
   },
   {
@@ -4765,8 +4765,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4776,8 +4776,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4789,8 +4789,8 @@
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4800,8 +4800,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4831,8 +4831,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4852,8 +4852,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4876,8 +4876,8 @@
     "700italic"
    ],
    "subsets": [
-    "cyrillic",
-    "latin"
+    "latin",
+    "cyrillic"
    ]
   },
   {
@@ -4887,8 +4887,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4908,8 +4908,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4920,12 +4920,12 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -4935,8 +4935,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -4951,9 +4951,9 @@
     "900italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4968,9 +4968,9 @@
     "900italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -4991,9 +4991,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -5034,8 +5034,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5085,10 +5085,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "greek",
     "cyrillic",
-    "latin"
+    "greek"
    ]
   },
   {
@@ -5098,8 +5098,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5119,9 +5119,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -5144,8 +5144,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5169,8 +5169,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5183,8 +5183,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5216,8 +5216,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5227,8 +5227,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5239,8 +5239,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5268,8 +5268,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5279,8 +5279,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5290,8 +5290,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5341,8 +5341,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5352,8 +5352,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5363,8 +5363,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5374,8 +5374,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5416,8 +5416,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5428,8 +5428,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5453,8 +5453,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5476,8 +5476,8 @@
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5487,8 +5487,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5498,8 +5498,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5509,10 +5509,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -5522,9 +5522,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -5534,8 +5534,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5545,8 +5545,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5577,8 +5577,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5588,8 +5588,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5609,8 +5609,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5633,9 +5633,9 @@
     "700italic"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -5655,8 +5655,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5666,8 +5666,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5677,9 +5677,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -5699,8 +5699,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5723,8 +5723,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5754,8 +5754,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5798,8 +5798,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5812,8 +5812,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5826,8 +5826,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5858,8 +5858,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5939,8 +5939,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5951,8 +5951,8 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -5988,8 +5988,8 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6019,8 +6019,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6050,9 +6050,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -6073,8 +6073,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6084,8 +6084,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6096,8 +6096,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6209,10 +6209,10 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
     "cyrillic-ext",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -6257,8 +6257,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6278,8 +6278,8 @@
     "900"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6299,8 +6299,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6322,8 +6322,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6350,12 +6350,12 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -6365,12 +6365,12 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -6383,12 +6383,12 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "greek",
-    "cyrillic",
+    "latin",
     "greek-ext",
+    "latin-ext",
     "cyrillic-ext",
-    "latin"
+    "cyrillic",
+    "greek"
    ]
   },
   {
@@ -6418,9 +6418,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
@@ -6430,8 +6430,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6502,8 +6502,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6553,8 +6553,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6564,8 +6564,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6641,8 +6641,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6652,8 +6652,8 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6676,8 +6676,8 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "latin"
+    "latin",
+    "latin-ext"
    ]
   },
   {
@@ -6697,9 +6697,9 @@
     "regular"
    ],
    "subsets": [
+    "latin",
     "latin-ext",
-    "cyrillic",
-    "latin"
+    "cyrillic"
    ]
   },
   {
