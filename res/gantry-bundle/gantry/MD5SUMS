@@ -120,7 +120,7 @@ e3bd24a42dc4e6a60d7a6789d1742a92 images/logo/powered.png
 ab990f5c748d73be34b3d253caf9e78d images/menu/tree-node.png
 8a3edb0428f11a404535d9134c90063f images/patterns/index.html
 1ad4f07c0893cf7f3865ad7e4c5c115c images/patterns/noise.png
-c0493b386d61d683832278474ce745ca index.php
+19fede8d950aec580a6a250e81d90f4f index.php
 69431f1ec831bacf31013dff2872cba0 js/html5shim.js
 8a3edb0428f11a404535d9134c90063f js/index.html
 c741a5b974802556e613a0358417b04a js/load-transition.js
@@ -134,7 +134,7 @@ f0b9799ee8a13b695190184b4e7a1a5b less/1200fixed.less
 70dab596722c96114ab806205db7e1e0 less/bootstrap.less
 7c989dc30835e888f053c25ed9117a8f less/error.less
 314546c9e6f14024f6c7c0f409057359 less/gantry-core.less
-c786f061ce94f79b8c518aa916d5d600 less/global.less
+ac9543e13d72ae84a496e132b8fef791 less/global.less
 65456cfd7b9d4775fab70b7f936e53cd less/header-dark.less
 7941d04e31f890a63a967147c1edc9de less/header-light.less
 8a3edb0428f11a404535d9134c90063f less/index.html
@@ -168,7 +168,7 @@ d180878168be2ae73cbd1603162b7a4b less/variables.less
 b6ae0820d67cec612b1a15b535449a35 template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-b2787aac33c4128a87f41e1d5c63b10c templateDetails.xml
+5a5c621613e6905459026cd7c5209a8e templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 023e6d6f2a65cd379381019fb1aa205f tests.php
