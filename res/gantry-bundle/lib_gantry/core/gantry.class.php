@@ -1,6 +1,6 @@
 <?php
 /**
- * @version   $Id: gantry.class.php 8465 2013-03-18 21:50:23Z btowles $
+ * @version   $Id: gantry.class.php 12525 2013-08-07 23:02:42Z btowles $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -1857,8 +1857,9 @@ class Gantry
 	public function getFeaturesForPosition($position)
 	{
 
-		if (isset($this->_featuresPosition[$this->cacheKey($position, true)])) {
-			return $this->_featuresPosition[$this->cacheKey($position, true)];
+		$cache_key =$this->cacheKey($position, true).$this->retrieveTemp('platform', $this->get('template_prefix').$this->browser->platform . '-switcher','');
+		if (isset($this->_featuresPosition[$cache_key])) {
+			return $this->_featuresPosition[$cache_key];
 		}
 
 		$return = array();

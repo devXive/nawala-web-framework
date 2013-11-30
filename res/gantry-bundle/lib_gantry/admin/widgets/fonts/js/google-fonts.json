@@ -571,10 +571,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v3",
    "lastModified": "2012-07-25",
@@ -622,10 +622,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -811,11 +811,11 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -1159,8 +1159,8 @@
     "regular"
    ],
    "subsets": [
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin"
    ],
    "version": "v2",
    "lastModified": "2012-07-25",
@@ -2320,10 +2320,10 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek"
    ],
    "version": "v4",
@@ -2501,11 +2501,11 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -2664,9 +2664,9 @@
     "700italic"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-08-02",
@@ -2887,10 +2887,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -3133,11 +3133,11 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
+    "vietnamese",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
-    "vietnamese"
+    "latin-ext",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -3746,10 +3746,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -4858,10 +4858,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v5",
    "lastModified": "2012-07-25",
@@ -5138,10 +5138,10 @@
     "600"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -5279,9 +5279,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v3",
    "lastModified": "2012-07-25",
@@ -5546,9 +5546,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-07-25",
@@ -5701,10 +5701,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v5",
    "lastModified": "2012-07-25",
@@ -6024,9 +6024,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -6072,9 +6072,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v3",
    "lastModified": "2012-07-25",
@@ -6876,8 +6876,8 @@
     "regular"
    ],
    "subsets": [
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -7071,9 +7071,9 @@
     "700italic"
    ],
    "subsets": [
+    "vietnamese",
     "latin-ext",
-    "latin",
-    "vietnamese"
+    "latin"
    ],
    "version": "v3",
    "lastModified": "2012-07-25",
@@ -7094,11 +7094,11 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -7121,11 +7121,11 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -7410,11 +7410,11 @@
     "800italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -7442,11 +7442,11 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -7465,10 +7465,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-08-23",
@@ -7681,10 +7681,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2013-04-10",
@@ -7702,10 +7702,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v5",
    "lastModified": "2013-05-29",
@@ -7724,10 +7724,10 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v6",
    "lastModified": "2013-05-29",
@@ -7744,10 +7744,10 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2013-05-29",
@@ -7766,10 +7766,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v5",
    "lastModified": "2013-05-29",
@@ -7788,10 +7788,10 @@
     "italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v5",
    "lastModified": "2013-05-29",
@@ -7905,9 +7905,9 @@
     "regular"
    ],
    "subsets": [
+    "vietnamese",
     "latin-ext",
-    "latin",
-    "vietnamese"
+    "latin"
    ],
    "version": "v7",
    "lastModified": "2013-02-27",
@@ -7922,9 +7922,9 @@
     "regular"
    ],
    "subsets": [
+    "vietnamese",
     "latin-ext",
-    "latin",
-    "vietnamese"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2013-02-27",
@@ -8034,8 +8034,8 @@
     "700italic"
    ],
    "subsets": [
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -8117,10 +8117,10 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -8159,9 +8159,9 @@
     "900italic"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v7",
    "lastModified": "2012-11-28",
@@ -8186,9 +8186,9 @@
     "900italic"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-10-31",
@@ -8225,9 +8225,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-07-25",
@@ -8365,9 +8365,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
     "latin",
-    "cyrillic",
     "greek"
    ],
    "version": "v1",
@@ -8414,9 +8414,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-07-25",
@@ -8897,11 +8897,11 @@
     "900italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -8934,11 +8934,11 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -8963,11 +8963,11 @@
     "700"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -9208,10 +9208,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -9226,9 +9226,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-07-25",
@@ -9404,9 +9404,9 @@
     "700italic"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-09-26",
@@ -9471,9 +9471,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-10-26",
@@ -10092,9 +10092,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-09-26",
@@ -10346,10 +10346,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
-    "cyrillic"
+    "cyrillic",
+    "latin-ext",
+    "latin"
    ],
    "version": "v4",
    "lastModified": "2012-07-25",
@@ -10417,11 +10417,11 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
-    "cyrillic-ext",
-    "latin",
-    "cyrillic",
     "vietnamese",
+    "cyrillic-ext",
+    "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -10581,10 +10581,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -10608,10 +10608,10 @@
     "regular"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -10631,10 +10631,10 @@
     "700italic"
    ],
    "subsets": [
-    "latin-ext",
     "cyrillic-ext",
-    "latin",
     "cyrillic",
+    "latin-ext",
+    "latin",
     "greek-ext",
     "greek"
    ],
@@ -10684,9 +10684,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v1",
    "lastModified": "2012-09-26",
@@ -11135,9 +11135,9 @@
     "regular"
    ],
    "subsets": [
+    "cyrillic",
     "latin-ext",
-    "latin",
-    "cyrillic"
+    "latin"
    ],
    "version": "v6",
    "lastModified": "2012-09-26",

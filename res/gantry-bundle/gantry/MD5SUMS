@@ -9,7 +9,7 @@
 c72b39572624fe57e42943934d65f9ad component.php
 274f8f25cd44f920e8ca62ec2bce7e2d css-compiled/fusionmenu.css
 8ca096fda23d564fe62bc65ef5f498e0 css-compiled/index.html
-61a74b543382e390f95ec28f86dde178 css-compiled/mediaqueries.css
+83ef269068b8c528e09a6013756b63ef css-compiled/mediaqueries.css
 8ca096fda23d564fe62bc65ef5f498e0 css/index.html
 538b4aa218489eb374eab47d2dbd9479 css/master-ie8.css
 3adb8790cb553df5d07e063f2a64306d css/master-ie9.css
@@ -63,7 +63,7 @@ f6428ede1c18662e2bf6147ad4973bb3 html/com_content/form/edit.php
 45225817209cd95e7b6d53316f9b1af0 html/mod_roknavmenu/themes/gantry-dropdown/formatter.php
 8ca096fda23d564fe62bc65ef5f498e0 html/mod_roknavmenu/themes/gantry-dropdown/index.html
 8762a208234dbebd43fb5c62507ae584 html/mod_roknavmenu/themes/gantry-dropdown/item.xml
-191b1d7a7456d73afa0064d5d1b6eaf4 html/mod_roknavmenu/themes/gantry-dropdown/layout.php
+0a1ea549b685e28fe5791f2c32ba2e06 html/mod_roknavmenu/themes/gantry-dropdown/layout.php
 3362760dc0d420dc1c263f185604a4a8 html/mod_roknavmenu/themes/gantry-dropdown/parameters.xml
 7db86edb595519f1d2ddd91ebf8bafc5 html/mod_roknavmenu/themes/gantry-dropdown/theme.php
 95d9154a6b6029da2846d2892cfa3de6 html/mod_roknavmenu/themes/gantry-splitmenu/formatter.php
@@ -139,10 +139,10 @@ ac9543e13d72ae84a496e132b8fef791 less/global.less
 8ca096fda23d564fe62bc65ef5f498e0 less/joomla/3.0/index.html
 8ca096fda23d564fe62bc65ef5f498e0 less/joomla/index.html
 eaf07845ce6a471db63fba62e23af726 less/mediaqueries.less
-e21619934efc98c4b323592cbad69fde less/menu-dark.less
+b2bde34615f01c9cfbf0c38e920610ac less/menu-dark.less
 75b3c0fffb818997bde6a18cf33d4471 less/menu-hovers.less
-4de28bfc793b64ce5544c9ccfdcd354a less/menu-light.less
-ed5922e11a36fe23fb0c25fe680c1b76 less/menu.less
+a70dee1acb2649ff6037ecc95177b627 less/menu-light.less
+718e34b64bbe06261e48d8a274de381d less/menu.less
 8ca096fda23d564fe62bc65ef5f498e0 less/mixins/index.html
 1c1c4c6f3d240ccafebf4ac391601a56 less/mixins/index.less
 7a9e4b659453db4c4c3d94f9db4555c5 less/mixins/rockettheme/buttons.less
@@ -156,7 +156,7 @@ b2c417b7d957c98ab1b8acaeee09c8a6 less/prettify.less
 3c6e688b2aa18cff2d947f35708597cd less/style.less
 e515eb86a32249d47047f016c980a62e less/template.less
 09f8e1f82d3cd19dc606dc551e4b939c less/utilities.less
-d180878168be2ae73cbd1603162b7a4b less/variables.less
+121d9189d40e31a3540810eb08ec4a6e less/variables.less
 4aaf2c65feaa643a3f63e004fd52098e lib/gantry/gantry.php
 8ca096fda23d564fe62bc65ef5f498e0 lib/gantry/index.html
 8ca096fda23d564fe62bc65ef5f498e0 lib/index.html
@@ -164,7 +164,7 @@ ad739113fabbd2ff68254bf17fc63ab9 offline.php
 b9c2955ea8a0d6bcccf2d94ba26a7060 template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-8441202586b031218c776ce9008211e3 templateDetails.xml
+0d0213aeb43df332fd89e66003cb28fc templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 023e6d6f2a65cd379381019fb1aa205f tests.php
