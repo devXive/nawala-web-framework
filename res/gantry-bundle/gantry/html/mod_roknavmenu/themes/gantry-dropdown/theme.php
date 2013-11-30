@@ -25,7 +25,8 @@ class GantryDropdownTheme extends AbstractRokMenuTheme {
         'tweak-subsequent-y' => 1,
         'tweak-width' => 0,
         'tweak-height' => 0,
-        'enable_current_id' => 0
+        'enable_current_id' => 0,
+        'responsive-menu' => 'panel'
     );
 
     public function getFormatter($args){
