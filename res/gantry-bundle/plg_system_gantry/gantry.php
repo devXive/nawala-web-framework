@@ -1,6 +1,6 @@
 <?php
 /**
- * @version        4.1.1 November 1, 2012
+ * @version        4.1.2 November 2, 2012
  * @author         RocketTheme http://www.rockettheme.com
  * @copyright      Copyright (C) 2007 - 2012 RocketTheme, LLC
  * @license        http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -64,10 +64,10 @@ class plgSystemGantry extends JPlugin
 	{
 		$app = JFactory::getApplication();
 		if ($app->isSite()) {
-			$template_info = $app->getTemplate(true);
-			if ($this->isGantryTemplate($template_info->id)) {
-				require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
-			}
+//			$template_info = $app->getTemplate(true);
+//			if ($this->isGantryTemplate($template_info->id)) {
+//				require_once(JPATH_LIBRARIES . '/gantry/gantry.php');
+//			}
 		} else {
 			if (array_key_exists('option', $_REQUEST) && array_key_exists('task', $_REQUEST)) {
 				$option = JRequest::getVar('option');
@@ -237,7 +237,6 @@ class plgSystemGantry extends JPlugin
 	 */
 	public function onAfterDispatch()
 	{
-
 	}
 
 	/**

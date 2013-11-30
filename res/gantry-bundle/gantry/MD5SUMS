@@ -191,14 +191,14 @@ c42adb8692a7a364e9ef405b7d3f1bf2 less/mixins/rockettheme/utilities.less
 b2238528958b03806286f1bcf598fd20 less/template.less
 3aa192bd04c572eac6a264984a2aa507 less/utilities.less
 d180878168be2ae73cbd1603162b7a4b less/variables.less
-3eb02b617d00e9c3549247cad0861025 lib/gantry/gantry.php
+60767bcb872347a6cdfe0a547136c4e7 lib/gantry/gantry.php
 8a3edb0428f11a404535d9134c90063f lib/gantry/index.html
 8a3edb0428f11a404535d9134c90063f lib/index.html
 9b493dbfdbf217916dadb62b7aa76d19 offline.php
 b6ae0820d67cec612b1a15b535449a35 template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-ce1558e9bcd4340a8e4756761924279d templateDetails.xml
+0000b195819ede0998dccdf1f9a15cc9 templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 135f132c4b904ae0cd8d35b09a75d5dd tests.php
