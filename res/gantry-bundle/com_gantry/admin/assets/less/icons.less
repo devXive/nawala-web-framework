@@ -1,0 +1,74 @@
+i {
+	/*background-image: url(../images/icons-sprite.png);
+	background-repeat: no-repeat;
+	.square(16px);
+	display: block;
+*/
+	/* Spinner */
+	&.spinner {
+		.opacity(0);
+
+		&.spinner-16 {
+			background-image: url(../images/loader-16.gif);
+		}
+		&.spinner-32 {
+			background-image: url(../images/loader-32.gif);
+			.square(32px);
+		}
+		&.spinner-64 {
+			background-image: url(../images/loader-64.gif);
+			.square(64px);
+		}
+		&.spinner-128 {
+			background-image: url(../images/loader-128.gif);
+			.square(128px);
+		}
+	}
+
+	/* Statuses */
+	&.published {
+		background-position: 0 0;
+	}
+
+	&.unpublished {
+		background-position: -16px 0;
+	}
+
+	/* Actions */
+	&.info {
+		background-position: -32px 0;
+	}
+
+	&.edit {
+		background-position: -48px 0;
+	}
+
+	&.plus {
+		background-position: -64px 0;
+	}
+}
+
+.rok-button-primary i {
+	/* Actions */
+	&.info {
+		background-position: -32px -16px;
+	}
+
+	&.edit {
+		background-position: -48px -16px;
+	}
+
+	&.plus {
+		background-position: -64px -16px;
+	}
+}
+
+/* XDebug fix */
+.xdebug-var-dump, .xdebug-error {
+	i {
+		background: none;
+		display: inline;
+		width: auto;
+		height: auto;
+	}
+}

@@ -1,0 +1,173 @@
+@import "typography-fonts.less";
+
+#g4-logo {
+	font-size: 200px;
+	line-height: 0px;
+	color: rgba(00,00,00,0.05);
+	text-indent: 40px;
+	font-weight: bold;
+}
+
+.g4-wrap {
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+
+	}
+
+	p {
+		margin: 20px 0;
+		font-size: @baseFontSize+1;
+		color: @gray;
+	}
+
+
+}
+
+h1 {
+	#html > h1;
+	small {
+		color: #9b9b9b;
+		font-size: 16px;
+	}
+}
+
+
+
+.g4-tabs {
+	li {
+		font-size: 14px;
+	}
+}
+
+#g4-sidebar {
+	.g4-content {
+		h2 {
+			font-size: 16px;
+			color: #3e3e3e;
+			margin: 0;
+			padding: 15px 15px 5px;
+		}
+	}
+}
+
+.g4-tabs {
+	.presets-involved, overrides-involved, .preset-info, .menuitems-involved {
+		font-size: 13px;
+		font-weight: bold;
+	}
+}
+
+#g4-panels {
+	h1 {
+		font-size: 38px;
+		line-height: 38px;
+		font-weight: bold;
+
+		.g4-version, > span {
+			color: @blue;
+			font-weight: normal;
+		}
+	}
+	h1+h2 {
+		margin-top: 5px;
+		color: @gray;
+		font-weight: normal;
+	}
+}
+
+div.template-preview {
+	h2, ul {
+		margin: 10px 0 10px 10px;
+
+	}
+	ul {
+		list-style: disc;
+		li {
+			margin-left:20px;
+			margin-bottom: 3px;
+		}
+	}
+}
+
+ .gantrytips-tip {
+ 	ul {
+ 		list-style: disc;
+ 		margin: 10px 0 10px 10px;
+ 		li {
+ 			margin-left: 10px;
+ 			margin-bottom: 3px;
+ 		}
+ 	}
+ }
+
+.tips-field, .html-field {
+	font-size: @baseFontSize+1;
+	color: @black2;
+	text-shadow: 1px 1px 1px #fff;
+	.h2bar {
+		line-height: 26px;
+		font-size: 22px;
+		font-weight: bold;
+		color: @gray;
+	}
+}
+
+#updater {
+
+	#updater-bar {
+		color: #eee;
+		font-size: @baseFontSize+1;
+		line-height: 26px;
+		font-size: 22px;
+		font-weight: bold;
+		text-shadow: 0px -1px 0 #1d5792;
+
+		span {
+			color: #fff;
+		}
+
+
+	}
+
+	#updater-desc {
+
+		color: #eee;
+		text-shadow: 0px -1px 0 #1d5792;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	&.update #updater-bar, &.update #updater-desc {
+		text-shadow: 0px -1px 0 #a71f14;
+	}
+}
+
+.g4-cell {
+	&.g4-col1 {
+		font-weight: bold;
+		text-shadow: 1px 1px 0 #fff;
+		color: @gray;
+
+		label, h2 {
+			padding-left: 20px;
+			font-size:13px;
+		}
+
+		h2 {
+			padding-top: 45px;
+		}
+	}
+}
+
+.chain-label > label, .group-label > label {
+	font-size: @baseFontSize - 1;
+	color: @gray2;
+	text-shadow: 1px 1px 0px #fff;
+}

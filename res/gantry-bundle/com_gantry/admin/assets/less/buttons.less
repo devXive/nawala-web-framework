@@ -1,0 +1,152 @@
+/* Reset */
+button {
+	margin: 0;
+	font-size: 100%;
+	vertical-align: middle;
+}
+button {
+	*overflow: visible; // Inner spacing ie IE6/7
+	line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
+}
+button::-moz-focus-inner { // Inner padding and border oddities in FF3/4
+	padding: 0;
+	border: 0;
+}
+button {
+	cursor: pointer; // Cursors on all buttons applied consistently
+	-webkit-appearance: button; // Style clickable inputs in iOS
+}
+
+/* Button Core */
+.rok-button {
+	position: relative;
+	font-size: @fontSize;
+	line-height: 1em;
+	min-width: 15px;
+	.border-radius(2px);
+	margin-right: 4px;
+	padding: 7px 6px;
+
+	.caret {
+		margin: 5px 0 0; // top and left margin like padding top of the button
+		.opacity(50);
+	}
+
+	/* inherit core button styles */
+	.button();
+
+	/* fix padding on active */
+	&:active, &.rok-button-active {
+		padding: 8px 7px; // like base padding + 1px
+	}
+
+	&.rok-button-disabled {
+		&, &:hover, &:active {
+			padding: 8px 7px;
+		}
+	}
+
+	&.rok-button-primary {
+		/* primary button looks better with no opacity on icons */
+		i {
+			.opacity(100);
+		}
+	}
+
+	i {
+		margin: -1px 0 -2px;
+	}
+}
+
+.rok-button-primary {
+	.rok-button();
+	.button(#2a9de6, #1d79b5);
+
+	&:active, &.rok-button-active {
+		#gradient > .vertical(darken(#2a9de6, 5%), darken(#1d79b5, 5%));
+	}
+
+	&.rok-button-disabled, &.rok-button-disabled:hover {
+		text-shadow: 0 -1px 0 #fff;
+	}
+}
+
+.rok-button-secondary {
+	.rok-button();
+	.button(#999, #666);
+
+	&:active, &.rok-button-active {
+		#gradient > .vertical(darken(#666, 2%), darken(#999, 5%));
+	}
+}
+
+
+/* Groups */
+.rok-buttons-group {
+	> * {
+		display: inline-block;
+		.border-radius(0);
+		margin-right: 0;
+		margin-left: -3px;
+
+		&:first-child {
+			margin-left: 0;
+			.border-radius(3px 0 0 3px);
+		}
+		&:last-child {
+			.border-radius(0 3px 3px 0);
+			margin-right: 4px;
+		}
+	}
+}
+
+/* Dropdowns */
+#g4-toolbar .rok-dropdown-open ul.rok-dropdown {
+	display: block;
+}
+
+#g4-toolbar ul.rok-dropdown {
+	.dropdown();
+
+	li {
+		text-align: left;
+	}
+
+	background-color: @dropdownBackground;
+	min-width: 160px;
+	top: 200%;
+	right: -10px;
+	left: inherit;
+	padding: 4px 0;
+	border: 1px solid #fff;
+	*border-right-width: 2px;
+	*border-bottom-width: 2px;
+	.border-radius(2px 2px 4px 4px);
+	.box-shadow(~"0 5px 10px rgba(0, 0, 0, .1), 0 0 0 1px rgba(0, 0, 0, 0.20)");
+
+	li a {
+		color: #666;
+	}
+
+	.divider {
+		background-color: darken(@dropdownBackground, 10%);
+		border-bottom: 1px solid lighten(@dropdownBackground, 10%);
+		margin: ((24px / 4) - 1) 1px; // 24px is the 'a' line-height (below)
+	}
+
+	a {
+		margin: 0 -1px; // to compensate the inner border of 1px
+		padding: 3px 15px;
+		line-height: 24px;
+		color: @dropdownLinks;
+		text-shadow: 0 1px 0 #fff;
+		text-decoration: none;
+	}
+
+	// hover states
+	> li > a:hover, .active > a, .active > a:hover {
+		#gradient > .vertical(#2a9de6, #1d79b5);
+		color: #fff;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+	}
+}
