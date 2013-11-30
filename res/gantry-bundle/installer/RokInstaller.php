@@ -1,7 +1,7 @@
 <?php
 /**
  * @package   Installer Bundle Framework - RocketTheme
- * @version   4.1.18 November 6, 2013
+ * @version   4.1.19 November 18, 2013
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
