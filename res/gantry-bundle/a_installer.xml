@@ -1,13 +1,13 @@
 <extension version="1.6" type="plugin" group="system" method="upgrade">
     <name>Installer</name>
 	<author>RocketTheme, LLC</author>
-	<creationDate>July 2, 2013</creationDate>
+	<creationDate>July 3, 2013</creationDate>
 	<copyright>(C) 2005 - 2013 RocketTheme, LLC. All rights reserved.</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>support@rockettheme.com</authorEmail>
 	<authorUrl>http://www.rockettheme.com</authorUrl>
-	<version>4.1.11</version>
-	<description>Gantry Template Bundle Package v.4.1.11</description>
+	<version>4.1.12</version>
+	<description>Gantry Template Bundle Package v.4.1.12</description>
     <scriptfile>install.script.php</scriptfile>
     <files>
         <filename plugin="gantry_installer">installer.php</filename>
