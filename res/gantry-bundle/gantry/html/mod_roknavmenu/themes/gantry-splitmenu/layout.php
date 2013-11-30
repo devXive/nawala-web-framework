@@ -1,6 +1,6 @@
 <?php
 /**
-* @version   $Id: layout.php 6613 2013-01-18 19:11:16Z btowles $
+* @version   $Id: layout.php 7234 2013-02-06 05:09:14Z steph $
  * @author    RocketTheme http://www.rockettheme.com
  * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
  * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -30,7 +30,7 @@ class GantrySplitmenuLayout extends AbstractRokMenuLayout
         $this->args['theme_path'] = $this->theme_path;
         $this->args['theme_rel_path'] = $gantry->templateUrl. $theme_rel_path;
         $this->args['theme_url'] = $this->args['theme_rel_path'];
-	    //$this->args['responsive-menu'] = $args['responsive-menu'];
+	    $this->args['responsive-menu'] = $args['responsive-menu'];
     }
 
     public function stageHeader()

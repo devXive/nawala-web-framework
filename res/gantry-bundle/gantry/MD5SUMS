@@ -74,9 +74,9 @@ c877405a007d07fff318446544889074 html/mod_roknavmenu/themes/gantry-dropdown/layo
 95d9154a6b6029da2846d2892cfa3de6 html/mod_roknavmenu/themes/gantry-splitmenu/formatter.php
 8a3edb0428f11a404535d9134c90063f html/mod_roknavmenu/themes/gantry-splitmenu/index.html
 a582be3db08f4c14edcb6d53f5338c7a html/mod_roknavmenu/themes/gantry-splitmenu/item.xml
-b42e872e1dee796893983909f18ae692 html/mod_roknavmenu/themes/gantry-splitmenu/layout.php
+bfec94ceae79fa695f8bc5794f671d60 html/mod_roknavmenu/themes/gantry-splitmenu/layout.php
 93254c0d2ca4fdd63ef9500089b6c6f1 html/mod_roknavmenu/themes/gantry-splitmenu/parameters.xml
-3dd8182644adbf8f2165cf39039f8770 html/mod_roknavmenu/themes/gantry-splitmenu/theme.php
+1a5bd2cafec02711148d1a5f62c68e92 html/mod_roknavmenu/themes/gantry-splitmenu/theme.php
 8a3edb0428f11a404535d9134c90063f html/mod_roknavmenu/themes/index.html
 b31003e9af3a52c6a522d353a5350fec html/modules.php
 567e79a20ec18e664a5288888dddf7e6 images/gantryrocket.png
@@ -138,7 +138,7 @@ c786f061ce94f79b8c518aa916d5d600 less/global.less
 65456cfd7b9d4775fab70b7f936e53cd less/header-dark.less
 7941d04e31f890a63a967147c1edc9de less/header-light.less
 8a3edb0428f11a404535d9134c90063f less/index.html
-5bc454ad997c57966dfb274a00a96fee less/joomla-core.less
+333832e015e836ce1ef9fd45c3741994 less/joomla-core.less
 58c62ebf15eec34abfec1175eeaf149e less/joomla/2.5/bootstrap.less
 8a3edb0428f11a404535d9134c90063f less/joomla/2.5/index.html
 8a3edb0428f11a404535d9134c90063f less/joomla/index.html
@@ -168,7 +168,7 @@ d180878168be2ae73cbd1603162b7a4b less/variables.less
 b6ae0820d67cec612b1a15b535449a35 template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-790fbe9e2fe54e52439d62d64b52035c templateDetails.xml
+b2787aac33c4128a87f41e1d5c63b10c templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 023e6d6f2a65cd379381019fb1aa205f tests.php
