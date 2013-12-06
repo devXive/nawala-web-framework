@@ -24,10 +24,10 @@
             <description>The Nawala System Plugin</description>
         </cog>
         <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
-            appos
-            <name>AppOS Template</name>
-            <description>Application optimized template</description>
-            <style name="AppOS - Default" default="false" master="true" paramsfile="template-options.xml"/>
+            rdk_apptheme
+            <name>RDK AppTheme</name>
+            <description>Application optimized template for NawalaRDK</description>
+            <style name="AppTheme - Default" default="false" master="true" paramsfile="template-options.xml"/>
         </cog>
 
         <cog type="library" enabled="true" protected="false">
