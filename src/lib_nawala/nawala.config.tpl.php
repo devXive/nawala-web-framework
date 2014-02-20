@@ -1,9 +1,9 @@
 <?php
 /**
  * @package          Nawala Rapid Development Kit
- * @subPackage	Nawala - Library
+ * @subPackage       Nawala - Library
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
- * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
@@ -14,9 +14,9 @@ defined('_NRDKRA') or die;
 /**
  * 
  */
-$gantry_default_grid = 12;
+$nawala_default_grid = 12;
 
-$gantry_default_layoutschemas =
+$nawala_default_layoutschemas =
     array(
     16=>array(
         1 => array(16),
@@ -107,7 +107,7 @@ $gantry_default_layoutschemas =
 	)
 );
 
-$gantry_default_mainbodyschemas = array(
+$nawala_default_mainbodyschemas = array(
 	9 => array(
 	    1 => array('mb'=>9),
 	    2 => array('mb'=>6, 'sa'=>3),
@@ -129,7 +129,7 @@ $gantry_default_mainbodyschemas = array(
 
 
 //for debugging only
-$gantry_default_pushpullschemas = array(
+$nawala_default_pushpullschemas = array(
 
 	'mb9' => array(''),
 	
@@ -256,7 +256,7 @@ $gantry_default_pushpullschemas = array(
 );
 
 
-$gantry_default_mainbodyschemascombos = array(
+$nawala_default_mainbodyschemascombos = array(
 	9 => array(
 		1 => array(
 				array('mb'=>9)
