@@ -1,6 +1,6 @@
 <?php
 /**
-* @version   $Id: error.php 15539 2013-11-13 23:24:28Z btowles $
+* @version   $Id: error.php 15753 2013-11-18 18:49:43Z btowles $
 * @author    RocketTheme http://www.rockettheme.com
 * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
 * @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
@@ -14,13 +14,17 @@ if (!isset($this->error)) {
 	$this->debug = false;
 }
 
+$doc = JFactory::getDocument();
+if ($doc->_type === 'raw'){
+	$output = "{$this->error->getCode()} {$this->error->getMessage()}";
+	return;
+}
+$doc->setTitle($this->error->getCode() . ' - '.$this->title);
+
 // load and inititialize gantry class
 global $gantry;
 require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
 $gantry->init();
-
-$doc = JFactory::getDocument();
-$doc->setTitle($this->error->getCode() . ' - '.$this->title);
 
 $gantry->addStyle('grid-responsive.css', 5);
 $gantry->addLess('bootstrap.less', 'bootstrap.css', 6);
@@ -34,6 +38,8 @@ if ($gantry->browser->name == 'ie') {
 	}
 }
 $gantry->addScript('rokmediaqueries.js');
+
+
 
 ob_start();
 ?>

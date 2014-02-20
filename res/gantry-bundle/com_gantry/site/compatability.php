@@ -9,8 +9,7 @@ defined('_JEXEC') or die('Restricted access');
 
 if (!class_exists('GantryLegacyJView', false)) {
     $jversion = new JVersion();
-    if (version_compare($jversion->getShortVersion(), '2.5.5', '>'))
-	{
+    if (version_compare($jversion->getShortVersion(), '2.5.5', '>')) {
 		class GantryLegacyJView extends JViewLegacy
 		{
 		}
@@ -22,8 +21,7 @@ if (!class_exists('GantryLegacyJView', false)) {
 		class GantryLegacyJModel extends JModelLegacy
 		{
 		}
-	}
-	else {
+	} else {
 		jimport('joomla.application.component.view');
 		jimport('joomla.application.component.controller');
 		jimport('joomla.application.component.model');

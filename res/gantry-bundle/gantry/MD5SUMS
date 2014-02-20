@@ -9,13 +9,13 @@
 c72b39572624fe57e42943934d65f9ad component.php
 274f8f25cd44f920e8ca62ec2bce7e2d css-compiled/fusionmenu.css
 8ca096fda23d564fe62bc65ef5f498e0 css-compiled/index.html
-1048611f65f699c1a2bad2a634499132 css-compiled/mediaqueries.css
+88d319cd252f7c60d3dde924539c0d31 css-compiled/mediaqueries.css
 8ca096fda23d564fe62bc65ef5f498e0 css/index.html
 538b4aa218489eb374eab47d2dbd9479 css/master-ie8.css
 3adb8790cb553df5d07e063f2a64306d css/master-ie9.css
 8ca096fda23d564fe62bc65ef5f498e0 custom/index.html
 21585ad0f8f96fa6159c4abfa6308b90 debugbody.php
-5df43d3b37e77c95f5d677c267b4f66d error.php
+f47b00e54477c8fb07beea7dfc1d33af error.php
 10adc742efb8bb4aabb9f07f0d571712 features/branding.php
 9e8166daffd42e3d46bf2a3a85305bdc features/color.php
 a613fd397c6dc0983a94f96ed1317a15 features/dropdownmenu.php
@@ -138,7 +138,7 @@ bcdbcee7080d2a6a5a60a21d1fc8981d less/960fixed.less
 8ca096fda23d564fe62bc65ef5f498e0 less/joomla/2.5/index.html
 8ca096fda23d564fe62bc65ef5f498e0 less/joomla/3.0/index.html
 8ca096fda23d564fe62bc65ef5f498e0 less/joomla/index.html
-cd011c061782cee0e1cbccf35c2c623e less/mediaqueries.less
+57e7615ef22bc96a1c3285413169fd91 less/mediaqueries.less
 b2bde34615f01c9cfbf0c38e920610ac less/menu-dark.less
 75b3c0fffb818997bde6a18cf33d4471 less/menu-hovers.less
 a70dee1acb2649ff6037ecc95177b627 less/menu-light.less
@@ -164,7 +164,7 @@ ad739113fabbd2ff68254bf17fc63ab9 offline.php
 70a95f2fe1119ea459d30490e9ec43f8 template-options.xml
 35ff9cb9b1059f9f61f9c86ec1f8e528 template-overview.php
 fd954b11fe88d48169138826190bfd82 template-thumb-big.png
-9c9f9131701c5551521f96cceed57451 templateDetails.xml
+0b192193097ed9d4c5cc5bc99fd3cfaa templateDetails.xml
 0eac0f99e7a4656cf9b5282d1a0bfd73 template_preview.png
 e23c898b4addc38a11c67ea73b679211 template_thumbnail.png
 023e6d6f2a65cd379381019fb1aa205f tests.php
