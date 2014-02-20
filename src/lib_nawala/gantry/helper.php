@@ -1,7 +1,7 @@
 <?php
 /**
  * @package          Nawala Rapid Development Kit
- * @subPackage	Nawala - Library
+ * @subPackage       Nawala - Library
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
  * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
@@ -9,7 +9,7 @@
  */
 
 // Check to ensure this file is included in Nawala!RDK environment
-defined('_NRDKRA') or die;
+defined('_NRDKRA') or die();
 
 /**
  * Nawala Framework GantryHelper Class
@@ -30,43 +30,18 @@ class NGantryHelper
 	const DEFAULT_STYLE_PRIORITY = 10;
 
 	/**
-	 * @var    string    $basePath    System base website path
-	 * @var    string    $baseUrl     Url base website path
-	 */
-	static $basePath;
-	static $baseUrl;
-
-	/**
-	 * @var    string    $templateName      Name of the active template
-	 * @var    string    $templatePath      Path of the active template
-	 * @var    string    $templateUrl       Url of the active template
-	 * @var    string    $templatePrefix    Prefix of the active template
-	 */
-	static $templateName;
-	static $templatePath;
-	static $templateUrl;
-	static $templatePrefix;
-
-	/**
-	 * @var    string    $basePath    System path to nawala library
-	 * @var    string    $baseUrl     Url path to nawala library
-	 */
-	static $nawalaPath;
-	static $nawalaUrl;
-
-	/**
 	 * Path for the compressed / combined files, which will be used later to load files from
 	 *
 	 * @var    string    $cachePath    System path to nawala cache dir
 	 * @var    string    $cacheUrl     Url path to nawala cache dir
 	 */
-	static $cachePath;
-	static $cacheUrl;
+	protected $cachePath;
+	protected $cacheUrl;
 
 	/**
-	 * @var    array    $stylePaths    Array of absolute paths where to look for files used in addLess(), addStyle(), addScript().
+	 * @var    array    $mediaPaths    Array of absolute paths where to look for files used in addLess(), addStyle(), addScript().
 	 */
-	static $stylePaths;
+	private $mediaPaths;
 
 	/**
 	 * @var    object    $compression    Object that hold informations if a compression should be used or not.
@@ -74,7 +49,7 @@ class NGantryHelper
 	 *         string                ->css     CSS compression.
 	 *         string                ->js      JS compression.
 	 */
-	static $compression;
+	private $compression;
 
 	/**
 	 * Hold conditional array of style variables which will be used in compiler
@@ -90,7 +65,7 @@ class NGantryHelper
 	/**
 	 * @var    array    $lessImportFiles    Conditional array of @import files which will be used in compiler
 	 */
-	static $lessImportFiles;
+	private $lessImportFiles;
 
 
 	/**
@@ -101,29 +76,14 @@ class NGantryHelper
 		// Initialize global gantry
 		global $gantry;
 
-		$this->basePath = $gantry->basePath;
-		$this->baseUrl  = $gantry->baseUrl;
+		/** Intantiate global nawala */
+		global $nawala;
 
-		$this->templateName   = $gantry->templateName;
-		$this->templateUrl    = $gantry->templateUrl;
-		$this->templatePath   = $gantry->templatePath;
-		$this->templatePrefix = $gantry->template_prefix;
-
-		$this->nawalaPath = $this->basePath . '/libraries/nawala';
-		$this->nawalaUrl  = $this->baseUrl . '/libraries/nawala';
-
-		$this->cachePath = $this->basePath . '/cache/nawala';
-		$this->cacheUrl  = $this->baseUrl . '/cache/nawala';
+		$this->cachePath = $nawala->platform->cachePath . '/media';
+		$this->cacheUrl  = $nawala->platform->cacheUrl . '/media';
 
 		// Declare the main Entry Points to look for
-		$this->stylePaths = array(
-			$this->templatePath . '/less',
-			$this->templatePath . '/css',
-			$this->templatePath . '/js',
-			$this->nawalaPath . '/assets/less',
-			$this->nawalaPath . '/assets/css',
-			$this->nawalaPath . '/assets/js'
-		);
+		$this->mediaPaths = $nawala->platform->template->mediaPaths;
 
 		// Init Compressions
 		$comp = new stdClass;
@@ -142,7 +102,64 @@ class NGantryHelper
 
 		// Set the lessImportFiles var
 		$this->lessImportFiles = array();
+
+		// Init
+		$this->_init();
 	}
 
 
+	/**
+	 * Method to check dependencies and all other stuff that is needed
+	 */
+	protected function _init() {
+		/** Intantiate global nawala */
+		global $nawala;
+
+		// Create appropriate cache folders (Note: All folder between will be created automatically)
+		$cacheFolder = array(
+			'media/css/swap',
+			'media/js/swap'
+		);
+		$nawala->cache->createFolder($cacheFolder);
+	}
+
+
+	/**
+	 * Method to set the media paths
+	 * @param     string    $path    Full system path to add to the pathDirectories
+	 * @param     string    $type    Type of the files in this paths ( less|css|js )
+	 * 
+	 * @return    void
+	 */
+	public function setMediaPath( $path, $type ) {
+		// Check supported type
+		switch ($type)
+		{
+			case 'less':
+			case 'css':
+			case 'js':
+				break;
+			
+			default:
+				return;
+				break;
+		}
+
+		// Get the media type and store in array
+		$pathArray = $this->mediaPaths->get($type);
+		if (is_array($path))
+		{
+			foreach ($path as $dir)
+			{
+				$pathArray[] = $dir;
+			}
+		}
+		else
+		{
+			$pathArray[] = $path;
+		}
+	
+		// Store back
+		$this->mediaPaths->set($type, $pathArray);
+	}
 }
