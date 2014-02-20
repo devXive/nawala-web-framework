@@ -22,7 +22,7 @@ tx.exe
 # Resource demo folder
 a_res_demos/
 vendor
-
+t3-2.1.2
 
 # IDE
 .buildpath
