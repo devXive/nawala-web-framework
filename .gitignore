@@ -15,9 +15,16 @@ $RECYCLE.BIN/
 # Mac crap
 .DS_Store
 
-#Translations
+# Translations
 *.mo
 tx.exe
 
 # Resource demo folder
 a_res_demos/
+vendor
+
+
+# IDE
+.buildpath
+.project
+.settings
