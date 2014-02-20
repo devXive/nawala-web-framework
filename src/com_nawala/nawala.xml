@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension method="upgrade" type="component" version="3.0">
+    <!-- Note: we can use method="upgrade" to ensure an upgrade regardless of
+     if it is a new install or an actual upgrade; Normal installs will
+     behave like an install but upgrades will be treated appropriately even
+     if the interface doesn't support it properly -->
+    <!-- Generic Metadata -->
+    <name>Nawala</name>
+    <author>devXive</author>
+    <creationDate>2013-12-01</creationDate>
+    <copyright>(C) 1997 - 2013 devXive - research and development. All rights reserved.</copyright>
+    <license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
+    <authorEmail>support@devxive.com</authorEmail>
+    <authorUrl>http://www.devxive.com</authorUrl>
+    <version>1.1.0</version>
+    <description>Nawala!RDK - Built-In Ajax Processing</description>
+
+    <!-- Front end file, media and language specification -->
+    <files folder="site">
+        <filename>compatability.php</filename>
+        <filename>controller.php</filename>
+        <filename>index.html</filename>
+        <filename>nawala.php</filename>
+    </files>
+
+    <scriptfile>nawala_install.script.php</scriptfile>
+
+    <administration>
+        <!-- Administrator file and language specification;
+              Note: administrator doesn't have media -->
+        <files folder="admin">
+            <folder>language</folder>
+            <filename>compatability.php</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>nawala.php</filename>
+        </files>
+        <languages folder="admin/language">
+            <language tag="en-GB">en-GB/en-GB.com_nawala.ini</language>
+        </languages>
+    </administration>
+</extension>
