@@ -1,9 +1,9 @@
 <?php
 /**
  * @package          Nawala Rapid Development Kit
- * @subPackage	Nawala - Library
+ * @subPackage       Nawala - Library
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
- * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
@@ -16,93 +16,225 @@ defined('_NRDKRA') or die;
  *
  * @package  Framework
  * @since    1.0
+ * 
+ * @deprecated in 2.0
  */
-class NFactory
+abstract class NFactory
 {
 	/**
-	 * Marked for TODO
-	 * @var    array  Array containing information for loaded files
+	 * Global configuraiton object
+	 *
+	 * @var    NCoreConfig
 	 * @since  1.0
 	 */
-	protected static $loaded = array();
+	public static $config = null;
 
 
 	/**
-	 * Adds a script file to the document with platform based checks
+	 * Global application object
 	 *
-	 * @param  $file
-	 *
-	 * @return void
+	 * @var    NApplication
+	 * @since  1.0
 	 */
-	function nawala_addScript($file)
-	{
-		gantry_import('core.gantryplatform');
-		$platform      = new GantryPlatform();
-		$document      = JFactory::getDocument();
-		$filename      = basename($file);
-		$relative_path = dirname($file);
+	public static $application = null;
 
-		// For local url path get the local path based on checks
-		$file_path       = gantry_getFilePath($file);
-		$url_file_checks = $platform->getJSChecks($file_path, true);
-		foreach ($url_file_checks as $url_file) {
-			$full_path = realpath($url_file);
-			if ($full_path !== false && file_exists($full_path)) {
-				$document->addScript($relative_path . '/' . basename($full_path) . '?ver=' . NAWALA_VERSION);
-				break;
+
+	/**
+	 * Global document object
+	 *
+	 * @var    NDocument
+	 * @since  1.0
+	 */
+	public static $document = null;
+
+
+	/**
+	 * Global cache object
+	 *
+	 * @var    NCache
+	 * @since  1.0
+	 */
+	public static $cache = null;
+
+
+	/**
+	 * Global ajax Object
+	 * @var    NAjax
+	 * @since  1.1
+	 */
+	public static $ajax;
+
+
+	/**
+	 * Get a application object.
+	 *
+	 * Returns the global {@link NApplication} object, only creating it if it doesn't already exist.
+	 *
+	 * @param   mixed   $id      A client identifier or name.
+	 * @param   array   $config  An optional associative array of configuration settings.
+	 * @param   string  $prefix  Application prefix
+	 *
+	 * @return  NApplication object
+	 *
+	 * @see     NApplication
+	 * @since   1.0
+	 * @throws  Exception
+	 */
+	public static function getApplication($id = null, array $config = array(), $prefix = 'N')
+	{
+		if (!self::$application)
+		{
+			if (!$id && !$prefix)
+			{
+				throw new Exception('Application Instantiation Error', 500);
 			}
+
+			self::$application = new NApplication($id);
 		}
+
+		return self::$application;
 	}
 
-	/**
-	 * Add inline script to the document
-	 *
-	 * @param  $script
-	 *
-	 * @return void
-	 */
-	function nawala_addInlineScript($script)
-	{
-		$document = JFactory::getDocument();
-		$document->addScriptDeclaration($script);
-	}
 
 	/**
-	 * Add a css style file to the document with browser based checks
+	 * Get a document object.
 	 *
-	 * @param  $file
+	 * Returns the global {@link NDocument} object, only creating it if it doesn't already exist.
 	 *
-	 * @return void
+	 * @return  NDocument object
+	 *
+	 * @see     NDocument
+	 * @since   1.1
 	 */
-	function nawala_addStyle($file)
+	public static function getDocument()
 	{
-		gantry_import('core.gantrybrowser');
-		$browser       = new GantryBrowser();
-		$document      = JFactory::getDocument();
-		$filename      = basename($file);
-		$relative_path = dirname($file);
-
-		// For local url path get the local path based on checks
-		$file_path       = gantry_getFilePath($file);
-		$url_file_checks = $browser->getChecks($file_path, true);
-		foreach ($url_file_checks as $url_file) {
-			$full_path = realpath($url_file);
-			if ($full_path !== false && file_exists($full_path)) {
-				$document->addStyleSheet($relative_path . '/' . basename($full_path) . '?ver=' . NAWALA_VERSION);
-			}
+		if (!self::$document)
+		{
+//			self::$document = new NDocument();
 		}
+
+		return self::$document;
 	}
 
+
 	/**
-	 * Add inline css to the document
+	 * Get a session object.
 	 *
-	 * @param  $css
+	 * Returns either the global {@link NSession} object if name is false or
+	 * Return one of the predefined subsession scopes app|doc|tmp (located in namespace __nawala->SCOPE) or
+	 * If using a non predefined name, the appropriate scope is created!
+	 * 
+	 * Usage: Using scopes as using the standard JObject. Simply ->get() and ->set() vars as you want.
+	 * Take care of using objects in the session to prevent: __PHP_Incomplete_Class Object
+	 * 
+	 * Please note that NObject extends the JObject class
 	 *
-	 * @return void
+	 * @param   string  $name       Name of session item
+	 * @param   string  $namespace  Optional namespace to store in the session item. Useful to avoid conflicts for multiple extensions
+	 * 
+	 * @return  NSession object
+	 *
+	 * @see     NSession
+	 * @since   1.0
 	 */
-	function nawala_addInlineStyle($css)
+	public static function getSession($name = false, $namespace = false)
 	{
-		$document = JFactory::getDocument();
-		$document->addStyleDeclaration($css);
+		$sessionObject = '';
+		$empty = new JObject();
+		$session = JFactory::getSession();
+
+		if ( !$name ) {
+			return $session;
+		}
+
+		// Determine namespace
+		if ( !$namespace ) {
+			$config = self::getConfig();
+			$namespace = $config->getNamespace();
+		}
+
+		// Create a sessionKey based on name/namepace string
+		$sessionKey = $name . '_' . $namespace;
+
+		// Check if we have to get an existing session scope.
+		if ( $session->has($name, $namespace) ) {
+			$sessionObject = $session->get($name, null, $namespace);
+		} else {
+			$session->set($name, $empty, $namespace);
+			$sessionObject = $session->get($name, null, $namespace);
+		}
+
+		return $sessionObject;
+	}
+
+
+	/**
+	 * Get a document object.
+	 *
+	 * Returns the global {@link NDocument} object, only creating it if it doesn't already exist.
+	 *
+	 * @return  NDocument object
+	 *
+	 * @see     NDocument
+	 * @since   1.1
+	 */
+	public static function getCache()
+	{
+		if (!self::$cache)
+		{
+			self::$cache = new NCache();
+		}
+
+		return self::$cache;
+	}
+
+
+	/**
+	 * Get a class object.
+	 *
+	 * Returns an appropriate class object.
+	 *
+	 * @param   string  $classString  A dot notated string of the class name which should be load
+	 * @param   string  $prefix       The global class name prefix
+	 *
+	 * @return  Appropriate class object
+	 *
+	 * @see     Appropriate class
+	 * @since   1.0
+	 */
+	public static function getClass( $classString, $prefix = 'N' )
+	{
+		$parts = explode('.', $classString);
+
+		// Build the className and varName
+		$className = $prefix;
+		foreach ( $parts as $part ) {
+			$className .= ucfirst($part);
+		}
+		
+		$instance = new $className;
+
+		return $instance;
+	}
+
+
+	/**
+	 * Get a ajax object.
+	 *
+	 * Returns the global {@link NAjax} object, only creating it if it doesn't already exist.
+	 *
+	 * @return  NAjax object
+	 *
+	 * @see     NAjax
+	 * @since   1.1
+	 */
+	public static function getAjax()
+	{
+		if (!self::$ajax)
+		{
+			self::$ajax = new NAjax();
+		}
+
+		return self::$ajax;
 	}
 }
