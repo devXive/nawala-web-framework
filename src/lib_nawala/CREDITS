@@ -1,18 +1,13 @@
-<?php
 /**
  * CREDITS
  *
  * @package          Nawala Rapid Development Kit
- * @subPackage	Nawala - Library
+ * @subPackage       Nawala - Library
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
  * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
-
-// Check to ensure this file is included in Nawala!RDK environment
-defined('_NRDKRA') or die;
-?>
 
 -------------------- Nawala Credits ---------------------
 
@@ -56,3 +51,10 @@ Author:       Luke Plant
 Copyright:    Copyright 2012, Leaf Corcoran <leafot@gmail.com>
 License:      Licensed under MIT or GPLv3, see LICENSE
 Url:          http://leafo.net/lessphp
+
+Less.php CSS Compiler
+-------------------
+Author:       Josh Schmidt (oyejorge) - originally ported to php by Matt Agar and then updated by Martin Jantošovič
+Copyright:    No Copyright Provided
+License:      Licensed under GPLv2, see LICENSE
+Url:          http://lessphp.gpeasy.com
