@@ -1,52 +1,72 @@
 <?php
 /**
-* @version   $Id: styledeclaration.php 15522 2013-11-13 21:47:07Z kevin $
- * @author		RocketTheme http://www.rockettheme.com
- * @copyright 	Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license		http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ * @package          Nawala Rapid Development Kit
+ * @subPackage       Nawala - Theme
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
+ * 
+ * @origin based on  Gantry4, Copyright (C) 2007 - 2013 RocketTheme, LLC (http://www.rockettheme.com, http://gantry-framework.com)
  *
  * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
  */
-defined('JPATH_BASE') or die();
+
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die();
 
 gantry_import('core.gantryfeature');
 
+/**
+ * Nawala!Theme Feature GantryFeatureStyleDeclaration Class
+ *
+ * Class that build the nawala theme styledecralation
+ *
+ * @package       Theme
+ * @subpackage    Feature
+ * @since         1.0
+ */
 class GantryFeatureStyleDeclaration extends GantryFeature {
 	var $_feature_name = 'styledeclaration';
 
-	function isEnabled() {
+	function isEnabled()
+	{
 		global $gantry;
+
 		$menu_enabled = $this->get('enabled');
 
 		if (1 == (int)$menu_enabled) return true;
+
 		return false;
 	}
 
-	function init() {
+	function init()
+	{
 		global $gantry;
+
 		$browser = $gantry->browser;
 
-        // Colors
-	$lessVariables = array(
-		'linkcolor'     => $gantry->get('linkcolor',     '#2698de'),
-		'headerstyle'     => $gantry->get('headerstyle',     'dark')
-	);
+		// Colors
+		$lessVariables = array(
+			'linkcolor'     => $gantry->get('linkcolor',     '#2698de'),
+			'headerstyle'     => $gantry->get('headerstyle',     'dark')
+		);
 
-	$gantry->addLess('global.less', 'master.css', 8, $lessVariables);
+		$gantry->addLess('global.less', 'master.css', 8, $lessVariables);
 
         // Logo
-	$css = $this->buildLogo();
+		$css = $this->buildLogo();
 
-	$this->_disableRokBoxForiPhone();
+		$this->_disableRokBoxForiPhone();
 
-	$gantry->addInlineStyle($css);
-	if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('mediaqueries.less');
-	if ($gantry->get('layout-mode')=="960fixed") $gantry->addLess('960fixed.less');
-	if ($gantry->get('layout-mode')=="1200fixed") $gantry->addLess('1200fixed.less');
+		$gantry->addInlineStyle($css);
+		if ($gantry->get('layout-mode')=="responsive") $gantry->addLess('mediaqueries.less');
+		if ($gantry->get('layout-mode')=="960fixed") $gantry->addLess('960fixed.less');
+		if ($gantry->get('layout-mode')=="1200fixed") $gantry->addLess('1200fixed.less');
 	}
 
-	function buildLogo(){
+	function buildLogo()
+	{
 		global $gantry;
 
 		if ($gantry->get('logo-type')!="custom") return "";
@@ -56,20 +76,20 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 		$logo = str_replace("&quot;", '"', str_replace("'", '"', $gantry->get('logo-custom-image')));
 		$data = json_decode($logo);
 
-		if (!$data){
+		if (!$data) {
 			if (strlen($logo)) $source = $logo;
 			else return "";
 		} else {
 			$source = $data->path;
 		}
 
-		if (substr($gantry->baseUrl, 0, strlen($gantry->baseUrl)) == substr($source, 0, strlen($gantry->baseUrl))){
+		if (substr($gantry->baseUrl, 0, strlen($gantry->baseUrl)) == substr($source, 0, strlen($gantry->baseUrl))) {
 			$file = JPATH_ROOT . '/' . substr($source, strlen($gantry->baseUrl));
 		} else {
 			$file = JPATH_ROOT . '/' . $source;
 		}
 
-		if (isset($data->width) && isset($data->height)){
+		if (isset($data->width) && isset($data->height)) {
 			$width = $data->width;
 			$height = $data->height;
 		} else {
@@ -78,12 +98,11 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 			$height = $size[1];
 		}
 
-		if (!preg_match('/^\//', $source))
-		{
+		if (!preg_match('/^\//', $source)) {
 			$source = JURI::root(true).'/'.$source;
 		}
 
-        $source = str_replace(' ', '%20', $source);
+		$source = str_replace(' ', '%20', $source);
 
 		$output = "";
 		$output .= "#rt-logo {background: url(".$source.") 50% 0 no-repeat !important;}"."\n";
@@ -94,8 +113,10 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 		return (file_exists($file)) ?$output : '';
 	}
 
-	function _createGradient($direction, $from, $fromOpacity, $fromPercent, $to, $toOpacity, $toPercent){
+	function _createGradient($direction, $from, $fromOpacity, $fromPercent, $to, $toOpacity, $toPercent)
+	{
 		global $gantry;
+
 		$browser = $gantry->browser;
 
 		$fromColor = $this->_RGBA($from, $fromOpacity);
@@ -110,72 +131,68 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 			break;
 
 			case 'webkit':
-			if ($browser->shortversion < '5.1'){
+				if ($browser->shortversion < '5.1') {
+					switch ($direction){
+						case 'top':
+							$from_dir = 'left top'; $to_dir = 'left bottom'; break;
+						case 'bottom':
+							$from_dir = 'left bottom'; $to_dir = 'left top'; break;
+						case 'left':
+							$from_dir = 'left top'; $to_dir = 'right top'; break;
+						case 'right':
+							$from_dir = 'right top'; $to_dir = 'left top'; break;
+					}
 
-				switch ($direction){
-					case 'top':
-					$from_dir = 'left top'; $to_dir = 'left bottom'; break;
-					case 'bottom':
-					$from_dir = 'left bottom'; $to_dir = 'left top'; break;
-					case 'left':
-					$from_dir = 'left top'; $to_dir = 'right top'; break;
-					case 'right':
-					$from_dir = 'right top'; $to_dir = 'left top'; break;
+					$gradient = ' background: -webkit-gradient(linear, '.$from_dir.', '.$to_dir.', color-stop('.$fromPercent.','.$fromColor.'), color-stop('.$toPercent.','.$toColor.'));';
+				} else {
+					$gradient = ' background: -webkit-linear-gradient('.$direction.', '.$fromColor.' '.$fromPercent.', '.$toColor.' '.$toPercent.');';
 				}
-				$gradient = ' background: -webkit-gradient(linear, '.$from_dir.', '.$to_dir.', color-stop('.$fromPercent.','.$fromColor.'), color-stop('.$toPercent.','.$toColor.'));';
-			} else {
-				$gradient = ' background: -webkit-linear-gradient('.$direction.', '.$fromColor.' '.$fromPercent.', '.$toColor.' '.$toPercent.');';
-			}
-			break;
-
+				break;
 			case 'presto':
-			$gradient = ' background: -o-linear-gradient('.$direction.', '.$fromColor.' '.$fromPercent.', '.$toColor.' '.$toPercent.');';
-			break;
-
+				$gradient = ' background: -o-linear-gradient('.$direction.', '.$fromColor.' '.$fromPercent.', '.$toColor.' '.$toPercent.');';
+				break;
 			case 'trident':
-			if ($browser->shortversion >= '10'){
-				$gradient = ' background: -ms-linear-gradient('.$direction.', '.$fromColor.' '.$fromPercent.', '.$toColor.' '.$toPercent.');';
-			} else if ($browser->shortversion <= '6'){
+				if ($browser->shortversion >= '10') {
+					$gradient = ' background: -ms-linear-gradient('.$direction.', '.$fromColor.' '.$fromPercent.', '.$toColor.' '.$toPercent.');';
+				} else if ($browser->shortversion <= '6') {
+					$gradient = $from;
+					$default_gradient = '';
+				} else {
+					$gradient_type = ($direction == 'left' || $direction == 'right') ? 1 : 0;
+					$from_nohash = str_replace('#', '', $from);
+					$to_nohash = str_replace('#', '', $to);
+
+					if (strlen($from_nohash) == 3) $from_nohash = str_repeat(substr($from_nohash, 0, 1), 6);
+					if (strlen($to_nohash) == 3) $to_nohash = str_repeat(substr($to_nohash, 0, 1), 6);
+
+					if ($fromOpacity == 0 || $fromOpacity == '0' || $fromOpacity == '0%') $from_nohash = '00' . $from_nohash;
+					if ($toOpacity == 0 || $toOpacity == '0' || $toOpacity == '0%') $to_nohash = '00' . $to_nohash;
+
+					$gradient = " filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#".$to_nohash."', endColorstr='#".$from_nohash."',GradientType=".$gradient_type." );";
+
+					$default_gradient = '';
+				}
+				break;
+			default:
 				$gradient = $from;
 				$default_gradient = '';
-			} else {
-
-				$gradient_type = ($direction == 'left' || $direction == 'right') ? 1 : 0;
-				$from_nohash = str_replace('#', '', $from);
-				$to_nohash = str_replace('#', '', $to);
-
-				if (strlen($from_nohash) == 3) $from_nohash = str_repeat(substr($from_nohash, 0, 1), 6);
-				if (strlen($to_nohash) == 3) $to_nohash = str_repeat(substr($to_nohash, 0, 1), 6);
-
-				if ($fromOpacity == 0 || $fromOpacity == '0' || $fromOpacity == '0%') $from_nohash = '00' . $from_nohash;
-				if ($toOpacity == 0 || $toOpacity == '0' || $toOpacity == '0%') $to_nohash = '00' . $to_nohash;
-
-				$gradient = " filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#".$to_nohash."', endColorstr='#".$from_nohash."',GradientType=".$gradient_type." );";
-
-				$default_gradient = '';
-
-			}
-			break;
-
-			default:
-			$gradient = $from;
-			$default_gradient = '';
-			break;
+				break;
 		}
 
 		return  $default_gradient . $gradient;
 	}
 
-	function _HEX2RGB($hexStr, $returnAsString = false, $seperator = ','){
+	function _HEX2RGB($hexStr, $returnAsString = false, $seperator = ',')
+	{
 		$hexStr = preg_replace("/[^0-9A-Fa-f]/", '', $hexStr);
 		$rgbArray = array();
 
-		if (strlen($hexStr) == 6){
+		if (strlen($hexStr) == 6) {
 			$colorVal = hexdec($hexStr);
 			$rgbArray['red'] = 0xFF & ($colorVal >> 0x10);
 			$rgbArray['green'] = 0xFF & ($colorVal >> 0x8);
 			$rgbArray['blue'] = 0xFF & $colorVal;
-		} elseif (strlen($hexStr) == 3){
+		} elseif (strlen($hexStr) == 3) {
 			$rgbArray['red'] = hexdec(str_repeat(substr($hexStr, 0, 1), 2));
 			$rgbArray['green'] = hexdec(str_repeat(substr($hexStr, 1, 1), 2));
 			$rgbArray['blue'] = hexdec(str_repeat(substr($hexStr, 2, 1), 2));
@@ -186,11 +203,13 @@ class GantryFeatureStyleDeclaration extends GantryFeature {
 		return $returnAsString ? implode($seperator, $rgbArray) : $rgbArray;
 	}
 
-	function _RGBA($hex, $opacity){
+	function _RGBA($hex, $opacity)
+	{
 		return 'rgba(' . $this->_HEX2RGB($hex, true) . ','.$opacity.')';
 	}
 
-	function _disableRokBoxForiPhone() {
+	function _disableRokBoxForiPhone()
+	{
 		global $gantry;
 
 		if ($gantry->browser->platform == 'iphone' || $gantry->browser->platform == 'android') {

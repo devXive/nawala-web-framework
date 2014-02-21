@@ -1,39 +1,62 @@
 <?php
 /**
-* @version   $Id: color.php 2328 2012-08-13 17:55:39Z btowles $
-* @author    RocketTheme http://www.rockettheme.com
-* @copyright Copyright (C) 2007 - 2012 RocketTheme, LLC
-* @license   http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
-*
-* Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
-*
-*/
+ * @package          Nawala Rapid Development Kit
+ * @subPackage       Nawala - Theme
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
+ * 
+ * @origin based on  Gantry4, Copyright (C) 2007 - 2013 RocketTheme, LLC (http://www.rockettheme.com, http://gantry-framework.com)
+ *
+ * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
+ */
+
+// Check to ensure this file is included in Nawala!RDK environment
+defined('_NRDKRA') or die();
+
+/**
+ * Nawala!Theme Feature Color Class
+ *
+ * Class that build the nawala theme colors
+ *
+ * @package       Theme
+ * @subpackage    Feature
+ * @since         1.0
+ */
 class Color {
 
-	function Color($hex){
+	function Color($hex)
+	{
 		$this->color = $hex;
 	}
 
-	function lib_lighten($args) {
+	function lib_lighten($args)
+	{
 		list($color, $delta) = $this->colorArgs($args);
 
 		$hsl = $this->toHSL($color);
 		$hsl[3] = $this->clamp($hsl[3] + $delta, 100);
+
 		return $this->toRGB($hsl);
 	}
 
-	function lib_darken($args) {
+	function lib_darken($args)
+	{
 		list($color, $delta) = $this->colorArgs($args);
 
 		$hsl = $this->toHSL($color);
 		$hsl[3] = $this->clamp($hsl[3] - $delta, 100);
+
 		return $this->toRGB($hsl);
 	}
 
-	function colorArgs($args) {
+	function colorArgs($args)
+	{
 		if ($args[0] != 'list' || count($args[2]) < 2) {
 			return array(array('color', 0, 0, 0));
 		}
+
 		list($color, $delta) = $args[2];
 		if ($color[0] != 'color')
 			$color = array('color', 0, 0, 0);
@@ -43,7 +66,8 @@ class Color {
 		return array($color, $delta);
 	}
 
-	function toHSL($color) {
+	function toHSL($color)
+	{
 		if ($color[0] == 'hsl') return $color;
 
 		$r = $color[1] / 255;
@@ -75,10 +99,12 @@ class Color {
 		);
 
 		if (count($color) > 4) $out[] = $color[4]; // copy alpha
+
 		return $out;
 	}
 
-	function toRGB_helper($comp, $temp1, $temp2) {
+	function toRGB_helper($comp, $temp1, $temp2)
+	{
 		if ($comp < 0) $comp += 1.0;
 		elseif ($comp > 1) $comp -= 1.0;
 
@@ -89,7 +115,8 @@ class Color {
 		return $temp1;
 	}
 
-	function toRGB($color) {
+	function toRGB($color)
+	{
 		if ($color == 'color') return $color;
 
 		$H = $color[1] / 360;
@@ -112,14 +139,17 @@ class Color {
 
 		$out = array('color', round($r*255), round($g*255), round($b*255));
 		if (count($color) > 4) $out[] = $color[4]; // copy alpha
+
 		return $out;
 	}
 
-	function clamp($v, $max = 1, $min = 0) {
+	function clamp($v, $max = 1, $min = 0)
+	{
 		return min($max, max($min, $v));
 	}
 
-	function rgbaToHex($color) {
+	function rgbaToHex($color)
+	{
 		if ($color[0] != 'color')
 			throw new exception("color expected for rgbahex");
 
@@ -127,7 +157,8 @@ class Color {
 			$color[1],$color[2], $color[3]);
 	}
 
-	function hex2RGB($hexStr, $returnAsString = false, $seperator = ',') {
+	function hex2RGB($hexStr, $returnAsString = false, $seperator = ',')
+	{
 	    $hexStr = preg_replace("/[^0-9A-Fa-f]/", '', $hexStr); // Gets a proper hex string
 	    $rgbArray = array();
 	    $rgbArray[] = 'color';
@@ -147,7 +178,8 @@ class Color {
 	    return $returnAsString ? implode($seperator, $rgbArray) : $rgbArray; // returns the rgb string or the associative array
 	}
 
-	function lighten($pc){
+	function lighten($pc)
+	{
 		$pc = str_replace('%', '', $pc);
 		$args = array('list', ',', array($this->hex2RGB($this->color), array('%', $pc)));
 		$rgb = array_slice($this->lib_lighten($args), 1);
@@ -155,7 +187,8 @@ class Color {
 		return $this->rgbaToHex($this->lib_lighten($args));
 	}
 
-	function darken($pc){
+	function darken($pc)
+	{
 		$pc = str_replace('%', '', $pc);
 		$args = array('list', ',', array($this->hex2RGB($this->color), array('%', $pc)));
 		$rgb = array_slice($this->lib_darken($args), 1);
