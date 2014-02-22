@@ -24,8 +24,8 @@
             <description>The Nawala System Plugin</description>
         </cog>
         <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
-            rdk_apptheme
-            <name>RDK AppTheme</name>
+            tpl_ntheme
+            <name>NTheme Template</name>
             <description>Application optimized template for NawalaRDK</description>
             <style name="AppTheme - Default" default="false" master="true" paramsfile="template-options.xml"/>
         </cog>
