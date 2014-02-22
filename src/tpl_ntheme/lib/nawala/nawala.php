@@ -21,4 +21,7 @@ if (!file_exists($nawala_lib_path)) {
 
 $backtrace = debug_backtrace();
 $nawala_calling_file = $backtrace[0]['file'];
-include($nawala_lib_path);
+
+if ( !defined('_NRDKRA') ) {
+	include($nawala_lib_path);
+}

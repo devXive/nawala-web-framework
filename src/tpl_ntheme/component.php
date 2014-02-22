@@ -13,6 +13,7 @@ defined( '_JEXEC' ) or die( 'Restricted index access' );
 
 // load and inititialize gantry class
 require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
+global $gantry;
 $gantry->init();
 
 ?>
