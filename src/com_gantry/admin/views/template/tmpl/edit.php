@@ -30,7 +30,7 @@ $gantryForm = $this->gantryForm;
 $fieldSets = $gantryForm->getFieldsets();
 
 
-
+$gantry->addStyle( str_replace('/var/www', '', NAWALA_LIBRARY) . '/assets/admin/css/nawala-administrator.css');
 //$gantry->addStyle($gantry->gantryUrl."/admin/widgets/gantry-administrator.css");
 $this->compileLess();
 define('GANTRY_CSS', 1);
@@ -72,7 +72,8 @@ function gantry_admin_render_menu($view, $item)
 			</div>
 		</li>
 		<li class="rok-button rok-button-secondary" id="toolbar-show-presets">Presets</li>
-		<li class="rok-button" id="toolbar-clearcache" data-ajaxbutton="{model: 'cache', action: 'clear'}">Clear Cache</li>
+		<li class="rok-button" id="toolbar-clearcache" data-ajaxbutton="{model: 'cache', action: 'clear'}"><span class="icon-trash"></span> Gantry Cache</li>
+		<li class="rok-button" id="nawala-clearcache" data-ajaxbutton="{model: 'nawalacache', action: 'clear'}"><span class="icon-trash"></span> Nawala Cache</li>
 		<!--<li class="rok-button" id="toolbar-purge">Reset</li>-->
 		<li class="rok-button" data-g4-toolbaraction="template.cancel">Close</li>
 	</ul>
@@ -252,6 +253,7 @@ $this->gantryForm->initialize();
 						<div class="g4-row">
 							<div class="g4-column">
 								<div id="g4-logo"><span></span></div>
+								<div id="n-logo"><span></span></div>
 								<ul class="g4-tabs">
 								<?php
 									$panels = array();
