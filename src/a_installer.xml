@@ -1,13 +1,13 @@
 <extension version="3.1" type="plugin" group="system" method="upgrade">
     <name>Installer</name>
 	<author>devXive</author>
-	<creationDate>2013-11-01</creationDate>
-	<copyright>(C) 1997 - 2013 devXive - research and development. All rights reserved.</copyright>
+	<creationDate>2014-02-22</creationDate>
+	<copyright>Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.</copyright>
 	<license>http://www.gnu.org/copyleft/gpl.html GNU/GPL</license>
 	<authorEmail>support@devxive.com</authorEmail>
 	<authorUrl>http://devxive.com</authorUrl>
-	<version>1.1.0</version>
-	<description>Nawala Rapid Development Kit v.1.1.0</description>
+	<version>1.2.0</version>
+	<description>Nawala Rapid Development Kit</description>
     <scriptfile>install.script.php</scriptfile>
     <files>
         <filename plugin="nawala_installer">installer.php</filename>
@@ -25,7 +25,7 @@
         </cog>
         <cog type="template" client="site" access="1" enabled="true" protected="false" remove_style="true">
             tpl_ntheme
-            <name>NTheme Template</name>
+            <name>Nawala Template (NTheme)</name>
             <description>Application optimized template for NawalaRDK</description>
             <style name="AppTheme - Default" default="false" master="true" paramsfile="template-options.xml"/>
         </cog>
