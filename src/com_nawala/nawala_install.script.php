@@ -21,6 +21,8 @@ class Com_NawalaInstallerScript
 	{
 		$cache = JFactory::getCache();
 		$cache->clean('nawala');
+		$cache->clean('Nawala');
+		$cache->clean('NawalaAdmin');
 
 		// Remove the admin menu
 		$installer = new NInstaller();

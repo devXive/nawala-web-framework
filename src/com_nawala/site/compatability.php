@@ -3,7 +3,7 @@
  * @package          Nawala Rapid Development Kit
  * @subPackage       Nawala - Component
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
- * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
@@ -26,7 +26,7 @@ if (!class_exists('NawalaLegacyJView', false)) {
 }
 
 if (method_exists('JSession','checkToken')) {
-	function gantry_checktoken($method = 'post')
+	function nawala_checktoken($method = 'post')
 	{
 		if ($method == 'default')
 		{
@@ -35,7 +35,7 @@ if (method_exists('JSession','checkToken')) {
 		return JSession::checkToken($method);
 	}
 } else {
-	function gantry_checktoken($method = 'post')
+	function nawala_checktoken($method = 'post')
 	{
 		return JRequest::checkToken($method);
 	}
