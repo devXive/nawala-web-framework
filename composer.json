@@ -1,0 +1,13 @@
+{
+  "name" : "nawala-rdk",
+  "version" : "1.1.0",
+  "require" : {
+    "joomla/framework" : "=1.1.0",
+    "twitter/bootstrap" : "=v3.1.1",
+    "oyejorge/less.php" : "=v1.6.3"
+  },
+  "repositories" : [ {
+    "type" : "composer",
+    "url" : "https://packagist.org/"
+  } ]
+}
