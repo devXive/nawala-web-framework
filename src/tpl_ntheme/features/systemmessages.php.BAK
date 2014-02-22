@@ -3,7 +3,7 @@
  * @package          Nawala Rapid Development Kit
  * @subPackage       Nawala - Library
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
- * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
@@ -14,8 +14,13 @@ defined('_NRDKRA') or die();
 gantry_import('core.gantryfeature');
 
 /**
- * @package     gantry
- * @subpackage  features
+ * Nawala!Theme Feature GantryFeatureSystemMessages Class
+ *
+ * Class that build the nawala theme systemmessages
+ *
+ * @package       Theme
+ * @subpackage    Feature
+ * @since         1.0
  */
 class GantryFeatureSystemMessages extends GantryFeature
 {
@@ -30,7 +35,7 @@ class GantryFeatureSystemMessages extends GantryFeature
 //	    $app->setMessageQueue('This is a "error" message in <b>red</b>', 'error');
 //	    $app->setMessageQueue('This is a "success" message in <b>green</b>', 'success');
 //	    $app->setMessageQueue('This is a "warning" message in <b>yellow</b>', 'warning');
-		
+
 		$msgs = $app->getMessageQueue();
 		
 		ob_start();
@@ -40,6 +45,7 @@ class GantryFeatureSystemMessages extends GantryFeature
 		<jdoc:include type="message" />
 		<?php
 		endif;
+
 		return ob_get_clean();
 	}
 }

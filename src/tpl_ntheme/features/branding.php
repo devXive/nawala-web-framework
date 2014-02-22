@@ -15,6 +15,8 @@
 // Check to ensure this file is included in Nawala!RDK environment
 defined('_NRDKRA') or die();
 
+gantry_import('core.gantryfeature');
+
 /**
  * Nawala!Theme Feature GantryFeatureBranding Class
  *
