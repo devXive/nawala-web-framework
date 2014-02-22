@@ -32,8 +32,4 @@
         <filename>CHANGELOG.php</filename>
         <folder>js</folder>
     </files>
-    <!-- Extension Update Specification -->
-	<updateservers>
-		<server name="Gantry Framework Update Site" priority="1" type="extension">http://www.gantry-framework.org/updates/joomla16/gantry.xml</server>
-	</updateservers>
 </extension>
