@@ -1,19 +1,29 @@
 <?php
 /**
-* @version   $Id: index.php 15529 2013-11-13 22:04:39Z kevin $
- * @author RocketTheme http://www.rockettheme.com
- * @copyright Copyright (C) 2007 - 2013 RocketTheme, LLC
- * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 only
+ * @package          Nawala Rapid Development Kit
+ * @subPackage       Nawala - Theme
+ * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
+ * @license          GNU General Public License version 2 or later; see LICENSE.txt
+ * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
+ * 
+ * @origin based on  Gantry4, Copyright (C) 2007 - 2013 RocketTheme, LLC (http://www.rockettheme.com, http://gantry-framework.com)
  *
  * Gantry uses the Joomla Framework (http://www.joomla.org), a GNU/GPLv2 content management system
- *
  */
+
 // no direct access
 defined( '_JEXEC' ) or die( 'Restricted index access' );
 
 // load and inititialize gantry class
 require_once(dirname(__FILE__) . '/lib/gantry/gantry.php');
+global $gantry;
 $gantry->init();
+
+/** Instantiate global $nawala */
+require_once(dirname(__FILE__) . '/lib/nawala/nawala.php');
+global $nawala;
+$nawala->init();
 
 // get the current preset
 $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
@@ -35,8 +45,9 @@ $gpreset = str_replace(' ','',strtolower($gantry->get('name')));
     <?php
         $gantry->displayHead();
 		$gantry->addStyle('grid-responsive.css', 5);
-		$gantry->addLess('bootstrap.less', 'bootstrap.css', 6);
-        if ($gantry->browser->name == 'ie'){
+//		$gantry->addLess('bootstrap.less', 'bootstrap.css', 6);
+		$nawala->addLess('bootstrap.less', 'bootstrap.css', 6);
+		if ($gantry->browser->name == 'ie'){
         	if ($gantry->browser->shortversion == 9){
         		$gantry->addInlineScript("if (typeof RokMediaQueries !== 'undefined') window.addEvent('domready', function(){ RokMediaQueries._fireEvent(RokMediaQueries.getQuery()); });");
         	}

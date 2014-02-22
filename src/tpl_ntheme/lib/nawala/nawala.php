@@ -11,6 +11,7 @@
 // Check to ensure this file is included in Nawala!RDK environment
 defined('JPATH_PLATFORM') or die();
 
+/** Instantiate global $nawala */
 global $nawala;
 
 $nawala_lib_path = JPATH_SITE . '/libraries/nawala/nawala.php';
