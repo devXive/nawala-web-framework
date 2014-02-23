@@ -61,8 +61,8 @@
 			</field>
 		</fields>
 		<field name="iconfont" type="selectbox" default="font-awesome4" label="GANTRY_TEMPLATE_ADMIN_STYLE_ICON_FONT" description="GANTRY_TEMPLATE_ADMIN_STYLE_ICON_FONT_DESC">
-			<option value="dark">DARK</option>
-			<option value="light">LIGHT</option>
+			<option value="fontawesome">Fontawesome</option>
+			<option value="glyphicons">Glyphicons</option>
 		</field>
 	</fieldset>
 

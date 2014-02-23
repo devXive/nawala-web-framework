@@ -13,6 +13,7 @@
     <gridcss>false</gridcss>
     <files>
         <folder>admin</folder>
+        <folder>ajax-models</folder>
         <filename>index.php</filename>
         <filename>error.php</filename>
         <folder>images</folder>
