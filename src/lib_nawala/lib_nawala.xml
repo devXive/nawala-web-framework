@@ -12,18 +12,31 @@
     <description>The Nawala Library for MOOTOMBO and Joomla</description>
 
     <files folder=".">
+        <folder>access</folder>
+        <folder>ajax</folder>
+        <folder>application</folder>
         <folder>assets</folder>
+        <folder>autoloader</folder>
+        <folder>cache</folder>
         <folder>compiler</folder>
         <folder>core</folder>
         <folder>debug</folder>
+        <folder>directory</folder>
+        <folder>filesystem</folder>
+        <folder>formatter</folder>
         <folder>gantry</folder>
+        <folder>html</folder>
+        <folder>installer</folder>
+        <folder>postinstall</folder>
         <folder>session</folder>
+        <folder>tools</folder>
         <filename>CHANGELOG</filename>
         <filename>checksums</filename>
+        <filename>config.php</filename>
         <filename>CREDITS</filename>
         <filename>factory.php</filename>
         <filename>index.html</filename>
-        <filename>nawala.config.php</filename>
+        <filename>nawala.config.tpl.php</filename>
         <filename>nawala.php</filename>
     </files>
 
