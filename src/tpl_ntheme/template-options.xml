@@ -312,13 +312,13 @@
 				</field>
 		</fields>
 
-		<field name="loadtransition" type="toggle" default="0" label="LOAD_TRANSITION" description="LOAD_TRANSITION_DESC"/>
+		<field name="loadtransition" type="toggle" default="1" label="LOAD_TRANSITION" description="LOAD_TRANSITION_DESC"/>
 
 		<field name="component-enabled" type="toggle" default="1" label="COMPONENT_ENABLED" description="COMPONENT_ENABLED_DESC"/>
 
 		<field name="mainbody-enabled" type="toggle" default="1" label="MAINBODY_ENABLED" description="MAINBODY_ENABLED_DESC"/>
 
-		<field name="rtl-enabled" type="toggle" default="1" label="RTL" description="RTL_DESC" setinoverride="false"/>
+		<field name="rtl-enabled" type="toggle" default="0" label="RTL" description="RTL_DESC" setinoverride="false"/>
 
 		<field name="pagesuffix-enabled" type="toggle" default="0" label="PAGESUFFIX" description="PAGESUFFIX_DESC"/>
 
