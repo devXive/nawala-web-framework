@@ -1361,9 +1361,9 @@ class NCoreGlobal
 			/*
 			 * Array
 			 * 	(
-			 * 	    [0] => /var/www/Live-NawalaRDK/templates/rdkapptheme/html/com_content/assets/css/joomla/3.2.0
-			 * 	    [1] => /var/www/Live-NawalaRDK/templates/rdkapptheme/html/com_content/assets/css/joomla/3.2
-			 * 	    [2] => /var/www/Live-NawalaRDK/templates/rdkapptheme/html/com_content/assets/css
+			 * 	    [0] => /var/www/Live-NawalaRDK/templates/ntheme/html/com_content/assets/css/joomla/3.2.0
+			 * 	    [1] => /var/www/Live-NawalaRDK/templates/ntheme/html/com_content/assets/css/joomla/3.2
+			 * 	    [2] => /var/www/Live-NawalaRDK/templates/ntheme/html/com_content/assets/css
 			 * 	)
 			 */
 			if ( $component ) {
@@ -1399,9 +1399,9 @@ class NCoreGlobal
 			/*
 			 * Array
 			 * 	(
-			 * 	    [0] => /var/www/Live-NawalaRDK/templates/rdkapptheme/css/joomla/3.2.0
-			 * 	    [1] => /var/www/Live-NawalaRDK/templates/rdkapptheme/css/joomla/3.2
-			 * 	    [2] => /var/www/Live-NawalaRDK/templates/rdkapptheme/css
+			 * 	    [0] => /var/www/Live-NawalaRDK/templates/ntheme/css/joomla/3.2.0
+			 * 	    [1] => /var/www/Live-NawalaRDK/templates/ntheme/css/joomla/3.2
+			 * 	    [2] => /var/www/Live-NawalaRDK/templates/ntheme/css
 			 * 	)
 			 */
 			$template_path = $template->path . '/' . $type;

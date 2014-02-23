@@ -97,7 +97,7 @@ class NApplicationInput
 	 *     The filter defaults to 'CMD'
 	 *     
 	 *     Example 1 var (.';//55com44_fattern33.3,5%)
-	 *     Example 2 var (/var/www/Live-NawalaRDK/templates/rdkapptheme)
+	 *     Example 2 var (/var/www/Live-NawalaRDK/templates/ntheme)
 	 *     
 	 *     Only use the first integer value                                            = INT|INTEGER    ( Based on example 1 it will return "55" )
 	 *     Only use the first integer value                                            = UINT           ( Based on example 1 it will return "55" )
