@@ -20,7 +20,7 @@ class Com_NawalaInstallerScript
 	public function postflight($type, $parent)
 	{
 		$cache = JFactory::getCache();
-		$cache->clean('nawala');
+		$cache->clean('nrdk');
 		$cache->clean('Nawala');
 		$cache->clean('NawalaAdmin');
 
