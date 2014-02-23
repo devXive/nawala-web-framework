@@ -1,9 +1,9 @@
 <?php
 /**
  * @package          Nawala Rapid Development Kit
- * @subPackage	Installer
+ * @subPackage       Installer
  * @author           devXive - research and development <support@devxive.com> (http://www.devxive.com)
- * @copyright        Copyright (C) 1997 - 2013 devXive - research and development. All rights reserved.
+ * @copyright        Copyright (C) 1997 - 2014 devXive - research and development. All rights reserved.
  * @license          GNU General Public License version 2 or later; see LICENSE.txt
  * @assetsLicense    devXive Proprietary Use License (http://www.devxive.com/license)
  */
@@ -52,8 +52,10 @@ if (!class_exists('PlgSystemnawala_installerInstallerScript')) {
 		 *
 		 * @return bool
 		 */
-		public function install($parent)
+		public function install( $parent )
 		{
+			// Set the Postinstall Messages
+			$this->setPostInstallMessages();
 
 			$this->cleanBogusError();
 
@@ -132,9 +134,10 @@ if (!class_exists('PlgSystemnawala_installerInstallerScript')) {
 		/**
 		 * @param $parent
 		 */
-		public function uninstall($parent)
+		public function uninstall( $parent )
 		{
-
+			// Remove the Postinstall Messages
+			$this->removePostInstallMessages();
 		}
 
 		/**
@@ -228,6 +231,53 @@ if (!class_exists('PlgSystemnawala_installerInstallerScript')) {
 				}
 			}
 			$app->setMessageQueue($other_messages);
+		}
+
+		/**
+		 * Prepare and build the Postinstallation messages
+		 */
+		public function setPostInstallMessages()
+		{
+			$db = JFactory::getDbo();
+			$query = 'INSERT INTO ' . $db->quoteName('#__postinstall_messages') .
+			' ( `extension_id`,
+                  `title_key`,
+                  `description_key`,
+                  `action_key`,
+                  `language_extension`,
+                  `language_client_id`,
+                  `type`,
+                  `action_file`,
+                  `action`,
+                  `condition_file`,
+                  `condition_method`,
+                  `version_introduced`,
+                  `enabled`) VALUES '
+				.'( 700,
+               "PLG_SYSTEM_NAWALA_POSTINSTALL_TITLE",
+               "PLG_SYSTEM_NAWALA_POSTINSTALL_BODY",
+               "PLG_SYSTEM_NAWALA_POSTINSTALL_ACTION",
+               "lib_nawala",
+                1,
+               "action",
+               "site://libraries/nawala/postinstall/actions.php",
+               "nawala_postinstall_action",
+               "site://libraries/nawala/postinstall/conditions.php",
+               "nawala_postinstall_condition",
+               "3.2.2",
+               1)';
+			 
+			$db->setQuery($query);
+			$db->execute();
+		}
+
+		public function removePostInstallMessages( $parent )
+		{
+			$db = JFactory::getDbo();
+			$query = 'DELETE FROM '.$db->quoteName('#__postinstall_messages').
+			' WHERE '. $db->quoteName('language_extension').' = '.$db->quote('lib_nawala');
+			$db->setQuery($query);
+			$db->execute();
 		}
 	}
 
