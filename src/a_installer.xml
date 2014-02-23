@@ -27,7 +27,7 @@
             tpl_ntheme
             <name>Nawala Template (NTheme)</name>
             <description>Application optimized template for NawalaRDK</description>
-            <style name="AppTheme - Default" default="false" master="true" paramsfile="template-options.xml"/>
+            <style name="NTheme - Default" default="false" master="true" paramsfile="template-options.xml"/>
         </cog>
 
         <cog type="library" enabled="true" protected="false">
